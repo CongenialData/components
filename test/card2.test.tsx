@@ -1,9 +1,9 @@
 describe('Hello World', () => {
-  const helloWorld = 'Hello, World!'
+  const helloWorld = 'Hello, World!';
   it('says hello world', () => {
-    expect(helloWorld).toEqual('Hello, World!')
-  })
-})
+    expect(helloWorld).toEqual('Hello, World!');
+  });
+});
 
 // import * as React from 'react';
 
