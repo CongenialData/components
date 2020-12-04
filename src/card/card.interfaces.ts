@@ -1,6 +1,6 @@
-import { TComponentSize, TComponentStatus } from '../theming'
+import { TComponentSize, TComponentStatus } from '../theming';
 
-export type TSpacing = 'none' | 'small' | 'normal'
+export type TSpacing = 'none' | 'small' | 'normal';
 
 export interface ICardStyleProps {
   /**
@@ -8,27 +8,27 @@ export interface ICardStyleProps {
    *
    * Defaults to `false`
    */
-  shadow: boolean
+  shadow: boolean;
 
   /**
    * Change the padding for the card. Allows the children to use all spacing of the card.
    *
    * Default value: `medium`
    */
-  spacing: TSpacing
+  spacing: TSpacing;
 
   /**
    * Colored cards could be simply configured by providing a status property
    *
    * Defaults to `basic`
    */
-  status: TComponentStatus
+  status: TComponentStatus;
 
   /**
    * It is also possible to assign an accent property for a slight card highlight as well as combine it with status.
    *
    */
-  accent?: TComponentStatus
+  accent?: TComponentStatus;
 
   /**
    * The size of the alert
@@ -37,17 +37,19 @@ export interface ICardStyleProps {
    *
    * Defaults to `medium`
    */
-  size?: TComponentSize
+  size?: TComponentSize;
 }
 
 export interface ICardComponentProps {
-  header?: string
-  footer?: string
-  title?: string
+  header?: string;
+  footer?: string;
+  title?: string;
 }
 
-export interface ICardProps extends Partial<ICardStyleProps>, ICardComponentProps {
-  children?: React.ReactChild | React.ReactChild[]
-  className?: string
-  renderToolbar?: () => React.ReactChild
+export interface ICardProps
+  extends Partial<ICardStyleProps>,
+    ICardComponentProps {
+  children?: React.ReactChild | React.ReactChild[];
+  className?: string;
+  renderToolbar?: () => React.ReactChild;
 }

@@ -1,2 +1,2 @@
-export * from './card'
-export * from './theming'
+export * from './card';
+export * from './theming';

@@ -44,11 +44,13 @@
   "bugs": {
     "url": "https://github.com/CongenialData/components/issues"
   },
-  "maintainers": [{
-    "email": "contact@cdab.eu",
-    "name": "Congenial Data AB",
-    "url": "http://cdab.eu"
-  }],
+  "maintainers": [
+    {
+      "email": "contact@cdab.eu",
+      "name": "Congenial Data AB",
+      "url": "http://cdab.eu"
+    }
+  ],
   "module": "dist/components.esm.js",
   "size-limit": [
     {
@@ -61,28 +63,31 @@
     }
   ],
   "dependencies": {
+    "@testing-library/react": "^11.2.2",
     "lodash": "^4.17.20",
-    "lodash-es": "^4.17.15",
-    "@testing-library/react": "^11.2.2"
+    "lodash-es": "^4.17.15"
   },
   "devDependencies": {
     "@babel/core": "^7.12.9",
     "@size-limit/preset-small-lib": "^4.9.1",
+    "@storybook/addon-centered": "^5.3.21",
     "@storybook/addon-essentials": "^6.1.10",
     "@storybook/addon-info": "^5.3.21",
     "@storybook/addon-links": "^6.1.10",
     "@storybook/addons": "^6.1.10",
     "@storybook/react": "^6.1.10",
+    "@testing-library/jest-dom": "^5.11.6",
     "@types/lodash": "^4.14.165",
-    "@types/react-dom": "^17.0.0",
     "@types/react": "^17.0.0",
+    "@types/react-dom": "^17.0.0",
     "@types/styled-components": "^5.1.4",
     "babel-loader": "^8.2.2",
     "husky": "^4.3.0",
+    "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-is": "^17.0.1",
-    "react": "^17.0.1",
     "size-limit": "^4.9.1",
+    "storybook-addon-jsx": "^7.3.4",
     "styled-components": "^5.2.1",
     "tsdx": "^0.14.1",
     "tslib": "^2.0.3",

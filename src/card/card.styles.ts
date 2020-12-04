@@ -1,6 +1,6 @@
-import styled, { css } from 'styled-components/macro'
+import styled, { css } from 'styled-components/macro';
 
-import { ICardStyleProps, TSpacing } from './card.interfaces'
+import { ICardStyleProps, TSpacing } from './card.interfaces';
 
 export const StyledCard = styled.div<ICardStyleProps>`
   ${({ shadow, size, theme: { Card } }) => css`
@@ -27,13 +27,13 @@ export const StyledCard = styled.div<ICardStyleProps>`
       margin-top: 1.5rem;
     }
   `};
-`
+`;
 
 export const Content = styled.div<{ spacing: TSpacing }>`
   ${({ spacing, theme: { Card } }) => css`
     padding: ${Card.spacing[spacing]};
   `};
-`
+`;
 
 export const Title = styled.div<Pick<ICardStyleProps, 'status'>>`
   ${({ theme: { Card }, status }) => css`
@@ -43,11 +43,12 @@ export const Title = styled.div<Pick<ICardStyleProps, 'status'>>`
     line-height: ${Card.header.textLineHeight};
     color: ${Card.header.status[status].textColor};
   `}
-`
+`;
 export const Header = styled.div<Omit<ICardStyleProps, 'shadow'>>`
   ${({ accent, spacing, status, theme: { Card } }) => css`
     padding: ${Card.spacing[spacing]};
-    border-bottom: ${Card.dividerWidth} ${Card.dividerStyle} ${Card.dividerColor};
+    border-bottom: ${Card.dividerWidth} ${Card.dividerStyle}
+      ${Card.dividerColor};
     border-top-left-radius: ${Card.borderRadius};
     border-top-right-radius: ${Card.borderRadius};
 
@@ -74,13 +75,13 @@ export const Header = styled.div<Omit<ICardStyleProps, 'shadow'>>`
      * Accent
      */
     ${accent &&
-    `
+      `
       border-top-color: ${Card.header.status[accent].backgroundColor};
       border-top-style: ${Card.borderStyle};
       border-top-width: ${Card.borderRadius};
     `};
   `};
-`
+`;
 
 export const Footer = styled.div<{ spacing: TSpacing }>`
   ${({ spacing, theme: { Card } }) => css`
@@ -89,4 +90,4 @@ export const Footer = styled.div<{ spacing: TSpacing }>`
     border-bottom-left-radius: nb-theme(card-border-radius);
     border-bottom-right-radius: nb-theme(card-border-radius);
   `};
-`
+`;
