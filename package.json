@@ -37,7 +37,6 @@
   },
   "name": "@cdab/components",
   "author": "Congenial Data AB",
-  "private": "false",
   "repository": {
     "type": "git",
     "url": "git@github.com:CongenialData/components.git"
