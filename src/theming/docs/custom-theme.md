@@ -20,7 +20,7 @@ Exempel på hur en knapp definieras:
 ### Example
 
 ```typescript
-import { createTheme } from 'components/theming' // Import theming function
+import { createTheme } from '../../theming' // Import theming function
 
 import { Button } from 'components/inputs/button' // Import all components you want to use
 
