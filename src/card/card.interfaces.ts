@@ -1,8 +1,8 @@
 import { TComponentSize, TComponentStatus } from '../theming';
 
-export type TSpacing = 'none' | 'small' | 'normal';
+export type Spacing = 'none' | 'small' | 'normal';
 
-export interface ICardStyleProps {
+export interface CardStyleProps {
   /**
    * Add a shadow to the card.
    *
@@ -15,7 +15,7 @@ export interface ICardStyleProps {
    *
    * Default value: `medium`
    */
-  spacing: TSpacing;
+  spacing: Spacing;
 
   /**
    * Colored cards could be simply configured by providing a status property
@@ -40,15 +40,13 @@ export interface ICardStyleProps {
   size?: TComponentSize;
 }
 
-export interface ICardComponentProps {
+export interface CardComponentProps {
   header?: string;
   footer?: string;
   title?: string;
 }
 
-export interface ICardProps
-  extends Partial<ICardStyleProps>,
-    ICardComponentProps {
+export interface CardProps extends Partial<CardStyleProps>, CardComponentProps {
   children?: React.ReactChild | React.ReactChild[];
   className?: string;
   renderToolbar?: () => React.ReactChild;

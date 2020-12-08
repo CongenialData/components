@@ -80,4 +80,4 @@ export const cardTheme = ({
     },
   ]);
 
-export type TCardTheme = TThemeFromFn<typeof cardTheme>;
+export type CardTheme = TThemeFromFn<typeof cardTheme>;

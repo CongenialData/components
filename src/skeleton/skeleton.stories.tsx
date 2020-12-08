@@ -1,38 +1,38 @@
-import React from 'react'
-import { jsxDecorator } from 'storybook-addon-jsx'
-import { ThemeProvider } from 'styled-components/macro'
+import React from 'react';
+import { jsxDecorator } from 'storybook-addon-jsx';
+import { ThemeProvider } from 'styled-components/macro';
 
-import { Card } from '../card'
+import { Card } from '../card';
 
-import { Skeleton } from '.'
-import { createTheme } from '../theming'
-const theme = createTheme([Card, Skeleton])
+import { Skeleton } from '.';
+import { createTheme } from '../theming';
+const theme = createTheme([Card, Skeleton]);
 
 export default {
   title: 'Generic|Skeleton',
   component: Skeleton,
   decorators: [jsxDecorator],
-}
+};
 
 export const SkeletonDefaultStory = (): JSX.Element => (
   <ThemeProvider theme={theme}>
     <h2>Default</h2>
     <Skeleton />
   </ThemeProvider>
-)
+);
 SkeletonDefaultStory.story = {
   name: 'Default',
-}
+};
 
 export const SkeletonTranslucentStory = (): JSX.Element => (
   <ThemeProvider theme={theme}>
     <h2>Translucent</h2>
     <Skeleton translucent={true} />
   </ThemeProvider>
-)
+);
 SkeletonTranslucentStory.story = {
   name: 'Translucent',
-}
+};
 
 export const SkeletonSizesStory = (): JSX.Element => (
   <ThemeProvider theme={theme}>
@@ -81,13 +81,13 @@ export const SkeletonSizesStory = (): JSX.Element => (
       </div>
     </div>
   </ThemeProvider>
-)
+);
 SkeletonSizesStory.story = {
   name: 'Sizes',
-}
+};
 
 export const SkeletonContentStory = (): JSX.Element => {
-  const [isLoading, setIsLoading] = React.useState(true)
+  const [isLoading, setIsLoading] = React.useState(true);
 
   return (
     <ThemeProvider theme={theme}>
@@ -100,7 +100,9 @@ export const SkeletonContentStory = (): JSX.Element => {
         }}
       >
         <div style={{ width: '15rem' }}>
-          <button onClick={() => setIsLoading(!isLoading)}>Toggle loading state</button>
+          <button onClick={() => setIsLoading(!isLoading)}>
+            Toggle loading state
+          </button>
 
           <Card shadow={true} spacing="none">
             <div
@@ -114,29 +116,49 @@ export const SkeletonContentStory = (): JSX.Element => {
                 justifyContent: 'center',
               }}
             >
-              {isLoading ? <Skeleton height="large" translucent={true} width="100px" /> : <h2>John Doe</h2>}
+              {isLoading ? (
+                <Skeleton height="large" translucent={true} width="100px" />
+              ) : (
+                <h2>John Doe</h2>
+              )}
             </div>
             <div style={{ padding: '0 1rem 1rem' }}>
               <p style={{ height: '1rem' }}>
-                {isLoading ? <Skeleton height="1.5rem" width="medium" /> : <>User Name: johndoe</>}
+                {isLoading ? (
+                  <Skeleton height="1.5rem" width="medium" />
+                ) : (
+                  <>User Name: johndoe</>
+                )}
               </p>
               <p style={{ height: '1rem' }}>
-                {isLoading ? <Skeleton height="1.5rem" width="medium" /> : <>Age: Unknown</>}
+                {isLoading ? (
+                  <Skeleton height="1.5rem" width="medium" />
+                ) : (
+                  <>Age: Unknown</>
+                )}
               </p>
               <p style={{ height: '1rem' }}>
-                {isLoading ? <Skeleton height="1.5rem" width="medium" /> : <>City: Stockholm</>}
+                {isLoading ? (
+                  <Skeleton height="1.5rem" width="medium" />
+                ) : (
+                  <>City: Stockholm</>
+                )}
               </p>
               <p style={{ height: '1rem' }}>
-                {isLoading ? <Skeleton height="1.5rem" width="medium" /> : <>Email: john@doe.se</>}
+                {isLoading ? (
+                  <Skeleton height="1.5rem" width="medium" />
+                ) : (
+                  <>Email: john@doe.se</>
+                )}
               </p>
             </div>
           </Card>
         </div>
       </div>
     </ThemeProvider>
-  )
-}
+  );
+};
 
 SkeletonContentStory.story = {
   name: 'Content',
-}
+};

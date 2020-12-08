@@ -22,7 +22,7 @@ Exempel på hur en knapp definieras:
 ```typescript
 import { createTheme } from '../../theming' // Import theming function
 
-import { Button } from 'components/inputs/button' // Import all components you want to use
+import { Button } from '../inputs/button' // Import all components you want to use
 
 export const theme = createTheme(
   [Button], // Pass in components in theme

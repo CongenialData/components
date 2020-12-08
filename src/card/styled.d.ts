@@ -1,7 +1,7 @@
-import { TCardTheme } from './card.theme';
+import { CardTheme } from './card.theme';
 
 declare module 'styled-components' {
   export interface DefaultTheme {
-    Card: TCardTheme;
+    Card: CardTheme;
   }
 }

@@ -1,8 +1,8 @@
 import styled, { css } from 'styled-components/macro';
 
-import { ICardStyleProps, TSpacing } from './card.interfaces';
+import { CardStyleProps, Spacing } from './card.interfaces';
 
-export const StyledCard = styled.div<ICardStyleProps>`
+export const StyledCard = styled.div<CardStyleProps>`
   ${({ shadow, size, theme: { Card } }) => css`
     background-color: ${Card.backgroundColor};
     border: ${Card.borderWidth} ${Card.borderStyle} ${Card.borderColor};
@@ -29,13 +29,13 @@ export const StyledCard = styled.div<ICardStyleProps>`
   `};
 `;
 
-export const Content = styled.div<{ spacing: TSpacing }>`
+export const Content = styled.div<{ spacing: Spacing }>`
   ${({ spacing, theme: { Card } }) => css`
     padding: ${Card.spacing[spacing]};
   `};
 `;
 
-export const Title = styled.div<Pick<ICardStyleProps, 'status'>>`
+export const Title = styled.div<Pick<CardStyleProps, 'status'>>`
   ${({ theme: { Card }, status }) => css`
     font-family: ${Card.header.textFontFamily};
     font-size: ${Card.header.textFontSize};
@@ -44,7 +44,7 @@ export const Title = styled.div<Pick<ICardStyleProps, 'status'>>`
     color: ${Card.header.status[status].textColor};
   `}
 `;
-export const Header = styled.div<Omit<ICardStyleProps, 'shadow'>>`
+export const Header = styled.div<Omit<CardStyleProps, 'shadow'>>`
   ${({ accent, spacing, status, theme: { Card } }) => css`
     padding: ${Card.spacing[spacing]};
     border-bottom: ${Card.dividerWidth} ${Card.dividerStyle}
@@ -83,7 +83,7 @@ export const Header = styled.div<Omit<ICardStyleProps, 'shadow'>>`
   `};
 `;
 
-export const Footer = styled.div<{ spacing: TSpacing }>`
+export const Footer = styled.div<{ spacing: Spacing }>`
   ${({ spacing, theme: { Card } }) => css`
     padding: ${Card.spacing[spacing]};
     border-top: ${Card.dividerWidth} ${Card.dividerStyle} ${Card.dividerColor};

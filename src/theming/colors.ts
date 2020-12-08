@@ -6,7 +6,7 @@ import { TBaseColors } from './basecolors';
  * A function that maps theme variables into Component variables
  * A theme consists of a list of colors, backgrounds, borders, text styles and supporting variables.
  */
-// eslint-disable-next-line @typescript-eslint/explicit-function-return-type
+
 export const colorMapping = (baseColors: TBaseColors) => {
   /**
    * Status colors states - focus, hover, default, active, disabled

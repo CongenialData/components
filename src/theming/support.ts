@@ -6,7 +6,7 @@ import { TColors } from './colors';
  *
  * border radius, outline, shadow, divider
  */
-// eslint-disable-next-line @typescript-eslint/explicit-function-return-type
+
 export const supportMapping = (baseColors: TBaseColors, colors: TColors) => {
   const OUTLINE_COLOR = baseColors.COLOR_BASIC_TRANSPARENT_200;
 

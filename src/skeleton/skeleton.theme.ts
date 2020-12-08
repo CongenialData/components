@@ -1,4 +1,4 @@
-import { TThemeFromFn, tuple } from '../theming'
+import { TThemeFromFn, tuple } from '../theming';
 
 export const skeletonTheme = () =>
   tuple([
@@ -28,6 +28,6 @@ export const skeletonTheme = () =>
         full: '100%',
       },
     },
-  ])
+  ]);
 
-export type SkeletonTheme = TThemeFromFn<typeof skeletonTheme>
+export type SkeletonTheme = TThemeFromFn<typeof skeletonTheme>;
