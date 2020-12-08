@@ -1,4 +1,3 @@
-import { IThemedComponent } from './theming';
 import { TSpacing } from './spacing';
 import { TBreakpoints } from './breakpoints';
 import { TBaseColors } from './basecolors';
@@ -7,7 +6,6 @@ import { TSupport } from './support';
 import { TBaseTypography } from './typography';
 
 declare module 'styled-components' {
-  // eslint-disable-next-line @typescript-eslint/interface-name-prefix
   export interface DefaultTheme {
     baseColors: TBaseColors;
     breakpoints: TBreakpoints;
@@ -16,11 +14,6 @@ declare module 'styled-components' {
     support: TSupport;
     typography: TBaseTypography;
   }
-}
-
-declare module 'React' {
-  // eslint-disable-next-line @typescript-eslint/no-empty-interface, @typescript-eslint/interface-name-prefix
-  interface FunctionComponent extends Partial<IThemedComponent> {}
 }
 
 export type TControlStatus = 'control';
