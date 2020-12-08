@@ -18,7 +18,7 @@ export const Normalize = createGlobalStyle`
    * Make sure the website is using full height
    */
 
-  html, body, #root {
+  html, body, #root { 
     height: 100vh;
   }
 
