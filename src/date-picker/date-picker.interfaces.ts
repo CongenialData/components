@@ -1,6 +1,5 @@
 import { TComponentStatus } from '../theming';
 
-// eslint-disable-next-line @typescript-eslint/no-empty-interface
 export interface DatePickerOptionalStyleProps {}
 
 export interface DatePickerRequiredStyleProps {
@@ -42,9 +41,9 @@ export interface DatePickerComponentProps {
 }
 
 export interface DatePickerProps
-  extends IDatePickerComponentProps,
-    Partial<IDatePickerRequiredStyleProps>,
-    IDatePickerOptionalStyleProps {
+  extends DatePickerComponentProps,
+    Partial<DatePickerRequiredStyleProps>,
+    DatePickerOptionalStyleProps {
   className?: string;
   minTime?: string;
   maxTime?: string;

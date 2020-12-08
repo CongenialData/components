@@ -1,13 +1,13 @@
 import styled from 'styled-components/macro';
 
 import {
-  IDatePickerOptionalStyleProps,
-  IDatePickerRequiredStyleProps,
+  DatePickerOptionalStyleProps,
+  DatePickerRequiredStyleProps,
 } from './date-picker.interfaces';
 import { DialogBox } from '../dialogbox/';
 
 export const StyledDatePicker = styled.div<
-  Omit<IDatePickerRequiredStyleProps, 'status'> & IDatePickerOptionalStyleProps
+  Omit<DatePickerRequiredStyleProps, 'status'> & DatePickerOptionalStyleProps
 >``;
 
 export const StyledDialogBox = styled(DialogBox)`

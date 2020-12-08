@@ -76,7 +76,7 @@ export const DatePicker = ({
   ): void => {
     if (hiddenInputRef.current === undefined) return;
 
-    const value = date + 'T' + `${hour}:${minute}`;
+    const value = `${date}T${hour}:${minute}`;
     hiddenInputRef.current.value = value;
   };
 

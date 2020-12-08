@@ -6,7 +6,6 @@ import {
 } from '../../theming/styled';
 import { NotVoid } from 'lodash';
 
-// eslint-disable-next-line @typescript-eslint/no-empty-interface
 export interface TextInputOptionalStyleProps {}
 
 export interface TextInputRequiredStyleProps {

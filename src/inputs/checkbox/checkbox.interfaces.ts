@@ -1,9 +1,7 @@
 import { TComponentStatus, TComponentType } from '../theming/styled';
 
-// eslint-disable-next-line @typescript-eslint/no-empty-interface
 export interface CheckboxOptionalStyleProps {}
 
-// eslint-disable-next-line @typescript-eslint/no-empty-interface
 export interface CheckboxRequiredStyleProps {
   status: TComponentStatus;
 }
