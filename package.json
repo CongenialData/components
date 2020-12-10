@@ -14,26 +14,30 @@
     "start": "tsdx watch",
     "build": "tsdx build",
     "test": "tsdx test --passWithNoTests",
+    "test:ci": "CI=true tsdx test --passWithNoTests",
     "lint": "tsdx lint",
+    "lint:errors": "tsdx lint --quiet",
+    "lint:fix": "tsdx lint --fix",
+    "check-format": "yarn prettier --list-different",
+    "check-types:watch": "tsc --noEmit --watch",
+    "check-types": "tsc",
+    "format": "yarn prettier --write",
     "prepare": "tsdx build",
+    "prettier": "prettier --ignore-path .gitignore --write \"**/*.+(js|ts|tsx|json|md)\"",
     "size": "size-limit",
     "analyze": "size-limit --why",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "build-storybook": "build-storybook",
+    "validate": "npm-run-all --parallel check-types check-format lint test:ci"
   },
   "peerDependencies": {
     "react": ">=16"
   },
   "husky": {
     "hooks": {
-      "pre-commit": "tsdx lint"
+      "pre-commit": "yarn check-types && lint-staged",
+      "pre-push": "yarn validate"
     }
-  },
-  "prettier": {
-    "printWidth": 80,
-    "semi": true,
-    "singleQuote": true,
-    "trailingComma": "es5"
   },
   "name": "@cdab/components",
   "author": "Congenial Data AB",
@@ -68,11 +72,16 @@
   },
   "dependencies": {
     "@testing-library/react": "^11.2.2",
+    "focus-trap-react": "^8.3.2",
     "lodash": "^4.17.20",
-    "lodash-es": "^4.17.15"
+    "lodash-es": "^4.17.15",
+    "react-resize-aware": "^3.1.0",
+    "react-router-dom": "^5.2.0",
+    "react-spring": "^8.0.27"
   },
   "devDependencies": {
     "@babel/core": "^7.12.9",
+    "@cdab/eslint-config-cdab": "^1.0.0",
     "@fortawesome/fontawesome-svg-core": "^1.2.32",
     "@fortawesome/free-solid-svg-icons": "^5.15.1",
     "@fortawesome/react-fontawesome": "^0.1.13",
@@ -87,12 +96,22 @@
     "@types/lodash": "^4.14.165",
     "@types/react": "^17.0.0",
     "@types/react-dom": "^17.0.0",
-    "@types/styled-components": "^5.1.4",
+    "@types/react-router-dom": "^5.1.6",
+    "@types/styled-components": "^5.1.5",
+    "@typescript-eslint/parser": "~4.9.1",
     "babel-loader": "^8.2.2",
     "date-fns": "^2.16.1",
+    "eslint-config-prettier": "^7.0.0",
+    "eslint-plugin-compat": "3.6.0",
+    "eslint-plugin-jest": "23.8.2",
+    "eslint-plugin-markdown": "1.0.2",
+    "eslint-plugin-prettier": "3.1.3",
+    "eslint-plugin-react": "7.19.0",
+    "eslint-plugin-react-perf": "3.2.3",
     "husky": "^4.3.5",
     "i18next": "^19.8.4",
     "i18next-browser-languagedetector": "^6.0.1",
+    "lint-staged": "^10.5.3",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-i18next": "^11.8.1",

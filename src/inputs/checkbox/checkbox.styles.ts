@@ -1,12 +1,9 @@
-import styled, { css } from 'styled-components/macro';
-import {
-  ICheckboxComponentProps,
-  ICheckboxRequiredStyleProps,
-} from './checkbox.interfaces';
-import { componentAnimation, outline } from '../theming/';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import styled, { css } from 'styled-components/macro'
+import { CheckboxComponentProps, CheckboxRequiredStyleProps } from './checkbox.interfaces'
+import { componentAnimation, outline } from '../../theming/'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
-export const Icon = styled(FontAwesomeIcon)``;
+export const Icon = styled(FontAwesomeIcon)``
 
 export const CheckboxWrapper = styled.label`
   ${({ theme: { Checkbox } }) => css`
@@ -21,7 +18,7 @@ export const CheckboxWrapper = styled.label`
     display: flex;
     flex-direction: row;
   `};
-`;
+`
 
 export const LabelAndCaption = styled.div`
   display: flex;
@@ -35,11 +32,9 @@ export const LabelAndCaption = styled.div`
        * @include nb-rtl(padding-right, nb-theme(checkbox-text-space));
        */
   }
-`;
+`
 
-export const CustomCheckbox = styled.span<
-  ICheckboxComponentProps & ICheckboxRequiredStyleProps
->`
+export const CustomCheckbox = styled.span<CheckboxComponentProps & CheckboxRequiredStyleProps>`
   ${({ theme: { Checkbox }, checked, status }) => {
     return css`
       ${componentAnimation('background-color, border, box-shadow')};
@@ -68,32 +63,30 @@ export const CustomCheckbox = styled.span<
        * Checked
        */
       ${checked &&
-        css`
-          background-color: ${Checkbox.status[status].checkedBackgroundColor};
-          border-color: ${Checkbox.status[status].checkedBorderColor};
+      css`
+        background-color: ${Checkbox.status[status].checkedBackgroundColor};
+        border-color: ${Checkbox.status[status].checkedBorderColor};
 
-          ${Icon} {
-            color: ${Checkbox.status[status]
-              .checkedCheckmarkColor}; /* TODO: Fungerar det här? */
-          }
-        `};
+        ${Icon} {
+          color: ${Checkbox.status[status].checkedCheckmarkColor}; /* TODO: Fungerar det här? */
+        }
+      `};
 
       &:hover {
         background-color: ${Checkbox.status[status].hoverBackgroundColor};
         border-color: ${Checkbox.status[status].hoverBorderColor};
 
         ${checked &&
-          css`
-            background-color: ${Checkbox.status[status]
-              .hoverCheckedBackgroundColor};
-            border-color: ${Checkbox.status[status].hoverCheckedBorderColor};
-          `}
+        css`
+          background-color: ${Checkbox.status[status].hoverCheckedBackgroundColor};
+          border-color: ${Checkbox.status[status].hoverCheckedBorderColor};
+        `}
       }
-    `;
+    `
   }};
-`;
+`
 
-export const Text = styled.span<ICheckboxRequiredStyleProps>`
+export const Text = styled.span<CheckboxRequiredStyleProps>`
   ${({ theme: { Checkbox }, status }) => css`
     ${componentAnimation('color')};
 
@@ -104,7 +97,7 @@ export const Text = styled.span<ICheckboxRequiredStyleProps>`
 
     color: ${Checkbox.status[status].textColor};
   `};
-`;
+`
 
 const Hidden = styled.div`
   position: absolute !important;
@@ -113,24 +106,14 @@ const Hidden = styled.div`
   overflow: hidden;
   clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
   clip: rect(1px, 1px, 1px, 1px);
-`;
+`
 
-export const NativeInput = styled(Hidden.withComponent('input'))<
-  ICheckboxRequiredStyleProps & ICheckboxComponentProps
->`
+export const NativeInput = styled(Hidden.withComponent('input'))<CheckboxRequiredStyleProps & CheckboxComponentProps>`
   ${({ theme: { Checkbox, support }, checked, status }) => css`
-    ${outline(
-      support.OUTLINE_WIDTH,
-      support.OUTLINE_COLOR,
-      Checkbox.focusInsetShadowLength
-    )};
+    ${outline(support.OUTLINE_WIDTH, support.OUTLINE_COLOR, Checkbox.focusInsetShadowLength)};
 
     &:focus:not(:checked) + ${CustomCheckbox} {
-      ${outline(
-        Checkbox.outlineWidth,
-        Checkbox.outlineColor,
-        Checkbox.focusInsetShadowLength
-      )};
+      ${outline(Checkbox.outlineWidth, Checkbox.outlineColor, Checkbox.focusInsetShadowLength)};
     }
 
     &:focus:checked + ${CustomCheckbox} {
@@ -142,11 +125,10 @@ export const NativeInput = styled(Hidden.withComponent('input'))<
       border-color: ${Checkbox.status[status].focusBorderColor};
 
       ${checked &&
-        css`
-          background-color: ${Checkbox.status[status]
-            .focusCheckedBackgroundColor};
-          border-color: ${Checkbox.status[status].focusCheckedBorderColor};
-        `};
+      css`
+        background-color: ${Checkbox.status[status].focusCheckedBackgroundColor};
+        border-color: ${Checkbox.status[status].focusCheckedBorderColor};
+      `};
     }
 
     &:enabled:active + ${CustomCheckbox} {
@@ -154,11 +136,10 @@ export const NativeInput = styled(Hidden.withComponent('input'))<
       border-color: ${Checkbox.status[status].activeBorderColor};
 
       ${checked &&
-        css`
-          background-color: ${Checkbox.status[status]
-            .activeCheckedBackgroundColor};
-          border-color: ${Checkbox.status[status].activeCheckedBorderColor};
-        `};
+      css`
+        background-color: ${Checkbox.status[status].activeCheckedBackgroundColor};
+        border-color: ${Checkbox.status[status].activeCheckedBorderColor};
+      `};
     }
 
     &:disabled {
@@ -176,10 +157,9 @@ export const NativeInput = styled(Hidden.withComponent('input'))<
       }
 
       &:checked + ${CustomCheckbox} {
-        background-color: ${Checkbox.status[status]
-          .disabledCheckedBackgroundColor};
+        background-color: ${Checkbox.status[status].disabledCheckedBackgroundColor};
         border-color: ${Checkbox.status[status].disabledCheckedBorderColor};
       }
     }
   `};
-`;
+`

@@ -1,2 +1,2 @@
-export * from './page';
-export { PageContent } from './page.styles';
+export * from './page'
+export { PageContent } from './page.styles'

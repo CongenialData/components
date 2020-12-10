@@ -1,0 +1,8 @@
+{
+  "*.+(js,ts,tsx,json,md)": [
+    "lint"
+  ],
+  "*.+(js|ts|tsx|json|md)": [
+    "prettier",
+  ]
+}

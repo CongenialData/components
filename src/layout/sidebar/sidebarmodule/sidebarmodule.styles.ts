@@ -1,6 +1,6 @@
-import styled, { css } from 'styled-components/macro';
-import { Card } from '../card';
-import { ISidebarModuleStyleProps } from './sidebarmodule.interfaces';
+import styled, { css } from 'styled-components/macro'
+import { Card } from '../../../card'
+import { SidebarModuleStyleProps } from './sidebarmodule.interfaces'
 
 export const StyledSidebarModule = styled(Card)`
   ${({ theme: { SidebarModule } }) => css`
@@ -11,7 +11,7 @@ export const StyledSidebarModule = styled(Card)`
       padding: 0;
     }
   `};
-`;
+`
 
 export const StyledHeader = styled.div`
   ${({ theme: { Card, SidebarModule } }) => css`
@@ -22,7 +22,7 @@ export const StyledHeader = styled.div`
     border-top-left-radius: ${Card.borderRadius};
     border-top-right-radius: ${Card.borderRadius};
   `};
-`;
+`
 
 export const Title = styled.h3`
   ${({ theme: { SidebarModule } }) => css`
@@ -35,13 +35,13 @@ export const Title = styled.h3`
       padding: 0;
     }
   `};
-`;
+`
 
-export const Content = styled.div<ISidebarModuleStyleProps>`
+export const Content = styled.div<SidebarModuleStyleProps>`
   ${({ contentPadding, theme: { SidebarModule } }) => css`
     position: relative;
     display: flex;
     padding: ${contentPadding === 'none' ? '0' : SidebarModule.content.padding};
     flex-direction: column;
   `};
-`;
+`

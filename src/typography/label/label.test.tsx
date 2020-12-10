@@ -1,10 +1,10 @@
-import * as React from 'react';
+import * as React from 'react'
 
-import { Label } from '.';
-import { createTheme, render } from '../../theming';
+import { Label } from '.'
+import { createTheme, render } from '../../theming'
 
-const theme = createTheme([Label]);
+const theme = createTheme([Label])
 
 test('renders without crashing', (): void => {
-  render(<Label>I am a Label</Label>, { theme });
-});
+  render(<Label>I am a Label</Label>, { theme })
+})

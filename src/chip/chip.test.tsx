@@ -1,18 +1,18 @@
-import * as React from 'react';
-import { createTheme, render } from '../theming';
+import * as React from 'react'
+import { createTheme, render } from '../theming'
 
-import { Chip } from '.';
+import { Chip } from '.'
 
-const theme = createTheme([Chip]);
+const theme = createTheme([Chip])
 
 test('renders without crashing', (): void => {
-  render(<Chip text="Title" />, { theme });
-});
+  render(<Chip text="Title" />, { theme })
+})
 
 test('has a text', (): void => {
-  const { getByText } = render(<Chip text="My text" />, { theme });
+  const { getByText } = render(<Chip text="My text" />, { theme })
 
-  const chip = getByText('My text') as HTMLDivElement;
+  const chip = getByText('My text') as HTMLDivElement
 
-  expect(chip).toHaveTextContent('My text');
-});
+  expect(chip).toHaveTextContent('My text')
+})

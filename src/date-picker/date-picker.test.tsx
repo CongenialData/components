@@ -1,25 +1,25 @@
-import * as React from 'react';
-import { Card } from '../card';
+import * as React from 'react'
+import { Card } from '../card'
 
-import { createTheme, render } from '../theming';
+import { createTheme, render } from '../theming'
 
-const theme = createTheme([Card]);
+const theme = createTheme([Card])
 
 test('renders without crashing', (): void => {
-  const { container } = render(<Card />, { theme });
+  const { container } = render(<Card />, { theme })
 
-  expect(container).toBeDefined();
-});
+  expect(container).toBeDefined()
+})
 
 test('prints given text', (): void => {
   const { container } = render(
     <Card>
       <p>I am a card</p>
     </Card>,
-    { theme }
-  );
+    { theme },
+  )
 
-  const elem = container.firstChild;
+  const elem = container.firstChild
 
-  expect(elem).toHaveTextContent('I am a card');
-});
+  expect(elem).toHaveTextContent('I am a card')
+})

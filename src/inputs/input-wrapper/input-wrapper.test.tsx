@@ -1,19 +1,19 @@
-import * as React from 'react';
+import * as React from 'react'
 
-import { InputWrapper } from '.';
-import { TextInput } from '../text-input';
-import { Label } from '../../typography/label';
-import { createTheme, render } from '../theming';
+import { InputWrapper } from '.'
+import { TextInput } from '../text-input'
+import { Label } from '../../typography/label'
+import { createTheme, render } from '../../theming'
 
-const theme = createTheme([InputWrapper, Label, TextInput]);
+const theme = createTheme([InputWrapper, Label, TextInput])
 
 test('renders without crashing', (): void => {
   const { container } = render(
     <InputWrapper>
       <TextInput label="Hello" />
     </InputWrapper>,
-    { theme }
-  );
+    { theme },
+  )
 
-  expect(container).toBeDefined();
-});
+  expect(container).toBeDefined()
+})

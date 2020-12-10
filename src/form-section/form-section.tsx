@@ -1,12 +1,12 @@
-import React, { PropsWithChildren } from 'react';
+import React, { PropsWithChildren } from 'react'
 
 /* Import components here */
-import { Heading } from '../typography/heading';
-import { Body, Header, StyledFormSection } from './form-section.styles';
+import { Heading } from '../typography/heading'
+import { Body, Header, StyledFormSection } from './form-section.styles'
 
 /* Import interfaces here */
-import { IFormSectionProps } from './form-section.interfaces';
-import { formSectionTheme } from './form-section.theme';
+import { FormSectionProps } from './form-section.interfaces'
+import { formSectionTheme } from './form-section.theme'
 
 export const FormSection = ({
   border = false,
@@ -14,7 +14,7 @@ export const FormSection = ({
   title,
   children,
   className,
-}: PropsWithChildren<IFormSectionProps>): JSX.Element => {
+}: PropsWithChildren<FormSectionProps>): JSX.Element => {
   return (
     <StyledFormSection border={border} className={className}>
       {(icon || title) && (
@@ -25,7 +25,7 @@ export const FormSection = ({
       )}
       <Body>{children}</Body>
     </StyledFormSection>
-  );
-};
+  )
+}
 
-FormSection.defaultTheme = formSectionTheme;
+FormSection.defaultTheme = formSectionTheme

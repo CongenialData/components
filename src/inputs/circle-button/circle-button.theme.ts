@@ -1,4 +1,4 @@
-import { TCommonTheme, TThemeFromFn, tuple } from '../theming';
+import { TCommonTheme, TThemeFromFn, tuple } from '../../theming'
 
 export const circleButtonTheme = (theme: TCommonTheme) =>
   tuple([
@@ -57,6 +57,6 @@ export const circleButtonTheme = (theme: TCommonTheme) =>
       },
       transition: 'background-color 0.1s cubic-bezier(0, 0, 0.2, 1)',
     },
-  ]);
+  ])
 
-export type CircleButtonTheme = TThemeFromFn<typeof circleButtonTheme>;
+export type CircleButtonTheme = TThemeFromFn<typeof circleButtonTheme>

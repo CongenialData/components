@@ -1,13 +1,12 @@
-import { IconDefinition } from '@fortawesome/pro-duotone-svg-icons';
+import { IconDefinition } from '@fortawesome/free-solid-svg-icons'
 
 export interface ToolbarItemStyleProps {
-  flex?: number | string;
+  flex?: number | string
 }
 
 export interface ToolbarItemComponentProps {
-  icon?: IconDefinition;
+  children: React.ReactChild | React.ReactChild[]
+  icon?: IconDefinition
 }
 
-export interface ToolbarItemProps
-  extends ToolbarItemComponentProps,
-    ToolbarItemStyleProps {}
+export interface ToolbarItemProps extends ToolbarItemComponentProps, ToolbarItemStyleProps {}

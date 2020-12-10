@@ -1,11 +1,6 @@
-import { TCommonTheme, TThemeFromFn, tuple } from '../theming';
+import { TCommonTheme, TThemeFromFn, tuple } from '../../theming'
 
-export const textInputTheme = ({
-  baseColors,
-  colors,
-  support,
-  typography,
-}: TCommonTheme) =>
+export const textInputTheme = ({ baseColors, colors, support, typography }: TCommonTheme) =>
   tuple([
     'TextInput',
     {
@@ -25,7 +20,7 @@ export const textInputTheme = ({
       /** Shape */
       shape: {
         rectangle: support.BORDER_RADIUS,
-        semiRound: '0.75rem',
+        semiround: '0.75rem',
         round: '1.5rem',
       },
 
@@ -185,6 +180,6 @@ export const textInputTheme = ({
         },
       },
     },
-  ]);
+  ])
 
-export type TextInputTheme = TThemeFromFn<typeof textInputTheme>;
+export type TextInputTheme = TThemeFromFn<typeof textInputTheme>

@@ -1,5 +1,5 @@
-import { css } from 'styled-components/macro';
-import { TComponentStatus } from '../../theming';
+import { css } from 'styled-components/macro'
+import { TComponentStatus } from '../../theming'
 
 export const OutlineButtonStyle = (status: TComponentStatus) => css`
   ${({
@@ -34,6 +34,6 @@ export const OutlineButtonStyle = (status: TComponentStatus) => css`
         border-color: ${outline[status].disabledBorderColor};
         color: ${outline[status].disabledTextColor};
       }
-    `;
+    `
   }};
-`;
+`

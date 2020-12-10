@@ -1,9 +1,9 @@
-import * as React from 'react';
+import * as React from 'react'
 
-import { StyledFlex } from './flex.styles';
-import { IFlexProps } from './flex.interfaces';
+import { StyledFlex } from './flex.styles'
+import { FlexProps } from './flex.interfaces'
 
-export const Flex = (props: IFlexProps): JSX.Element => {
+export const Flex = (props: FlexProps): JSX.Element => {
   return (
     <StyledFlex
       alignItems={props.alignItems}
@@ -24,5 +24,5 @@ export const Flex = (props: IFlexProps): JSX.Element => {
     >
       {props.children || ''}
     </StyledFlex>
-  );
-};
+  )
+}

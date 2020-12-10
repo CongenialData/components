@@ -1,11 +1,6 @@
-import { TCommonTheme, TThemeFromFn, tuple } from '../theming';
+import { TCommonTheme, TThemeFromFn, tuple } from '../theming'
 
-export const cardTheme = ({
-  baseColors,
-  colors,
-  typography,
-  support,
-}: TCommonTheme) =>
+export const cardTheme = ({ baseColors, colors, typography, support }: TCommonTheme) =>
   tuple([
     'Card',
     {
@@ -78,6 +73,6 @@ export const cardTheme = ({
         },
       },
     },
-  ]);
+  ])
 
-export type CardTheme = TThemeFromFn<typeof cardTheme>;
+export type CardTheme = TThemeFromFn<typeof cardTheme>

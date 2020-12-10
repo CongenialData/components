@@ -1,21 +1,16 @@
-import React, { memo } from 'react';
-import { faTachometerAlt } from '@fortawesome/free-solid-svg-icons';
+import React, { memo } from 'react'
+import { faTachometerAlt } from '@fortawesome/free-solid-svg-icons'
 
-import { NavItem } from '../../navbar/navitem';
-import { NavBar } from '../../navbar/navbar';
-import { Toolbar } from '../toolbar';
-import { IThemedComponent } from '../../theming';
+import { NavItem } from '../../navbar/navitem'
+import { NavBar } from '../../navbar/navbar'
+import { Toolbar } from '../toolbar'
+import { ThemedComponent } from '../../theming'
 
-import {
-  PageBody,
-  PageContainer,
-  PageContentWrapper,
-  StyledPage,
-} from './page.styles';
-import { pageTheme } from './page.theme';
-import { PageProps } from './page.interfaces';
+import { PageBody, PageContainer, PageContentWrapper, StyledPage } from './page.styles'
+import { pageTheme } from './page.theme'
+import { PageProps } from './page.interfaces'
 
-export const Page: React.FC<PageProps> & IThemedComponent = memo(
+export const Page: React.FC<PageProps> & ThemedComponent = memo(
   ({
     disableToolbar = false,
     disableMenu = false,
@@ -25,7 +20,7 @@ export const Page: React.FC<PageProps> & IThemedComponent = memo(
     sidebar,
     children,
     ...props
-  }): JSX.Element => {
+  }: PageProps): JSX.Element => {
     return (
       <StyledPage>
         <PageContainer>
@@ -47,9 +42,9 @@ export const Page: React.FC<PageProps> & IThemedComponent = memo(
           </PageBody>
         </PageContainer>
       </StyledPage>
-    );
-  }
-);
+    )
+  },
+)
 
-Page.defaultTheme = pageTheme;
-Page.displayName = 'Page';
+Page.defaultTheme = pageTheme
+Page.displayName = 'Page'

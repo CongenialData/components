@@ -1,17 +1,16 @@
-import styled, { css } from 'styled-components/macro';
+import styled, { css } from 'styled-components/macro'
 
-import { Card } from '../card';
-import { CircleButton } from '../inputs/circle-button';
-import { Grid } from '../layout/grid';
-import { componentAnimation } from '../theming/mixins';
-import { StyledButton } from '../inputs/button/button.styles';
+import { Card } from '../card'
+import { CircleButton } from '../inputs/circle-button'
+import { Grid } from '../layout/grid'
+import { componentAnimation } from '../theming/mixins'
+import { StyledButton } from '../inputs/button/button.styles'
 
 export const StyledCard = styled(Card)`
   ${({ theme: { Calendar } }) => css`
     background-color: ${Calendar.backgroundColor};
 
-    border: ${Calendar.borderWidth} ${Calendar.borderStyle}
-      ${Calendar.borderColor};
+    border: ${Calendar.borderWidth} ${Calendar.borderStyle} ${Calendar.borderColor};
     border-radius: ${Calendar.borderRadius};
 
     box-shadow: none;
@@ -22,7 +21,7 @@ export const StyledCard = styled(Card)`
 
     overflow: hidden;
   `};
-`;
+`
 
 export const Navigation = styled.div`
   ${({ theme: { Calendar } }) => css`
@@ -38,7 +37,7 @@ export const Navigation = styled.div`
     font-weight: ${Calendar.navigationTitleTextFontWeight};
     line-height: ${Calendar.navigationTitleTextLineHeight};
   `};
-`;
+`
 
 export const DateMonthWrapper = styled.div`
   ${({ theme: { Calendar } }) => css`
@@ -61,7 +60,7 @@ export const DateMonthWrapper = styled.div`
     font-weight: ${Calendar.navigationTitleTextFontWeight};
     line-height: ${Calendar.navigationTitleTextLineHeight};
   `};
-`;
+`
 
 export const PageableNavigation = styled.div`
   ${({ theme: { Calendar } }) => css`
@@ -73,9 +72,9 @@ export const PageableNavigation = styled.div`
       line-height: ${Calendar.navigationTitleTextLineHeight};
     }
   `};
-`;
+`
 
-export const Body = styled.div``;
+export const Body = styled.div``
 
 /** Grid of daynames shown above the days, like Mon, Tue, Wed etc */
 export const DayNamesGrid = styled(Grid)`
@@ -88,12 +87,10 @@ export const DayNamesGrid = styled(Grid)`
 
     text-transform: capitalize;
 
-    border-top: ${Calendar.weekdayDividerWidth} solid
-      ${Calendar.weekdayDividerColor};
-    border-bottom: ${Calendar.weekdayDividerWidth} solid
-      ${Calendar.weekdayDividerColor};
+    border-top: ${Calendar.weekdayDividerWidth} solid ${Calendar.weekdayDividerColor};
+    border-bottom: ${Calendar.weekdayDividerWidth} solid ${Calendar.weekdayDividerColor};
   `};
-`;
+`
 
 /** A day rendered in DayNamesGrid */
 export const StyledDayName = styled.div<{ holiday?: boolean }>`
@@ -111,15 +108,15 @@ export const StyledDayName = styled.div<{ holiday?: boolean }>`
     line-height: ${Calendar.weekdayTextLineHeight};
 
     ${holiday &&
-      css`
-        color: ${Calendar.weekdayHolidayTextColor};
-      `};
+    css`
+      color: ${Calendar.weekdayHolidayTextColor};
+    `};
   `};
-`;
+`
 
 export const Picker = styled.div`
   display: block;
-`;
+`
 
 export const DayPicker = styled(Grid)`
   ${({ theme: { Calendar } }) => css`
@@ -128,7 +125,7 @@ export const DayPicker = styled(Grid)`
     padding-right: ${Calendar.pickerPaddingEnd};
     padding-left: ${Calendar.pickerPaddingStart};
   `};
-`;
+`
 
 export const CellContent = styled.div`
   ${({ theme: { Calendar } }) => css`
@@ -142,14 +139,14 @@ export const CellContent = styled.div`
 
     ${componentAnimation('background-color, border-color, color')};
   `};
-`;
+`
 
 /** A day rendered in the calendar */
 export const DayCell = styled.div<{
-  size?: 'large';
-  isSelected: boolean;
-  isToday: boolean;
-  isCurrentMonth: boolean;
+  size?: 'large'
+  isSelected: boolean
+  isToday: boolean
+  isCurrentMonth: boolean
 }>`
   ${({ isCurrentMonth, isSelected, isToday, size, theme: { Calendar } }) => css`
     width: ${Calendar.dayCellWidth};
@@ -169,15 +166,15 @@ export const DayCell = styled.div<{
     cursor: pointer;
 
     ${size === 'large' &&
-      css`
-        width: ${Calendar.dayCellLargeWidth};
-        height: ${Calendar.dayCellLargeHeight};
-      `};
+    css`
+      width: ${Calendar.dayCellLargeWidth};
+      height: ${Calendar.dayCellLargeHeight};
+    `};
 
     ${!isCurrentMonth &&
-      css`
-        color: ${Calendar.cellInactiveTextColor};
-      `};
+    css`
+      color: ${Calendar.cellInactiveTextColor};
+    `};
 
     // &:not(.disabled):not(.empty) {
     &:hover ${CellContent} {
@@ -199,73 +196,73 @@ export const DayCell = styled.div<{
     }
 
     ${isToday &&
-      css`
-        ${CellContent} {
-          background-color: ${Calendar.cellTodayBackgroundColor};
-          border: 1px solid ${Calendar.cellTodayBorderColor};
-          color: ${Calendar.cellTodayTextColor};
-          font-size: ${Calendar.cellTodayTextFontSize};
-          font-weight: ${Calendar.cellTodayTextFontWeight};
-          line-height: ${Calendar.cellTodayTextLineHeight};
+    css`
+      ${CellContent} {
+        background-color: ${Calendar.cellTodayBackgroundColor};
+        border: 1px solid ${Calendar.cellTodayBorderColor};
+        color: ${Calendar.cellTodayTextColor};
+        font-size: ${Calendar.cellTodayTextFontSize};
+        font-weight: ${Calendar.cellTodayTextFontWeight};
+        line-height: ${Calendar.cellTodayTextLineHeight};
 
-          &:hover {
-            background-color: ${Calendar.cellTodayHoverBackgroundColor};
-            border-color: ${Calendar.cellTodayHoverBorderColor};
-          }
-
-          &:active {
-            background-color: ${Calendar.cellTodayActiveBackgroundColor};
-            border-color: ${Calendar.cellTodayActiveBorderColor};
-          }
+        &:hover {
+          background-color: ${Calendar.cellTodayHoverBackgroundColor};
+          border-color: ${Calendar.cellTodayHoverBorderColor};
         }
-      `};
+
+        &:active {
+          background-color: ${Calendar.cellTodayActiveBackgroundColor};
+          border-color: ${Calendar.cellTodayActiveBorderColor};
+        }
+      }
+    `};
 
     ${isSelected &&
-      css`
-        ${CellContent} {
-          background-color: ${Calendar.cellSelectedBackgroundColor};
-          border-color: ${Calendar.cellSelectedBorderColor};
-          color: ${Calendar.cellSelectedTextColor};
-          font-size: ${Calendar.cellSelectedTextFontSize};
-          font-weight: ${Calendar.cellSelectedTextFontWeight};
-          line-height: ${Calendar.cellSelectedTextLineHeight};
+    css`
+      ${CellContent} {
+        background-color: ${Calendar.cellSelectedBackgroundColor};
+        border-color: ${Calendar.cellSelectedBorderColor};
+        color: ${Calendar.cellSelectedTextColor};
+        font-size: ${Calendar.cellSelectedTextFontSize};
+        font-weight: ${Calendar.cellSelectedTextFontWeight};
+        line-height: ${Calendar.cellSelectedTextLineHeight};
 
-          &:hover {
-            background-color: ${Calendar.cellSelectedHoverBackgroundColor};
-            border-color: ${Calendar.cellSelectedHoverBorderColor};
-          }
-
-          &:active {
-            background-color: ${Calendar.cellSelectedActiveBackgroundColor};
-            border-color: ${Calendar.cellSelectedActiveBorderColor};
-          }
+        &:hover {
+          background-color: ${Calendar.cellSelectedHoverBackgroundColor};
+          border-color: ${Calendar.cellSelectedHoverBorderColor};
         }
-      `};
+
+        &:active {
+          background-color: ${Calendar.cellSelectedActiveBackgroundColor};
+          border-color: ${Calendar.cellSelectedActiveBorderColor};
+        }
+      }
+    `};
 
     ${isToday &&
-      isSelected &&
-      css`
-        background-color: ${Calendar.cellSelectedBackgroundColor};
-        border-radius: ${Calendar.borderRadius};
+    isSelected &&
+    css`
+      background-color: ${Calendar.cellSelectedBackgroundColor};
+      border-radius: ${Calendar.borderRadius};
 
-        ${CellContent} {
-          background-color: ${Calendar.cellTodaySelectedBackgroundColor};
-          border-color: ${Calendar.cellTodaySelectedBorderColor};
-          color: ${Calendar.cellTodaySelectedTextColor};
+      ${CellContent} {
+        background-color: ${Calendar.cellTodaySelectedBackgroundColor};
+        border-color: ${Calendar.cellTodaySelectedBorderColor};
+        color: ${Calendar.cellTodaySelectedTextColor};
 
-          &:hover {
-            background-color: ${Calendar.cellTodaySelectedHoverBackgroundColor};
-            border-color: ${Calendar.cellTodaySelectedHoverBorderColor};
-          }
-
-          &:focus {
-            background-color: ${Calendar.cellTodaySelectedActiveBackgroundColor};
-            border-color: ${Calendar.cellTodaySelectedActiveBorderColor};
-          }
+        &:hover {
+          background-color: ${Calendar.cellTodaySelectedHoverBackgroundColor};
+          border-color: ${Calendar.cellTodaySelectedHoverBorderColor};
         }
-      `};
+
+        &:focus {
+          background-color: ${Calendar.cellTodaySelectedActiveBackgroundColor};
+          border-color: ${Calendar.cellTodaySelectedActiveBorderColor};
+        }
+      }
+    `};
   `};
-`;
+`
 
 export const MonthButton = styled(CircleButton)`
   background: ${({ theme }): string => theme.colors.BACKGROUND_BASIC_COLOR_2};
@@ -274,4 +271,4 @@ export const MonthButton = styled(CircleButton)`
   &[disabled] {
     background: ${({ theme }): string => theme.Calendar.borderColor};
   }
-`;
+`

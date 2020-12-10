@@ -1,5 +1,5 @@
-import styled, { css } from 'styled-components/macro';
-import { SkeletonStyleProps } from './skeleton.interfaces';
+import styled, { css } from 'styled-components/macro'
+import { SkeletonStyleProps } from './skeleton.interfaces'
 
 const SkeletonPulse = styled.div<SkeletonStyleProps>`
   display: inline-block;
@@ -22,15 +22,21 @@ const SkeletonPulse = styled.div<SkeletonStyleProps>`
       background-position: -135% 0%;
     }
   }
-`;
+`
 
 export const SkeletonLine = styled(SkeletonPulse)<SkeletonStyleProps>`
   width: ${({ theme, width }) =>
     width === undefined
       ? theme.Skeleton.width.default
-      : theme.Skeleton.width[width] === undefined
+      : // TODO: Remove eslint disable and correct types
+      // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+      // @ts-ignore
+      theme.Skeleton.width[width] === undefined
       ? width
-      : theme.Skeleton.width[width]};
+      : // TODO: Remove eslint disable and correct types
+        // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+        // @ts-ignore
+        theme.Skeleton.width[width]};
 
   border-radius: 5px;
   display: flex;
@@ -38,11 +44,17 @@ export const SkeletonLine = styled(SkeletonPulse)<SkeletonStyleProps>`
   height: ${({ height, theme }) =>
     height === undefined
       ? theme.Skeleton.height.default
-      : theme.Skeleton.height[height] === undefined
+      : // TODO: Remove eslint disable and correct types
+      // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+      // @ts-ignore
+      theme.Skeleton.height[height] === undefined
       ? height
-      : theme.Skeleton.height[height]};
+      : // TODO: Remove eslint disable and correct types
+        // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+        // @ts-ignore
+        theme.Skeleton.height[height]};
 
   &::before {
     content: '\\00a0';
   }
-`;
+`

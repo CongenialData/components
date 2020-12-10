@@ -1,5 +1,7 @@
-import styled from 'styled-components/macro';
-import { justify as JUSTIFY, Justify } from './dialogbox.interfaces';
+import styled from 'styled-components/macro'
+
+import { justify as JUSTIFY, Justify } from './dialogbox.interfaces'
+
 export const StyledDialogBox = styled.div`
   position: fixed;
 
@@ -25,7 +27,7 @@ export const StyledDialogBox = styled.div`
   @media (min-width: ${({ theme }): string => theme.breakpoints.mdContainer}) {
     width: 34rem;
   }
-`;
+`
 
 export const Overlay = styled.div`
   position: fixed;
@@ -35,7 +37,7 @@ export const Overlay = styled.div`
   height: 100vh;
   background: ${({ theme }) => theme.DialogBox.overlayColor};
   z-index: 2;
-`;
+`
 
 export const TopSection = styled.div`
   width: 100%;
@@ -43,7 +45,7 @@ export const TopSection = styled.div`
   flex-direction: row-reverse;
   justify-content: space-between;
   align-items: flex-start;
-`;
+`
 
 export const StyledCloseButton = styled.button`
   padding: 0.5em;
@@ -53,7 +55,7 @@ export const StyledCloseButton = styled.button`
   box-shadow: none;
   outline-style: none;
   cursor: pointer;
-`;
+`
 
 export const CloseIcon = styled.svg`
   width: 25px;
@@ -62,7 +64,7 @@ export const CloseIcon = styled.svg`
   stroke: black;
   stroke-linecap: round;
   stroke-width: 2;
-`;
+`
 
 export const Close = styled.span`
   border: 0 !important;
@@ -74,7 +76,7 @@ export const Close = styled.span`
   position: absolute !important;
   width: 1px !important;
   white-space: nowrap !important;
-`;
+`
 
 export const Header = styled.h1`
   margin: 0;
@@ -83,7 +85,7 @@ export const Header = styled.h1`
 
   font-weight: 600;
   font-size: 1.25rem;
-`;
+`
 
 export const Body = styled.div`
   display: flex;
@@ -93,7 +95,7 @@ export const Body = styled.div`
   margin-top: 1rem;
   padding: 0 1rem;
   padding-bottom: 1rem;
-`;
+`
 
 // flexMap is used in Footer to justify the content according to TJustify
 const flexMap = (x?: Justify) =>
@@ -103,11 +105,11 @@ const flexMap = (x?: Justify) =>
         [JUSTIFY.right]: 'flex-end',
         [JUSTIFY.evenly]: 'space-around',
       }[x]
-    : 'space-between';
+    : 'space-between'
 
 export const Footer = styled.div<{ justify?: Justify }>`
   display: flex;
   justify-content: ${({ justify }) => flexMap(justify)};
   flex-direction: row;
   margin-top: 1rem;
-`;
+`

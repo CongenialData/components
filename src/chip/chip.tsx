@@ -1,12 +1,12 @@
-import * as React from 'react';
+import * as React from 'react'
 
 /* Import components here */
-import { faTimesCircle } from '@fortawesome/free-solid-svg-icons';
-import { Icon, RemoveIcon, StyledChip, Text } from './chip.styles';
+import { faTimesCircle } from '@fortawesome/free-solid-svg-icons'
+import { Icon, RemoveIcon, StyledChip, Text } from './chip.styles'
 
 /* Import interfaces here */
-import { IChipProps } from './chip.interfaces';
-import { chipTheme } from './chip.theme';
+import { ChipProps } from './chip.interfaces'
+import { chipTheme } from './chip.theme'
 
 /* Import utilities here */
 
@@ -20,7 +20,7 @@ export const Chip = ({
   maxWidth,
   onClick,
   ...restProps
-}: IChipProps): JSX.Element => {
+}: ChipProps): JSX.Element => {
   return (
     // FIXME: kolla i Storybook på Chip. Det finns inte en bra default height
     <StyledChip
@@ -34,7 +34,7 @@ export const Chip = ({
       <Text>{text}</Text>
       {showRemove && <RemoveIcon icon={faTimesCircle} size="2x" />}
     </StyledChip>
-  );
-};
+  )
+}
 
-Chip.defaultTheme = chipTheme;
+Chip.defaultTheme = chipTheme

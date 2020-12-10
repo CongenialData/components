@@ -1,15 +1,15 @@
-import styled, { css } from 'styled-components/macro';
+import styled, { css } from 'styled-components/macro'
 
-import { componentAnimation } from '../../theming/mixins';
+import { componentAnimation } from '../../theming/mixins'
 
-import { ITextInputRequiredStyleProps } from './text-input.interfaces';
+import { TextInputRequiredStyleProps } from './text-input.interfaces'
 
 export const InputWrapper = styled.div`
   display: flex;
   flex-direction: column;
-`;
+`
 
-export const StyledInput = styled.input<ITextInputRequiredStyleProps>`
+export const StyledInput = styled.input<TextInputRequiredStyleProps>`
   ${({ fieldSize, fullWidth, status, shape, theme: { TextInput } }) => css`
     ${componentAnimation('border, background-color, color, box-shadow')};
 
@@ -69,4 +69,4 @@ export const StyledInput = styled.input<ITextInputRequiredStyleProps>`
       }
     }
   `};
-`;
+`

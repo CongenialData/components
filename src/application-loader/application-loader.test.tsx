@@ -1,23 +1,23 @@
-import * as React from 'react';
+import * as React from 'react'
 
-import { render } from '@testing-library/react';
-import { ThemeProvider } from 'styled-components/macro';
+import { render } from '@testing-library/react'
+import { ThemeProvider } from 'styled-components/macro'
 
-import { ApplicationLoader } from './application-loader';
-import { Page } from '../layout/page';
-import { NavBar } from '../navbar/navbar';
-import { Heading } from '../typography/heading';
+import { ApplicationLoader } from './application-loader'
+import { Page } from '../layout/page'
+import { NavBar } from '../navbar/navbar'
+import { Heading } from '../typography/heading'
 
-import { createTheme } from '../theming';
+import { createTheme } from '../theming'
 
-const theme = createTheme([Heading, NavBar, Page]);
+const theme = createTheme([Heading, NavBar, Page])
 
 test('renders without crashing', (): void => {
   const { container } = render(
     <ThemeProvider theme={theme}>
       <ApplicationLoader />
-    </ThemeProvider>
-  );
+    </ThemeProvider>,
+  )
 
-  expect(container).toBeDefined();
-});
+  expect(container).toBeDefined()
+})

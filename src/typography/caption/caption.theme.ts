@@ -1,4 +1,4 @@
-import { TCommonTheme, TThemeFromFn, tuple } from '../../theming';
+import { TCommonTheme, TThemeFromFn, tuple } from '../../theming'
 
 export const captionTheme = ({ colors, typography }: TCommonTheme) =>
   tuple([
@@ -47,6 +47,6 @@ export const captionTheme = ({ colors, typography }: TCommonTheme) =>
         },
       },
     },
-  ]);
+  ])
 
-export type CaptionTheme = TThemeFromFn<typeof captionTheme>;
+export type CaptionTheme = TThemeFromFn<typeof captionTheme>

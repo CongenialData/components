@@ -1,21 +1,21 @@
-import * as React from 'react';
+import * as React from 'react'
 
-import { navitemTheme } from './navitem.theme';
-import { IconWrapper, Label, StyledNavItem } from './navitem.styles';
+import { navitemTheme } from './navitem.theme'
+import { IconWrapper, Label, StyledNavItem } from './navitem.styles'
 
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { IconDefinition } from '@fortawesome/pro-duotone-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { IconDefinition } from '@fortawesome/free-solid-svg-icons'
 
 interface INavItemProps {
-  icon: IconDefinition;
-  to: string;
-  exact?: boolean;
+  icon: IconDefinition
+  to: string
+  exact?: boolean
   /** Text to be displayed next to the icon */
-  label: string;
+  label: string
 }
 
 export const NavItem = (props: INavItemProps): JSX.Element => {
-  const { icon, to, exact, label } = props;
+  const { icon, to, exact, label } = props
 
   return (
     <StyledNavItem exact={exact === undefined ? true : exact} to={to}>
@@ -24,7 +24,7 @@ export const NavItem = (props: INavItemProps): JSX.Element => {
       </IconWrapper>
       <Label>{label}</Label>
     </StyledNavItem>
-  );
-};
+  )
+}
 
-NavItem.defaultTheme = navitemTheme;
+NavItem.defaultTheme = navitemTheme

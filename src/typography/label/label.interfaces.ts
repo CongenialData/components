@@ -1,7 +1,7 @@
 export interface StyledLabelProps {
-  htmlFor?: string;
+  htmlFor?: string
 }
 
 export interface LabelProps extends StyledLabelProps {
-  children?: React.ReactChild;
+  children?: React.ReactChild
 }

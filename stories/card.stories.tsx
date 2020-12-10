@@ -1,5 +1,5 @@
 import React from 'react'
-import { Meta, Story } from '@storybook/react';
+import { Meta, Story } from '@storybook/react'
 // import { jsxDecorator } from 'storybook-addon-jsx'
 // import { ThemeProvider } from 'styled-components/macro'
 // import centered from '@storybook/addon-centered/react'
@@ -20,18 +20,18 @@ const meta: Meta = {
         type: 'text',
       },
     },
-  }
-};
+  },
+}
 
-export default meta;
+export default meta
 
-const Template: Story<ICardProps> = args => <Card {...args} />;
+const Template: Story<ICardProps> = args => <Card {...args} />
 
 // By passing using the Args format for exported stories, you can control the props for a component for reuse in a test
 // https://storybook.js.org/docs/react/workflows/unit-testing
-export const Default = Template.bind({});
+export const Default = Template.bind({})
 
-Default.args = {};
+Default.args = {}
 
 // export default {
 //   title: 'Card',

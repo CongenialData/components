@@ -1,12 +1,12 @@
-import { TThemeFromFn, tuple } from '../theming';
+import { TThemeFromFn, tuple } from '../theming'
 
 export const chipTheme = () =>
   tuple([
     'Chip',
     {
-      height: '2rem', //'32px',
+      height: '2rem', // '32px',
       backgroundColor: '#0000001f',
-      borderRadius: '1rem', //'16px',
+      borderRadius: '1rem', // '16px',
       padding: '0.5rem', // '8px',
       margin: '0 0.5rem 0 0',
       hover: {
@@ -23,6 +23,6 @@ export const chipTheme = () =>
         transform: 'none',
       },
     },
-  ]);
+  ])
 
-export type ChipTheme = TThemeFromFn<typeof chipTheme>;
+export type ChipTheme = TThemeFromFn<typeof chipTheme>

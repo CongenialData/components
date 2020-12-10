@@ -1,3 +1,3 @@
-export interface INavBarProps {
-  children?: JSX.Element | JSX.Element[];
+export interface NavBarProps {
+  children?: React.ReactNode
 }

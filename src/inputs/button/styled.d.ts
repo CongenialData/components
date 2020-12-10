@@ -1,7 +1,7 @@
-import { ButtonTheme } from './button.theme';
+import { ButtonTheme } from './button.theme'
 
 declare module 'styled-components' {
   export interface DefaultTheme {
-    Button: ButtonTheme;
+    Button: ButtonTheme
   }
 }

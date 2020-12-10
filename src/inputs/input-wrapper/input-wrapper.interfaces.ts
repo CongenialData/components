@@ -1,4 +1,4 @@
-import { TComponentSize } from '../theming';
+import { TComponentSize } from '../../theming'
 
 export interface StyledInputWrapperRequiredProps {
   /**
@@ -6,7 +6,7 @@ export interface StyledInputWrapperRequiredProps {
    *
    * Defaults to `horizontal`
    */
-  direction: 'horizontal' | 'vertical';
+  direction: 'horizontal' | 'vertical'
 
   /**
    * The size the spacing between input fields
@@ -15,11 +15,17 @@ export interface StyledInputWrapperRequiredProps {
    *
    * Defaults to `medium`
    */
-  size: TComponentSize;
+  size: TComponentSize
 }
 
+// eslint-disable-next-line @typescript-eslint/no-empty-interface
 export interface StyledInputWrapperOptionalProps {}
 
+export interface InputWrapperComponentProps {
+  children?: React.ReactNode
+}
+
 export interface InputWrapperProps
-  extends Partial<IStyledInputWrapperRequiredProps>,
-    IStyledInputWrapperOptionalProps {}
+  extends Partial<StyledInputWrapperRequiredProps>,
+    StyledInputWrapperOptionalProps,
+    InputWrapperComponentProps {}

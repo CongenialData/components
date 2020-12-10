@@ -1,4 +1,4 @@
-import { TCommonTheme, TThemeFromFn, tuple } from '../../theming';
+import { TCommonTheme, TThemeFromFn, tuple } from '../../theming'
 
 export const toolbarTheme = (theme: TCommonTheme) =>
   tuple([
@@ -21,6 +21,6 @@ export const toolbarTheme = (theme: TCommonTheme) =>
         color: 'rgba(44,51,73,0.1)',
       },
     },
-  ]);
+  ])
 
-export type ToolbarTheme = TThemeFromFn<typeof toolbarTheme>;
+export type ToolbarTheme = TThemeFromFn<typeof toolbarTheme>

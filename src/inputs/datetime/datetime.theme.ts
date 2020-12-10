@@ -1,4 +1,4 @@
-import { TCommonTheme, TThemeFromFn, tuple } from '../../theming';
+import { TCommonTheme, TThemeFromFn, tuple } from '../../theming'
 
 export const dateTimeInputTheme = (theme: TCommonTheme) =>
   tuple([
@@ -6,6 +6,6 @@ export const dateTimeInputTheme = (theme: TCommonTheme) =>
     {
       background: theme.colors.BACKGROUND_ALTERNATIVE_COLOR_1,
     },
-  ]);
+  ])
 
-export type DateTimeInputTheme = TThemeFromFn<typeof dateTimeInputTheme>;
+export type DateTimeInputTheme = TThemeFromFn<typeof dateTimeInputTheme>

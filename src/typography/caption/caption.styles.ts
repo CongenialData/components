@@ -1,6 +1,6 @@
-import styled from 'styled-components/macro';
+import styled from 'styled-components/macro'
 
-import { StyledCaptionRequiredProps } from './caption.interfaces';
+import { StyledCaptionRequiredProps } from './caption.interfaces'
 
 export const StyledCaption = styled.span<StyledCaptionRequiredProps>`
   color: ${({ theme, status }) => theme.Caption.status[status].color};
@@ -13,4 +13,4 @@ export const StyledCaption = styled.span<StyledCaptionRequiredProps>`
   text-align: start;
 
   margin-top: 0.25rem;
-`;
+`

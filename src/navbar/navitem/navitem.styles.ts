@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/explicit-function-return-type */
-import styled, { css } from 'styled-components/macro';
-import { NavLink } from 'react-router-dom';
+import styled, { css } from 'styled-components/macro'
+import { NavLink } from 'react-router-dom' // TODO: This shouldn't be a dependency, we want our components to be compatible with all routers
 
 export const Label = styled.span`
   ${({ theme: { NavItem } }) => css`
@@ -9,13 +9,13 @@ export const Label = styled.span`
     margin-left: 1rem;
     vertical-align: middle;
   `};
-`;
+`
 
 export const IconWrapper = styled.div`
   width: 3rem;
-`;
+`
 
-const ACTIVE = 'active-navitem';
+const ACTIVE = 'active-navitem'
 export const StyledNavItem = styled(NavLink).attrs({
   activeClassName: ACTIVE,
 })`
@@ -81,8 +81,7 @@ export const StyledNavItem = styled(NavLink).attrs({
         animation-name: scale;
       }
 
-      @media screen and (min-width: ${({ theme }): string =>
-          theme.breakpoints.mdContainer}) {
+      @media screen and (min-width: ${({ theme }): string => theme.breakpoints.mdContainer}) {
         border-left: ${NavItem.borderActiveWidth} solid ${NavItem.borderActive};
 
         > svg {
@@ -92,8 +91,7 @@ export const StyledNavItem = styled(NavLink).attrs({
       }
     }
 
-    @media screen and (min-width: ${({ theme }): string =>
-        theme.breakpoints.mdContainer}) {
+    @media screen and (min-width: ${({ theme }): string => theme.breakpoints.mdContainer}) {
       flex: auto;
     }
 
@@ -111,4 +109,4 @@ export const StyledNavItem = styled(NavLink).attrs({
       }
     }
   `};
-`;
+`

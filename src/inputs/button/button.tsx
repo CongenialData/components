@@ -1,15 +1,14 @@
 /* eslint-disable react/prop-types */
-import * as React from 'react';
+import * as React from 'react'
 
 /* Import components here */
-import { StyledButton } from './button.styles';
+import { StyledButton } from './button.styles'
 
 /* Import interfaces here */
-import { IButtonProps } from './button.interfaces';
-import { buttonTheme } from './button.theme';
-import { IThemedComponent } from '../theming';
+import { ButtonProps } from './button.interfaces'
+import { buttonTheme } from './button.theme'
 
-export const Button: React.FC<IButtonProps<{}>> & IThemedComponent = ({
+export const Button = ({
   children,
   className,
   appearance = 'filled',
@@ -21,7 +20,7 @@ export const Button: React.FC<IButtonProps<{}>> & IThemedComponent = ({
   shape = 'rectangle',
   size = 'medium',
   status = 'basic',
-}): JSX.Element => {
+}: ButtonProps<HTMLButtonElement>): JSX.Element => {
   return (
     <StyledButton
       appearance={appearance}
@@ -38,7 +37,7 @@ export const Button: React.FC<IButtonProps<{}>> & IThemedComponent = ({
     >
       {children}
     </StyledButton>
-  );
-};
+  )
+}
 
-Button.defaultTheme = buttonTheme;
+Button.defaultTheme = buttonTheme
