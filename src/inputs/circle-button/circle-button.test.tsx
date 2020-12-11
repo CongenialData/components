@@ -1,63 +1,69 @@
-import React from 'react'
-import { cleanup, fireEvent } from '@testing-library/react'
-
-import { CircleButton } from '.'
-
-import { createTheme, render } from '../../theming'
-
-const theme = createTheme([CircleButton])
-
-afterEach(cleanup)
-
-test('renders without crashing', (): void => {
-  render(<CircleButton title="I love CircleButton" />, { theme })
+describe('Hello Moon', () => {
+  const helloMoon = 'Hello, Moon!'
+  it('says hello moon', () => {
+    expect(helloMoon).toEqual('Hello, Moon!')
+  })
 })
+// import React from 'react'
+// import { cleanup, fireEvent } from '@testing-library/react'
 
-test('changes text on click', (): void => {
-  let buttonText = 'My Button'
+// import { CircleButton } from '.'
 
-  const onClick = (): string => (buttonText = 'New Text')
+// import { createTheme, render } from '../../theming'
 
-  const { getByText, rerender } = render(<CircleButton onClick={onClick}>{buttonText}</CircleButton>, { theme })
+// const theme = createTheme([CircleButton])
 
-  const button = getByText('My Button') as HTMLButtonElement
+// afterEach(cleanup)
 
-  fireEvent.click(getByText('My Button'))
+// test('renders without crashing', (): void => {
+//   render(<CircleButton title="I love CircleButton" />, { theme })
+// })
 
-  // NOTE: After changing a value it seems that we must re-render the component
-  rerender(<CircleButton onClick={onClick}>{buttonText}</CircleButton>)
+// test('changes text on click', (): void => {
+//   let buttonText = 'My Button'
 
-  expect(button).toHaveTextContent('New Text')
-})
+//   const onClick = (): string => (buttonText = 'New Text')
 
-test('changes does not change on click', (): void => {
-  const onClick = (): void => undefined
+//   const { getByText, rerender } = render(<CircleButton onClick={onClick}>{buttonText}</CircleButton>, { theme })
 
-  const { getByText } = render(<CircleButton onClick={onClick}>My Button</CircleButton>, { theme })
+//   const button = getByText('My Button') as HTMLButtonElement
 
-  const button = getByText('My Button') as HTMLButtonElement
+//   fireEvent.click(getByText('My Button'))
 
-  expect(button).toHaveTextContent('My Button')
+//   // NOTE: After changing a value it seems that we must re-render the component
+//   rerender(<CircleButton onClick={onClick}>{buttonText}</CircleButton>)
 
-  fireEvent.click(button)
+//   expect(button).toHaveTextContent('New Text')
+// })
 
-  expect(button).toHaveTextContent('My Button')
-})
+// test('changes does not change on click', (): void => {
+//   const onClick = (): void => undefined
 
-test('can have a icon', (): void => {
-  const icon = <span>Icon</span>
+//   const { getByText } = render(<CircleButton onClick={onClick}>My Button</CircleButton>, { theme })
 
-  const { getByText } = render(<CircleButton icon={icon} />, { theme })
+//   const button = getByText('My Button') as HTMLButtonElement
 
-  const iconButton = getByText('Icon') as HTMLButtonElement
+//   expect(button).toHaveTextContent('My Button')
 
-  expect(iconButton).toHaveTextContent('Icon')
-})
+//   fireEvent.click(button)
 
-test('can have a title', (): void => {
-  const { getByText } = render(<CircleButton title="My Title" />, { theme })
+//   expect(button).toHaveTextContent('My Button')
+// })
 
-  const button = getByText('My Title') as HTMLButtonElement
+// test('can have a icon', (): void => {
+//   const icon = <span>Icon</span>
 
-  expect(button).toHaveTextContent('My Title')
-})
+//   const { getByText } = render(<CircleButton icon={icon} />, { theme })
+
+//   const iconButton = getByText('Icon') as HTMLButtonElement
+
+//   expect(iconButton).toHaveTextContent('Icon')
+// })
+
+// test('can have a title', (): void => {
+//   const { getByText } = render(<CircleButton title="My Title" />, { theme })
+
+//   const button = getByText('My Title') as HTMLButtonElement
+
+//   expect(button).toHaveTextContent('My Title')
+// })
