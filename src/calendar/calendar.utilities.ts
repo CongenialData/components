@@ -1,5 +1,5 @@
-import fp from 'lodash/fp';
-import i18n from 'config/i18n';
+import fp from 'lodash/fp'
+import i18n from '../config/i18n'
 
 /**
  * get the first day of the week containing given day
@@ -10,11 +10,9 @@ import i18n from 'config/i18n';
  * @returns the first date of the week
  */
 export function getFirstDayOfWeek(date: Date): Date {
-  const firstWeekday = new Date(date.getTime());
-  firstWeekday.setDate(
-    firstWeekday.getDate() - ((firstWeekday.getDay() + 6) % 7)
-  );
-  return firstWeekday;
+  const firstWeekday = new Date(date.getTime())
+  firstWeekday.setDate(firstWeekday.getDate() - ((firstWeekday.getDay() + 6) % 7))
+  return firstWeekday
 }
 
 /**
@@ -26,15 +24,15 @@ export function getFirstDayOfWeek(date: Date): Date {
  * @param date - A date within the month
  */
 export function* generateCalendar(date: Date): IterableIterator<Date> {
-  const nrDays = 7 * 6; // 6 weeks
-  let firstDay = new Date(date.getTime());
-  firstDay.setDate(1); // Adjust to the first date of this month
-  firstDay = getFirstDayOfWeek(firstDay);
+  const nrDays = 7 * 6 // 6 weeks
+  let firstDay = new Date(date.getTime())
+  firstDay.setDate(1) // Adjust to the first date of this month
+  firstDay = getFirstDayOfWeek(firstDay)
 
   for (let day = 0; day < nrDays; day++) {
-    const d = new Date(firstDay.getTime());
-    d.setDate(d.getDate() + day);
-    yield d;
+    const d = new Date(firstDay.getTime())
+    d.setDate(d.getDate() + day)
+    yield d
   }
 }
 
@@ -46,7 +44,7 @@ export const rawDayNames = [
   i18n.t('common:calendar.friday'),
   i18n.t('common:calendar.saturday'),
   i18n.t('common:calendar.sunday'),
-];
+]
 
 export const months = [
   i18n.t('common:calendar.january'),
@@ -61,15 +59,13 @@ export const months = [
   i18n.t('common:calendar.october'),
   i18n.t('common:calendar.november'),
   i18n.t('common:calendar.december'),
-];
+]
 
-export const getShorteningFn = (length: number): ((str: string) => string) =>
-  fp.flow(fp.take(length), fp.join(''));
+export const getShorteningFn = (length: number): ((str: string) => string) => fp.flow(fp.take(length), fp.join(''))
 
-export const getDayNames = (l?: number): string[] =>
-  l ? rawDayNames.map(getShorteningFn(l)) : rawDayNames;
+export const getDayNames = (l?: number): string[] => (l ? rawDayNames.map(getShorteningFn(l)) : rawDayNames)
 
 export const monthName = (d: Date, length?: number): string => {
-  const m: string = months[d.getMonth()];
-  return length ? getShorteningFn(length)(m) : m;
-};
+  const m: string = months[d.getMonth()]
+  return length ? getShorteningFn(length)(m) : m
+}

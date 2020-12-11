@@ -1,10 +1,6 @@
-import { TCommonTheme, TThemeFromFn, tuple } from '../theming';
+import { TCommonTheme, TThemeFromFn, tuple } from '../theming'
 
-export const calendarTheme = ({
-  support,
-  typography,
-  colors,
-}: TCommonTheme) => {
+export const calendarTheme = ({ support, typography, colors }: TCommonTheme) => {
   // Pre-defined variable mapping. See note in src/components/theming/docs/cdab-notes.md
 
   const calendar: any = {
@@ -17,12 +13,12 @@ export const calendarTheme = ({
     DAY_CELL_HEIGHT: '2.75rem',
     DAY_CELL_WIDTH: '2.75rem',
     MONTH_CELL_WIDTH: '4.8125rem',
-  };
-  calendar.WEEKDAY_HEIGHT = calendar.DAY_CELL_HEIGHT;
-  calendar.MONTH_CELL_HEIGHT = calendar.DAY_CELL_HEIGHT;
-  calendar.YEAR_CELL_WIDTH = calendar.MONTH_CELL_WIDTH;
-  calendar.YEAR_CELL_HEIGHT = calendar.MONTH_CELL_HEIGHT;
-  calendar.WEEKDAY_WIDTH = calendar.DAY_CELL_WIDTH;
+  }
+  calendar.WEEKDAY_HEIGHT = calendar.DAY_CELL_HEIGHT
+  calendar.MONTH_CELL_HEIGHT = calendar.DAY_CELL_HEIGHT
+  calendar.YEAR_CELL_WIDTH = calendar.MONTH_CELL_WIDTH
+  calendar.YEAR_CELL_HEIGHT = calendar.MONTH_CELL_HEIGHT
+  calendar.WEEKDAY_WIDTH = calendar.DAY_CELL_WIDTH
 
   return tuple([
     'Calendar',
@@ -78,29 +74,23 @@ export const calendarTheme = ({
       cellTodayHoverBackgroundColor: colors.COLOR_PRIMARY_TRANSPARENT_HOVER,
       cellTodayHoverBorderColor: colors.COLOR_PRIMARY_TRANSPARENT_HOVER_BORDER,
       cellTodayActiveBackgroundColor: colors.COLOR_PRIMARY_TRANSPARENT_ACTIVE,
-      cellTodayActiveBorderColor:
-        colors.COLOR_PRIMARY_TRANSPARENT_ACTIVE_BORDER,
+      cellTodayActiveBorderColor: colors.COLOR_PRIMARY_TRANSPARENT_ACTIVE_BORDER,
       cellTodayDisabledBorderColor: colors.BORDER_BASIC_COLOR_4,
 
-      cellTodaySelectedBackgroundColor:
-        colors.COLOR_CONTROL_TRANSPARENT_DEFAULT,
+      cellTodaySelectedBackgroundColor: colors.COLOR_CONTROL_TRANSPARENT_DEFAULT,
       cellTodaySelectedBorderColor: 'transparent',
       cellTodaySelectedTextColor: colors.TEXT_CONTROL_COLOR,
-      cellTodaySelectedHoverBackgroundColor:
-        colors.COLOR_CONTROL_TRANSPARENT_HOVER,
+      cellTodaySelectedHoverBackgroundColor: colors.COLOR_CONTROL_TRANSPARENT_HOVER,
       cellTodaySelectedHoverBorderColor: 'transparent',
-      cellTodaySelectedActiveBackgroundColor:
-        colors.COLOR_CONTROL_TRANSPARENT_ACTIVE,
+      cellTodaySelectedActiveBackgroundColor: colors.COLOR_CONTROL_TRANSPARENT_ACTIVE,
       cellTodaySelectedActiveBorderColor: 'transparent',
 
       cellTodayInRangeBackgroundColor: colors.COLOR_CONTROL_TRANSPARENT_DEFAULT,
       cellTodayInRangeBorderColor: 'transparent',
       cellTodayInRangeTextColor: colors.TEXT_CONTROL_COLOR,
-      cellTodayInRangeHoverBackgroundColor:
-        colors.COLOR_CONTROL_TRANSPARENT_HOVER,
+      cellTodayInRangeHoverBackgroundColor: colors.COLOR_CONTROL_TRANSPARENT_HOVER,
       cellTodayInRangeHoverBorderColor: 'transparent',
-      cellTodayInRangeActiveBackgroundColor:
-        colors.COLOR_CONTROL_TRANSPARENT_ACTIVE,
+      cellTodayInRangeActiveBackgroundColor: colors.COLOR_CONTROL_TRANSPARENT_ACTIVE,
       cellTodayInRangeActiveBorderColor: 'transparent',
 
       cellSelectedBackgroundColor: colors.COLOR_PRIMARY_DEFAULT,
@@ -154,7 +144,7 @@ export const calendarTheme = ({
       yearCellLargeWidth: calendar.MONTH_CELL_LARGE_WIDTH,
       yearCellLargeHeight: calendar.MONTH_CELL_LARGE_HEIGHT,
     },
-  ]);
-};
+  ])
+}
 
-export type CalendarTheme = TThemeFromFn<typeof calendarTheme>;
+export type CalendarTheme = TThemeFromFn<typeof calendarTheme>

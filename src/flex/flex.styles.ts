@@ -1,8 +1,8 @@
-import styled from 'styled-components/macro';
+import styled from 'styled-components/macro'
 
-import { IFlexProps } from './flex.interfaces';
+import { FlexProps } from './flex.interfaces'
 
-export const StyledFlex = styled.div<IFlexProps>`
+export const StyledFlex = styled.div<FlexProps>`
   display: ${({ container }) => (container ? 'flex' : 'block')};
   justify-content: ${({ justifyContent }) => justifyContent || 'flex-start'};
   flex-direction: ${({ flexDirection }) => flexDirection || 'row'};
@@ -17,4 +17,4 @@ export const StyledFlex = styled.div<IFlexProps>`
   width: ${({ width }) => width || 'auto'};
   height: ${({ height }) => height || 'auto'};
   max-width: ${({ maxWidth }) => maxWidth || 'none'};
-`;
+`

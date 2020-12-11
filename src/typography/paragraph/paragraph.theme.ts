@@ -1,5 +1,6 @@
-import { TCommonTheme, TThemeFromFn, tuple } from '../../theming';
+import { TCommonTheme, TThemeFromFn, tuple } from '../../theming'
 
+// eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
 export const paragraphTheme = ({ colors, typography }: TCommonTheme) =>
   tuple([
     'Paragraph',
@@ -31,6 +32,6 @@ export const paragraphTheme = ({ colors, typography }: TCommonTheme) =>
         },
       },
     },
-  ]);
+  ])
 
-export type ParagraphTheme = TThemeFromFn<typeof paragraphTheme>;
+export type ParagraphTheme = TThemeFromFn<typeof paragraphTheme>

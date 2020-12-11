@@ -1,11 +1,6 @@
-import { TCommonTheme, TThemeFromFn, tuple } from '../theming';
+import { TCommonTheme, TThemeFromFn, tuple } from '../../theming'
 
-export const checkboxTheme = ({
-  support,
-  typography,
-  colors,
-  baseColors,
-}: TCommonTheme) =>
+export const checkboxTheme = ({ support, typography, colors, baseColors }: TCommonTheme) =>
   tuple([
     'Checkbox',
     {
@@ -51,8 +46,7 @@ export const checkboxTheme = ({
           disabledBorderColor: colors.COLOR_BASIC_TRANSPARENT_DISABLED_BORDER,
           disabledCheckmarkColor: colors.TEXT_CONTROL_COLOR,
           disabledTextColor: colors.TEXT_DISABLED_COLOR,
-          disabledCheckedBackgroundColor:
-            baseColors.COLOR_BASIC_TRANSPARENT_600,
+          disabledCheckedBackgroundColor: baseColors.COLOR_BASIC_TRANSPARENT_600,
           disabledCheckedBorderColor: baseColors.COLOR_BASIC_TRANSPARENT_600,
         },
         primary: {
@@ -81,8 +75,7 @@ export const checkboxTheme = ({
           disabledBorderColor: colors.COLOR_BASIC_TRANSPARENT_DISABLED_BORDER,
           disabledCheckmarkColor: colors.TEXT_CONTROL_COLOR,
           disabledTextColor: colors.TEXT_DISABLED_COLOR,
-          disabledCheckedBackgroundColor:
-            baseColors.COLOR_BASIC_TRANSPARENT_600,
+          disabledCheckedBackgroundColor: baseColors.COLOR_BASIC_TRANSPARENT_600,
           disabledCheckedBorderColor: baseColors.COLOR_BASIC_TRANSPARENT_600,
         },
         success: {
@@ -111,8 +104,7 @@ export const checkboxTheme = ({
           disabledBorderColor: colors.COLOR_BASIC_TRANSPARENT_DISABLED_BORDER,
           disabledCheckmarkColor: colors.TEXT_CONTROL_COLOR,
           disabledTextColor: colors.TEXT_DISABLED_COLOR,
-          disabledCheckedBackgroundColor:
-            baseColors.COLOR_BASIC_TRANSPARENT_600,
+          disabledCheckedBackgroundColor: baseColors.COLOR_BASIC_TRANSPARENT_600,
           disabledCheckedBorderColor: baseColors.COLOR_BASIC_TRANSPARENT_600,
         },
         info: {
@@ -141,8 +133,7 @@ export const checkboxTheme = ({
           disabledBorderColor: colors.COLOR_BASIC_TRANSPARENT_DISABLED_BORDER,
           disabledCheckmarkColor: colors.TEXT_CONTROL_COLOR,
           disabledTextColor: colors.TEXT_DISABLED_COLOR,
-          disabledCheckedBackgroundColor:
-            baseColors.COLOR_BASIC_TRANSPARENT_600,
+          disabledCheckedBackgroundColor: baseColors.COLOR_BASIC_TRANSPARENT_600,
           disabledCheckedBorderColor: baseColors.COLOR_BASIC_TRANSPARENT_600,
         },
         warning: {
@@ -171,8 +162,7 @@ export const checkboxTheme = ({
           disabledBorderColor: colors.COLOR_BASIC_TRANSPARENT_DISABLED_BORDER,
           disabledCheckmarkColor: colors.TEXT_CONTROL_COLOR,
           disabledTextColor: colors.TEXT_DISABLED_COLOR,
-          disabledCheckedBackgroundColor:
-            baseColors.COLOR_BASIC_TRANSPARENT_600,
+          disabledCheckedBackgroundColor: baseColors.COLOR_BASIC_TRANSPARENT_600,
           disabledCheckedBorderColor: baseColors.COLOR_BASIC_TRANSPARENT_600,
         },
         danger: {
@@ -201,8 +191,7 @@ export const checkboxTheme = ({
           disabledBorderColor: colors.COLOR_BASIC_TRANSPARENT_DISABLED_BORDER,
           disabledCheckmarkColor: colors.TEXT_CONTROL_COLOR,
           disabledTextColor: colors.TEXT_DISABLED_COLOR,
-          disabledCheckedBackgroundColor:
-            baseColors.COLOR_BASIC_TRANSPARENT_600,
+          disabledCheckedBackgroundColor: baseColors.COLOR_BASIC_TRANSPARENT_600,
           disabledCheckedBorderColor: baseColors.COLOR_BASIC_TRANSPARENT_600,
         },
         control: {
@@ -231,12 +220,11 @@ export const checkboxTheme = ({
           disabledBorderColor: colors.COLOR_CONTROL_TRANSPARENT_DISABLED_BORDER,
           disabledCheckmarkColor: colors.TEXT_CONTROL_COLOR,
           disabledTextColor: colors.TEXT_CONTROL_COLOR,
-          disabledCheckedBackgroundColor:
-            baseColors.COLOR_BASIC_TRANSPARENT_600,
+          disabledCheckedBackgroundColor: baseColors.COLOR_BASIC_TRANSPARENT_600,
           disabledCheckedBorderColor: baseColors.COLOR_BASIC_TRANSPARENT_600,
         },
       },
     },
-  ]);
+  ])
 
-export type CheckboxTheme = TThemeFromFn<typeof checkboxTheme>;
+export type CheckboxTheme = TThemeFromFn<typeof checkboxTheme>

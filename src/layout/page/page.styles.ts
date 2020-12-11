@@ -1,7 +1,7 @@
-import styled, { css } from 'styled-components/macro';
+import styled, { css } from 'styled-components/macro'
 
-import { Card } from '../../card';
-import { Header, Title } from '../../card/card.styles';
+import { Card } from '../../card'
+import { Header, Title } from '../../card/card.styles'
 
 export const StyledPage = styled.div`
   ${({ theme: { Page } }) => css`
@@ -9,7 +9,7 @@ export const StyledPage = styled.div`
     display: flex;
     overflow: hidden;
   `}
-`;
+`
 
 export const PageContainer = styled.div`
   ${({ theme: { breakpoints } }) => css`
@@ -23,14 +23,14 @@ export const PageContainer = styled.div`
       display: flex;
     }
   `};
-`;
+`
 
 export const PageBody = styled.div`
   height: 100%;
   display: flex;
   overflow-y: scroll;
   flex: 1;
-`;
+`
 
 export const PageContentWrapper = styled.div`
   flex: 1;
@@ -38,7 +38,7 @@ export const PageContentWrapper = styled.div`
   padding: 1rem 0 1rem 1rem;
   overflow: auto;
   height: 100%;
-`;
+`
 
 export const PageContent = styled(Card)`
   ${({ theme: { Page } }) => css`
@@ -57,4 +57,4 @@ export const PageContent = styled(Card)`
       color: ${Page.topTextColor};
     }
   `};
-`;
+`

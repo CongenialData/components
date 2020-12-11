@@ -1,24 +1,20 @@
-import React from 'react';
+/* eslint-disable react/prop-types */ // TODO: Remove disable rule and make it work
+import React from 'react'
 
 /* Import components here */
-import { Caption } from '../../typography/caption';
-import { Label } from '../../typography/label';
-import { InputWrapper, StyledInput } from './text-input.styles';
+import { Caption } from '../../typography/caption'
+import { Label } from '../../typography/label'
+import { InputWrapper, StyledInput } from './text-input.styles'
 
 /* Import interfaces here */
-import { TextInputProps } from './text-input.interfaces';
-import { textInputTheme } from './text-input.theme';
-import { IThemedComponent } from '../../theming';
+import { TextInputProps } from './text-input.interfaces'
+import { textInputTheme } from './text-input.theme'
+import { ThemedComponent } from '../../theming'
 
-type TTextInput = React.ForwardRefExoticComponent<
-  TextInputProps & React.RefAttributes<HTMLInputElement>
-> &
-  IThemedComponent;
+type TTextInput = React.ForwardRefExoticComponent<TextInputProps & React.RefAttributes<HTMLInputElement>> &
+  ThemedComponent
 
-export const TextInput: TTextInput = React.forwardRef<
-  HTMLInputElement,
-  TextInputProps
->(
+export const TextInput: TTextInput = React.forwardRef<HTMLInputElement, TextInputProps>(
   (
     {
       autoComplete,
@@ -45,9 +41,9 @@ export const TextInput: TTextInput = React.forwardRef<
       step,
       value,
     },
-    ref
+    ref,
   ): JSX.Element => {
-    const [myID] = React.useState(id || Math.random().toString());
+    const [myID] = React.useState(id || Math.random().toString())
 
     return (
       <InputWrapper ref={ref}>
@@ -82,9 +78,9 @@ export const TextInput: TTextInput = React.forwardRef<
           caption
         )}
       </InputWrapper>
-    );
-  }
-);
+    )
+  },
+)
 
-TextInput.defaultTheme = textInputTheme;
-TextInput.displayName = 'TextInput';
+TextInput.defaultTheme = textInputTheme
+TextInput.displayName = 'TextInput'

@@ -35,6 +35,6 @@
     "resolveJsonModule": true,
     "target": "ES2017",
     "removeComments": true,
-    "allowSyntheticDefaultImports": true,
+    "allowSyntheticDefaultImports": true
   }
 }

@@ -1,5 +1,6 @@
-import { TCommonTheme, TThemeFromFn, tuple } from '../../theming';
+import { TCommonTheme, TThemeFromFn, tuple } from '../../theming'
 
+// eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
 export const labelTheme = ({ colors, typography }: TCommonTheme) =>
   tuple([
     'Label',
@@ -10,6 +11,6 @@ export const labelTheme = ({ colors, typography }: TCommonTheme) =>
       fontWeight: typography.TEXT_LABEL_FONT_WEIGHT,
       lineHeight: typography.TEXT_LABEL_LINE_HEIGHT,
     },
-  ]);
+  ])
 
-export type LabelTheme = TThemeFromFn<typeof labelTheme>;
+export type LabelTheme = TThemeFromFn<typeof labelTheme>

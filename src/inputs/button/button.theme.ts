@@ -1,4 +1,4 @@
-import { TCommonTheme, TThemeFromFn, tuple } from '../theming';
+import { TCommonTheme, TThemeFromFn, tuple } from '../../theming'
 
 export const buttonTheme = (theme: TCommonTheme) =>
   tuple([
@@ -204,13 +204,10 @@ export const buttonTheme = (theme: TCommonTheme) =>
             hoverBackgroundColor: theme.colors.COLOR_BASIC_TRANSPARENT_HOVER,
             hoverBorderColor: theme.colors.COLOR_BASIC_TRANSPARENT_HOVER_BORDER,
             activeBackgroundColor: theme.colors.COLOR_BASIC_TRANSPARENT_ACTIVE,
-            activeBorderColor:
-              theme.colors.COLOR_BASIC_TRANSPARENT_ACTIVE_BORDER,
+            activeBorderColor: theme.colors.COLOR_BASIC_TRANSPARENT_ACTIVE_BORDER,
             activeTextColor: theme.colors.TEXT_HINT_COLOR,
-            disabledBackgroundColor:
-              theme.colors.COLOR_BASIC_TRANSPARENT_DISABLED,
-            disabledBorderColor:
-              theme.colors.COLOR_BASIC_TRANSPARENT_DISABLED_BORDER,
+            disabledBackgroundColor: theme.colors.COLOR_BASIC_TRANSPARENT_DISABLED,
+            disabledBorderColor: theme.colors.COLOR_BASIC_TRANSPARENT_DISABLED_BORDER,
             disabledTextColor: theme.colors.TEXT_DISABLED_COLOR,
           },
           primary: {
@@ -218,22 +215,16 @@ export const buttonTheme = (theme: TCommonTheme) =>
             borderColor: theme.colors.COLOR_PRIMARY_TRANSPARENT_DEFAULT_BORDER,
             textColor: theme.colors.TEXT_PRIMARY_COLOR,
             focusBackgroundColor: theme.colors.COLOR_PRIMARY_TRANSPARENT_FOCUS,
-            focusBorderColor:
-              theme.colors.COLOR_PRIMARY_TRANSPARENT_FOCUS_BORDER,
+            focusBorderColor: theme.colors.COLOR_PRIMARY_TRANSPARENT_FOCUS_BORDER,
             focusTextColor: theme.colors.TEXT_PRIMARY_COLOR,
             hoverBackgroundColor: theme.colors.COLOR_PRIMARY_TRANSPARENT_HOVER,
-            hoverBorderColor:
-              theme.colors.COLOR_PRIMARY_TRANSPARENT_HOVER_BORDER,
+            hoverBorderColor: theme.colors.COLOR_PRIMARY_TRANSPARENT_HOVER_BORDER,
             hoverTextColor: theme.colors.TEXT_PRIMARY_COLOR,
-            activeBackgroundColor:
-              theme.colors.COLOR_PRIMARY_TRANSPARENT_ACTIVE,
-            activeBorderColor:
-              theme.colors.COLOR_PRIMARY_TRANSPARENT_ACTIVE_BORDER,
+            activeBackgroundColor: theme.colors.COLOR_PRIMARY_TRANSPARENT_ACTIVE,
+            activeBorderColor: theme.colors.COLOR_PRIMARY_TRANSPARENT_ACTIVE_BORDER,
             activeTextColor: theme.colors.TEXT_PRIMARY_COLOR,
-            disabledBackgroundColor:
-              theme.colors.COLOR_PRIMARY_TRANSPARENT_DISABLED,
-            disabledBorderColor:
-              theme.colors.COLOR_PRIMARY_TRANSPARENT_DISABLED_BORDER,
+            disabledBackgroundColor: theme.colors.COLOR_PRIMARY_TRANSPARENT_DISABLED,
+            disabledBorderColor: theme.colors.COLOR_PRIMARY_TRANSPARENT_DISABLED_BORDER,
             disabledTextColor: theme.colors.TEXT_DISABLED_COLOR,
           },
           success: {
@@ -241,22 +232,16 @@ export const buttonTheme = (theme: TCommonTheme) =>
             borderColor: theme.colors.COLOR_SUCCESS_TRANSPARENT_DEFAULT_BORDER,
             textColor: theme.colors.TEXT_SUCCESS_COLOR,
             focusBackgroundColor: theme.colors.COLOR_SUCCESS_TRANSPARENT_FOCUS,
-            focusBorderColor:
-              theme.colors.COLOR_SUCCESS_TRANSPARENT_FOCUS_BORDER,
+            focusBorderColor: theme.colors.COLOR_SUCCESS_TRANSPARENT_FOCUS_BORDER,
             focusTextColor: theme.colors.TEXT_SUCCESS_COLOR,
             hoverBackgroundColor: theme.colors.COLOR_SUCCESS_TRANSPARENT_HOVER,
-            hoverBorderColor:
-              theme.colors.COLOR_SUCCESS_TRANSPARENT_HOVER_BORDER,
+            hoverBorderColor: theme.colors.COLOR_SUCCESS_TRANSPARENT_HOVER_BORDER,
             hoverTextColor: theme.colors.TEXT_SUCCESS_COLOR,
-            activeBackgroundColor:
-              theme.colors.COLOR_SUCCESS_TRANSPARENT_ACTIVE,
-            activeBorderColor:
-              theme.colors.COLOR_SUCCESS_TRANSPARENT_ACTIVE_BORDER,
+            activeBackgroundColor: theme.colors.COLOR_SUCCESS_TRANSPARENT_ACTIVE,
+            activeBorderColor: theme.colors.COLOR_SUCCESS_TRANSPARENT_ACTIVE_BORDER,
             activeTextColor: theme.colors.TEXT_SUCCESS_COLOR,
-            disabledBackgroundColor:
-              theme.colors.COLOR_SUCCESS_TRANSPARENT_DISABLED,
-            disabledBorderColor:
-              theme.colors.COLOR_SUCCESS_TRANSPARENT_DISABLED_BORDER,
+            disabledBackgroundColor: theme.colors.COLOR_SUCCESS_TRANSPARENT_DISABLED,
+            disabledBorderColor: theme.colors.COLOR_SUCCESS_TRANSPARENT_DISABLED_BORDER,
             disabledTextColor: theme.colors.TEXT_DISABLED_COLOR,
           },
           info: {
@@ -270,13 +255,10 @@ export const buttonTheme = (theme: TCommonTheme) =>
             hoverBorderColor: theme.colors.COLOR_INFO_TRANSPARENT_HOVER_BORDER,
             hoverTextColor: theme.colors.TEXT_INFO_COLOR,
             activeBackgroundColor: theme.colors.COLOR_INFO_TRANSPARENT_ACTIVE,
-            activeBorderColor:
-              theme.colors.COLOR_INFO_TRANSPARENT_ACTIVE_BORDER,
+            activeBorderColor: theme.colors.COLOR_INFO_TRANSPARENT_ACTIVE_BORDER,
             activeTextColor: theme.colors.TEXT_INFO_COLOR,
-            disabledBackgroundColor:
-              theme.colors.COLOR_INFO_TRANSPARENT_DISABLED,
-            disabledBorderColor:
-              theme.colors.COLOR_INFO_TRANSPARENT_DISABLED_BORDER,
+            disabledBackgroundColor: theme.colors.COLOR_INFO_TRANSPARENT_DISABLED,
+            disabledBorderColor: theme.colors.COLOR_INFO_TRANSPARENT_DISABLED_BORDER,
             disabledTextColor: theme.colors.TEXT_DISABLED_COLOR,
           },
           warning: {
@@ -284,22 +266,16 @@ export const buttonTheme = (theme: TCommonTheme) =>
             borderColor: theme.colors.COLOR_WARNING_TRANSPARENT_DEFAULT_BORDER,
             textColor: theme.colors.TEXT_WARNING_COLOR,
             focusBackgroundColor: theme.colors.COLOR_WARNING_TRANSPARENT_FOCUS,
-            focusBorderColor:
-              theme.colors.COLOR_WARNING_TRANSPARENT_FOCUS_BORDER,
+            focusBorderColor: theme.colors.COLOR_WARNING_TRANSPARENT_FOCUS_BORDER,
             focusTextColor: theme.colors.TEXT_WARNING_COLOR,
             hoverBackgroundColor: theme.colors.COLOR_WARNING_TRANSPARENT_HOVER,
-            hoverBorderColor:
-              theme.colors.COLOR_WARNING_TRANSPARENT_HOVER_BORDER,
+            hoverBorderColor: theme.colors.COLOR_WARNING_TRANSPARENT_HOVER_BORDER,
             hoverTextColor: theme.colors.TEXT_WARNING_COLOR,
-            activeBackgroundColor:
-              theme.colors.COLOR_WARNING_TRANSPARENT_ACTIVE,
-            activeBorderColor:
-              theme.colors.COLOR_WARNING_TRANSPARENT_ACTIVE_BORDER,
+            activeBackgroundColor: theme.colors.COLOR_WARNING_TRANSPARENT_ACTIVE,
+            activeBorderColor: theme.colors.COLOR_WARNING_TRANSPARENT_ACTIVE_BORDER,
             activeTextColor: theme.colors.TEXT_WARNING_COLOR,
-            disabledBackgroundColor:
-              theme.colors.COLOR_WARNING_TRANSPARENT_DISABLED,
-            disabledBorderColor:
-              theme.colors.COLOR_WARNING_TRANSPARENT_DISABLED_BORDER,
+            disabledBackgroundColor: theme.colors.COLOR_WARNING_TRANSPARENT_DISABLED,
+            disabledBorderColor: theme.colors.COLOR_WARNING_TRANSPARENT_DISABLED_BORDER,
             disabledTextColor: theme.colors.TEXT_DISABLED_COLOR,
           },
           danger: {
@@ -307,21 +283,16 @@ export const buttonTheme = (theme: TCommonTheme) =>
             borderColor: theme.colors.COLOR_DANGER_TRANSPARENT_DEFAULT_BORDER,
             textColor: theme.colors.TEXT_DANGER_COLOR,
             focusBackgroundColor: theme.colors.COLOR_DANGER_TRANSPARENT_FOCUS,
-            focusBorderColor:
-              theme.colors.COLOR_DANGER_TRANSPARENT_FOCUS_BORDER,
+            focusBorderColor: theme.colors.COLOR_DANGER_TRANSPARENT_FOCUS_BORDER,
             focusTextColor: theme.colors.TEXT_DANGER_COLOR,
             hoverBackgroundColor: theme.colors.COLOR_DANGER_TRANSPARENT_HOVER,
-            hoverBorderColor:
-              theme.colors.COLOR_DANGER_TRANSPARENT_HOVER_BORDER,
+            hoverBorderColor: theme.colors.COLOR_DANGER_TRANSPARENT_HOVER_BORDER,
             hoverTextColor: theme.colors.TEXT_DANGER_COLOR,
             activeBackgroundColor: theme.colors.COLOR_DANGER_TRANSPARENT_ACTIVE,
-            activeBorderColor:
-              theme.colors.COLOR_DANGER_TRANSPARENT_ACTIVE_BORDER,
+            activeBorderColor: theme.colors.COLOR_DANGER_TRANSPARENT_ACTIVE_BORDER,
             activeTextColor: theme.colors.TEXT_DANGER_COLOR,
-            disabledBackgroundColor:
-              theme.colors.COLOR_DANGER_TRANSPARENT_DISABLED,
-            disabledBorderColor:
-              theme.colors.COLOR_DANGER_TRANSPARENT_DISABLED_BORDER,
+            disabledBackgroundColor: theme.colors.COLOR_DANGER_TRANSPARENT_DISABLED,
+            disabledBorderColor: theme.colors.COLOR_DANGER_TRANSPARENT_DISABLED_BORDER,
             disabledTextColor: theme.colors.TEXT_DISABLED_COLOR,
           },
           control: {
@@ -329,22 +300,16 @@ export const buttonTheme = (theme: TCommonTheme) =>
             borderColor: theme.colors.COLOR_CONTROL_TRANSPARENT_DEFAULT_BORDER,
             textColor: theme.colors.TEXT_CONTROL_COLOR,
             focusBackgroundColor: theme.colors.COLOR_CONTROL_TRANSPARENT_FOCUS,
-            focusBorderColor:
-              theme.colors.COLOR_CONTROL_TRANSPARENT_FOCUS_BORDER,
+            focusBorderColor: theme.colors.COLOR_CONTROL_TRANSPARENT_FOCUS_BORDER,
             focusTextColor: theme.colors.TEXT_CONTROL_COLOR,
             hoverBackgroundColor: theme.colors.COLOR_CONTROL_TRANSPARENT_HOVER,
-            hoverBorderColor:
-              theme.colors.COLOR_CONTROL_TRANSPARENT_HOVER_BORDER,
+            hoverBorderColor: theme.colors.COLOR_CONTROL_TRANSPARENT_HOVER_BORDER,
             hoverTextColor: theme.colors.TEXT_CONTROL_COLOR,
-            activeBackgroundColor:
-              theme.colors.COLOR_CONTROL_TRANSPARENT_ACTIVE,
-            activeBorderColor:
-              theme.colors.COLOR_CONTROL_TRANSPARENT_ACTIVE_BORDER,
+            activeBackgroundColor: theme.colors.COLOR_CONTROL_TRANSPARENT_ACTIVE,
+            activeBorderColor: theme.colors.COLOR_CONTROL_TRANSPARENT_ACTIVE_BORDER,
             activeTextColor: theme.colors.TEXT_CONTROL_COLOR,
-            disabledBackgroundColor:
-              theme.colors.COLOR_CONTROL_TRANSPARENT_DISABLED,
-            disabledBorderColor:
-              theme.colors.COLOR_CONTROL_TRANSPARENT_DISABLED_BORDER,
+            disabledBackgroundColor: theme.colors.COLOR_CONTROL_TRANSPARENT_DISABLED,
+            disabledBorderColor: theme.colors.COLOR_CONTROL_TRANSPARENT_DISABLED_BORDER,
             disabledTextColor: theme.colors.TEXT_DISABLED_COLOR,
           },
         },
@@ -373,8 +338,7 @@ export const buttonTheme = (theme: TCommonTheme) =>
             activeBackgroundColor: theme.baseColors.COLOR_BASIC_TRANSPARENT_200,
             activeBorderColor: 'transparent',
             activeTextColor: theme.baseColors.COLOR_BASIC_400,
-            disabledBackgroundColor:
-              theme.baseColors.COLOR_BASIC_TRANSPARENT_200,
+            disabledBackgroundColor: theme.baseColors.COLOR_BASIC_TRANSPARENT_200,
             disabledBorderColor: 'transparent',
             disabledTextColor: theme.colors.TEXT_DISABLED_COLOR,
           },
@@ -391,8 +355,7 @@ export const buttonTheme = (theme: TCommonTheme) =>
             activeBackgroundColor: theme.baseColors.COLOR_BASIC_TRANSPARENT_200,
             activeBorderColor: 'transparent',
             activeTextColor: theme.colors.TEXT_PRIMARY_COLOR,
-            disabledBackgroundColor:
-              theme.baseColors.COLOR_BASIC_TRANSPARENT_200,
+            disabledBackgroundColor: theme.baseColors.COLOR_BASIC_TRANSPARENT_200,
             disabledBorderColor: 'transparent',
             disabledTextColor: theme.colors.TEXT_DISABLED_COLOR,
           },
@@ -409,8 +372,7 @@ export const buttonTheme = (theme: TCommonTheme) =>
             activeBackgroundColor: theme.baseColors.COLOR_BASIC_TRANSPARENT_200,
             activeBorderColor: 'transparent',
             activeTextColor: theme.colors.TEXT_SUCCESS_COLOR,
-            disabledBackgroundColor:
-              theme.baseColors.COLOR_BASIC_TRANSPARENT_200,
+            disabledBackgroundColor: theme.baseColors.COLOR_BASIC_TRANSPARENT_200,
             disabledBorderColor: 'transparent',
             disabledTextColor: theme.colors.TEXT_DISABLED_COLOR,
           },
@@ -427,8 +389,7 @@ export const buttonTheme = (theme: TCommonTheme) =>
             activeBackgroundColor: theme.baseColors.COLOR_BASIC_TRANSPARENT_200,
             activeBorderColor: 'transparent',
             activeTextColor: theme.colors.TEXT_INFO_COLOR,
-            disabledBackgroundColor:
-              theme.baseColors.COLOR_BASIC_TRANSPARENT_200,
+            disabledBackgroundColor: theme.baseColors.COLOR_BASIC_TRANSPARENT_200,
             disabledBorderColor: 'transparent',
             disabledTextColor: theme.colors.TEXT_DISABLED_COLOR,
           },
@@ -445,8 +406,7 @@ export const buttonTheme = (theme: TCommonTheme) =>
             activeBackgroundColor: theme.baseColors.COLOR_BASIC_TRANSPARENT_200,
             activeBorderColor: 'transparent',
             activeTextColor: theme.colors.TEXT_WARNING_COLOR,
-            disabledBackgroundColor:
-              theme.baseColors.COLOR_BASIC_TRANSPARENT_200,
+            disabledBackgroundColor: theme.baseColors.COLOR_BASIC_TRANSPARENT_200,
             disabledBorderColor: 'transparent',
             disabledTextColor: theme.colors.TEXT_DISABLED_COLOR,
           },
@@ -463,8 +423,7 @@ export const buttonTheme = (theme: TCommonTheme) =>
             activeBackgroundColor: theme.baseColors.COLOR_BASIC_TRANSPARENT_200,
             activeBorderColor: 'transparent',
             activeTextColor: theme.colors.TEXT_DANGER_COLOR,
-            disabledBackgroundColor:
-              theme.baseColors.COLOR_BASIC_TRANSPARENT_200,
+            disabledBackgroundColor: theme.baseColors.COLOR_BASIC_TRANSPARENT_200,
             disabledBorderColor: 'transparent',
             disabledTextColor: theme.colors.TEXT_DISABLED_COLOR,
           },
@@ -481,8 +440,7 @@ export const buttonTheme = (theme: TCommonTheme) =>
             activeBackgroundColor: theme.baseColors.COLOR_BASIC_TRANSPARENT_200,
             activeBorderColor: 'transparent',
             activeTextColor: theme.baseColors.COLOR_BASIC_100,
-            disabledBackgroundColor:
-              theme.baseColors.COLOR_BASIC_TRANSPARENT_200,
+            disabledBackgroundColor: theme.baseColors.COLOR_BASIC_TRANSPARENT_200,
             disabledBorderColor: 'transparent',
             disabledTextColor: theme.colors.TEXT_DISABLED_COLOR,
           },
@@ -621,13 +579,12 @@ export const buttonTheme = (theme: TCommonTheme) =>
             hoverRightBackgroundColor: theme.colors.COLOR_CONTROL_HOVER,
             activeLeftBackgroundColor: theme.baseColors.COLOR_BASIC_200,
             activeRightBackgroundColor: theme.colors.COLOR_CONTROL_ACTIVE,
-            disabledBackgroundColor:
-              theme.baseColors.COLOR_BASIC_TRANSPARENT_300,
+            disabledBackgroundColor: theme.baseColors.COLOR_BASIC_TRANSPARENT_300,
             disabledTextColor: theme.colors.TEXT_DISABLED_COLOR,
           },
         },
       },
     },
-  ]);
+  ])
 
-export type ButtonTheme = TThemeFromFn<typeof buttonTheme>;
+export type ButtonTheme = TThemeFromFn<typeof buttonTheme>

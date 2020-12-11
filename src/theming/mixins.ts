@@ -1,4 +1,4 @@
-import { FlattenSimpleInterpolation, css } from 'styled-components/macro';
+import { FlattenSimpleInterpolation, css } from 'styled-components/macro'
 
 /**
  * Utility to add transitions to components
@@ -11,15 +11,13 @@ import { FlattenSimpleInterpolation, css } from 'styled-components/macro';
  * ${componentAnimation('background-color, color')};
  * ```
  */
-export const componentAnimation = (
-  properties: string
-): FlattenSimpleInterpolation => {
+export const componentAnimation = (properties: string): FlattenSimpleInterpolation => {
   return css`
     transition-duration: 0.15s;
     transition-property: ${properties};
     transition-timing-function: ease-in;
-  `;
-};
+  `
+}
 
 /**
  * Utility to calculate outline
@@ -38,21 +36,21 @@ export const componentAnimation = (
 export const outline = (
   outlineWidth: string,
   outlineColor: string,
-  insetShadowLength: string | number = 0
+  insetShadowLength: string | number = 0,
 ): FlattenSimpleInterpolation => {
-  const outsetShadow = `0 0 0 ${outlineWidth} ${outlineColor}`;
+  const outsetShadow = `0 0 0 ${outlineWidth} ${outlineColor}`
 
   if (insetShadowLength !== 0) {
-    const insetShadow = `inset ${insetShadowLength} ${outlineColor}`;
+    const insetShadow = `inset ${insetShadowLength} ${outlineColor}`
 
     return css`
       &:not(:hover):not(:active) {
         box-shadow: ${outsetShadow}, ${insetShadow};
       }
-    `;
+    `
   }
 
   return css`
     box-shadow: ${outsetShadow};
-  `;
-};
+  `
+}

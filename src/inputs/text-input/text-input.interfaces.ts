@@ -1,11 +1,7 @@
-import {
-  TComponentShape,
-  TComponentSize,
-  TComponentStatus,
-  TComponentType,
-} from '../../theming/styled';
-import { NotVoid } from 'lodash';
+import { TComponentShape, TComponentSize, TComponentStatus, TComponentType } from '../../theming/styled'
+import { NotVoid } from 'lodash'
 
+// eslint-disable-next-line @typescript-eslint/no-empty-interface
 export interface TextInputOptionalStyleProps {}
 
 export interface TextInputRequiredStyleProps {
@@ -13,29 +9,29 @@ export interface TextInputRequiredStyleProps {
    *
    * Defaults to `medium`
    */
-  fieldSize: TComponentSize;
+  fieldSize: TComponentSize
 
   /**
    *  You can add fullWidth attribute to make element fill container
    *
    * Default to `false`
    */
-  fullWidth: boolean;
+  fullWidth: boolean
 
   /**
    * Inputs available in different shapes, which could be combined with the other properties.
    *
    * Defaults to 'semiround'
    */
-  shape: TComponentShape;
+  shape: TComponentShape
 
   /** Inputs are available in multiple colors using status property
    *
    * Defaults to `basic`
    */
-  status: TComponentStatus;
+  status: TComponentStatus
 
-  value?: string;
+  value?: string
 }
 
 export interface TextInputComponentProps {
@@ -44,9 +40,9 @@ export interface TextInputComponentProps {
    *
    * Reference: https://www.chromium.org/developers/design-documents/form-styles-that-chromium-understands
    */
-  autoComplete?: string;
+  autoComplete?: string
 
-  autoFocus?: boolean;
+  autoFocus?: boolean
 
   /**
    *  Determines caption text rendered at the bottom of the component.
@@ -55,48 +51,48 @@ export interface TextInputComponentProps {
    *
    * If a component is used that component will be rendered.
    */
-  caption?: string | JSX.Element;
+  caption?: string | JSX.Element
 
   /**
    * Change the type of the caption
    *
    * Defaults to default value of <Caption />
    */
-  captionType?: TComponentType;
+  captionType?: TComponentType
 
-  defaultValue?: string;
+  defaultValue?: string
 
-  disabled?: boolean;
+  disabled?: boolean
 
-  id?: string;
+  id?: string
 
   /**
    * Determines text rendered at the top of the component.
    */
-  label?: string;
+  label?: string
 
-  inputRef?: (instance: HTMLInputElement | null) => NotVoid;
-  onFocus?: (e: React.FocusEvent<HTMLInputElement>) => void;
-  onBlur?: (e: React.FocusEvent<HTMLInputElement>) => void;
+  inputRef?: (instance: HTMLInputElement | null) => NotVoid
+  onFocus?: (e: React.FocusEvent<HTMLInputElement>) => void
+  onBlur?: (e: React.FocusEvent<HTMLInputElement>) => void
 
-  onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void;
+  onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void
 
-  onClick?: (e: React.MouseEvent<HTMLInputElement>) => void;
+  onClick?: (e: React.MouseEvent<HTMLInputElement>) => void
 
-  name?: string;
+  name?: string
 
-  placeholder?: string;
+  placeholder?: string
 
-  inputType?: 'text' | 'password' | 'email' | 'date' | 'time';
+  inputType?: 'text' | 'password' | 'email' | 'date' | 'time'
 
-  required?: boolean;
-  pattern?: string;
-  step?: number;
+  required?: boolean
+  pattern?: string
+  step?: number
 }
 
 export interface TextInputProps
   extends TextInputComponentProps,
     Partial<TextInputRequiredStyleProps>,
     TextInputOptionalStyleProps {
-  className?: string;
+  className?: string
 }

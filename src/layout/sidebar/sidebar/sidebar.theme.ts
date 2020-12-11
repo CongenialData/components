@@ -1,4 +1,4 @@
-import { TThemeFromFn, tuple } from '../../../theming';
+import { TThemeFromFn, tuple } from '../../../theming'
 
 export const sidebarTheme = () =>
   tuple([
@@ -6,6 +6,6 @@ export const sidebarTheme = () =>
     {
       width: '16rem',
     },
-  ]);
+  ])
 
-export type SidebarTheme = TThemeFromFn<typeof sidebarTheme>;
+export type SidebarTheme = TThemeFromFn<typeof sidebarTheme>

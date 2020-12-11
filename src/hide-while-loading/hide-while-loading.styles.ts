@@ -1,8 +1,8 @@
-import styled from 'styled-components/macro';
+import styled from 'styled-components/macro'
 
 export const StyledHideWhileLoading = styled.div`
   position: relative;
-`;
+`
 
 export const Overlay = styled.div`
   position: absolute;
@@ -17,4 +17,4 @@ export const Overlay = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-`;
+`

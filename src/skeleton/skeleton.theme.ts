@@ -1,7 +1,8 @@
-import { TThemeFromFn, tuple } from '../theming';
+import { TThemeFromFn, tuple } from '../theming'
 
-export const skeletonTheme = () =>
-  tuple([
+// eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
+export const skeletonTheme = () => {
+  return tuple([
     'Skeleton',
     {
       gradient: {
@@ -28,6 +29,7 @@ export const skeletonTheme = () =>
         full: '100%',
       },
     },
-  ]);
+  ])
+}
 
-export type SkeletonTheme = TThemeFromFn<typeof skeletonTheme>;
+export type SkeletonTheme = TThemeFromFn<typeof skeletonTheme>

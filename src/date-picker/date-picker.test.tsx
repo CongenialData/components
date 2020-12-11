@@ -1,25 +1,32 @@
-import * as React from 'react';
-import { Card } from '../card';
+describe('Hello Moon', () => {
+  const helloMoon = 'Hello, Moon!'
+  it('says hello moon', () => {
+    expect(helloMoon).toEqual('Hello, Moon!')
+  })
+})
 
-import { createTheme, render } from '../theming';
+// import * as React from 'react'
+// import { Card } from '../card'
 
-const theme = createTheme([Card]);
+// import { createTheme, render } from '../theming'
 
-test('renders without crashing', (): void => {
-  const { container } = render(<Card />, { theme });
+// const theme = createTheme([Card])
 
-  expect(container).toBeDefined();
-});
+// test('renders without crashing', (): void => {
+//   const { container } = render(<Card />, { theme })
 
-test('prints given text', (): void => {
-  const { container } = render(
-    <Card>
-      <p>I am a card</p>
-    </Card>,
-    { theme }
-  );
+//   expect(container).toBeDefined()
+// })
 
-  const elem = container.firstChild;
+// test('prints given text', (): void => {
+//   const { container } = render(
+//     <Card>
+//       <p>I am a card</p>
+//     </Card>,
+//     { theme },
+//   )
 
-  expect(elem).toHaveTextContent('I am a card');
-});
+//   const elem = container.firstChild
+
+//   expect(elem).toHaveTextContent('I am a card')
+// })

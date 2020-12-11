@@ -1,4 +1,4 @@
-import { TCommonTheme, TThemeFromFn, tuple } from '../../theming';
+import { TCommonTheme, TThemeFromFn, tuple } from '../../theming'
 
 export const pageTheme = (theme: TCommonTheme) =>
   tuple([
@@ -10,6 +10,6 @@ export const pageTheme = (theme: TCommonTheme) =>
       topBackground: theme.colors.BACKGROUND_ALTERNATIVE_COLOR_1,
       topTextColor: theme.colors.TEXT_CONTROL_COLOR,
     },
-  ]);
+  ])
 
-export type PageTheme = TThemeFromFn<typeof pageTheme>;
+export type PageTheme = TThemeFromFn<typeof pageTheme>

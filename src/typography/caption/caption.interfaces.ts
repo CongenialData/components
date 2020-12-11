@@ -1,4 +1,4 @@
-import { TComponentStatus } from '../../theming/styled';
+import { TComponentStatus } from '../../theming/styled'
 
 export interface StyledCaptionRequiredProps {
   /**
@@ -8,7 +8,7 @@ export interface StyledCaptionRequiredProps {
    *
    * Defaults to `basic`
    */
-  status: TComponentStatus;
+  status: TComponentStatus
 
   /**
    * Caption has two different variants, `default` and `alternate`.
@@ -17,13 +17,12 @@ export interface StyledCaptionRequiredProps {
    *
    * Defaults to 'default'
    */
-  type: 'default' | 'alternate';
+  type: 'default' | 'alternate'
 }
 
+// eslint-disable-next-line @typescript-eslint/no-empty-interface
 export interface StyledCaptionOptionalProps {}
 
-export interface CaptionProps
-  extends Partial<StyledCaptionRequiredProps>,
-    StyledCaptionOptionalProps {
-  children?: string | JSX.Element;
+export interface CaptionProps extends Partial<StyledCaptionRequiredProps>, StyledCaptionOptionalProps {
+  children?: string | JSX.Element
 }

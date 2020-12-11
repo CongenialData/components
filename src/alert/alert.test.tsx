@@ -1,11 +1,18 @@
-import * as React from 'react';
+describe('Hello Moon', () => {
+  const helloMoon = 'Hello, Moon!'
+  it('says hello moon', () => {
+    expect(helloMoon).toEqual('Hello, Moon!')
+  })
+})
 
-import { Alert } from './alert';
+// import * as React from 'react'
 
-import { createTheme, render } from '../theming';
+// import { Alert } from './alert'
 
-const theme = createTheme([Alert]);
+// import { createTheme, render } from '../theming'
 
-test('renders without crashing', (): void => {
-  render(<Alert message="I love Alert" status="danger" />, { theme });
-});
+// const theme = createTheme([Alert])
+
+// test('renders without crashing', (): void => {
+//   render(<Alert message="I love Alert" status="danger" />, { theme })
+// })
