@@ -63,24 +63,24 @@ export const CustomCheckbox = styled.span<CheckboxComponentProps & CheckboxRequi
        * Checked
        */
       ${checked &&
-      css`
-        background-color: ${Checkbox.status[status].checkedBackgroundColor};
-        border-color: ${Checkbox.status[status].checkedBorderColor};
+        css`
+          background-color: ${Checkbox.status[status].checkedBackgroundColor};
+          border-color: ${Checkbox.status[status].checkedBorderColor};
 
-        ${Icon} {
-          color: ${Checkbox.status[status].checkedCheckmarkColor}; /* TODO: Fungerar det här? */
-        }
-      `};
+          ${Icon} {
+            color: ${Checkbox.status[status].checkedCheckmarkColor}; /* TODO: Fungerar det här? */
+          }
+        `};
 
       &:hover {
         background-color: ${Checkbox.status[status].hoverBackgroundColor};
         border-color: ${Checkbox.status[status].hoverBorderColor};
 
         ${checked &&
-        css`
-          background-color: ${Checkbox.status[status].hoverCheckedBackgroundColor};
-          border-color: ${Checkbox.status[status].hoverCheckedBorderColor};
-        `}
+          css`
+            background-color: ${Checkbox.status[status].hoverCheckedBackgroundColor};
+            border-color: ${Checkbox.status[status].hoverCheckedBorderColor};
+          `}
       }
     `
   }};
@@ -125,10 +125,10 @@ export const NativeInput = styled(Hidden.withComponent('input'))<CheckboxRequire
       border-color: ${Checkbox.status[status].focusBorderColor};
 
       ${checked &&
-      css`
-        background-color: ${Checkbox.status[status].focusCheckedBackgroundColor};
-        border-color: ${Checkbox.status[status].focusCheckedBorderColor};
-      `};
+        css`
+          background-color: ${Checkbox.status[status].focusCheckedBackgroundColor};
+          border-color: ${Checkbox.status[status].focusCheckedBorderColor};
+        `};
     }
 
     &:enabled:active + ${CustomCheckbox} {
@@ -136,10 +136,10 @@ export const NativeInput = styled(Hidden.withComponent('input'))<CheckboxRequire
       border-color: ${Checkbox.status[status].activeBorderColor};
 
       ${checked &&
-      css`
-        background-color: ${Checkbox.status[status].activeCheckedBackgroundColor};
-        border-color: ${Checkbox.status[status].activeCheckedBorderColor};
-      `};
+        css`
+          background-color: ${Checkbox.status[status].activeCheckedBackgroundColor};
+          border-color: ${Checkbox.status[status].activeCheckedBorderColor};
+        `};
     }
 
     &:disabled {

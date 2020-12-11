@@ -22,15 +22,15 @@ export const AddChip = styled(Chip)`
     }
 
     ${!disabled &&
-    css`
-      &:hover {
-        background: ${MultiSelect.add.hoverBackgroundColor};
+      css`
+        &:hover {
+          background: ${MultiSelect.add.hoverBackgroundColor};
 
-        ${Text} {
-          color: ${MultiSelect.add.textColor};
+          ${Text} {
+            color: ${MultiSelect.add.textColor};
+          }
         }
-      }
-    `};
+      `};
   `};
 `
 

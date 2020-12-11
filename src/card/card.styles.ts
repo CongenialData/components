@@ -74,7 +74,7 @@ export const Header = styled.div<Omit<CardStyleProps, 'shadow'>>`
      * Accent
      */
     ${accent &&
-    `
+      `
       border-top-color: ${Card.header.status[accent].backgroundColor};
       border-top-style: ${Card.borderStyle};
       border-top-width: ${Card.borderRadius};
