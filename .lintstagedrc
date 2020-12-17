@@ -1,8 +1,8 @@
 {
   "*.+(js,ts,tsx,json,md)": [
-    "yarn lint"
+    "eslint"
   ],
   "*.+(js|ts|tsx|json|md)": [
-    "yarn check-format",
+    "prettier --write",
   ]
 }
