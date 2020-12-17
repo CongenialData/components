@@ -1,5 +1,5 @@
 {
-  "version": "0.1.0",
+  "version": "0.1.2",
   "license": "MIT",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
@@ -36,16 +36,30 @@
       "pre-push": "yarn validate"
     }
   },
-  "name": "cleancomponents",
-  "author": "Andreas Olsson",
-  "module": "dist/cleancomponents.esm.js",
+  "name": "@cdab/components",
+  "author": "Congenial Data AB",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:CongenialData/components.git"
+  },
+  "bugs": {
+    "url": "https://github.com/CongenialData/components/issues"
+  },
+  "maintainers": [
+    {
+      "email": "contact@cdab.eu",
+      "name": "Congenial Data AB",
+      "url": "http://cdab.eu"
+    }
+  ],
+  "module": "dist/components.esm.js",
   "size-limit": [
     {
-      "path": "dist/cleancomponents.cjs.production.min.js",
+      "path": "dist/components.cjs.production.min.js",
       "limit": "10 KB"
     },
     {
-      "path": "dist/cleancomponents.esm.js",
+      "path": "dist/components.esm.js",
       "limit": "10 KB"
     }
   ],
