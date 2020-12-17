@@ -1,17 +1,16 @@
-import styled, { css } from "styled-components/macro"
+import styled, { css } from 'styled-components/macro'
 
-import { Card } from "../card"
-import { CircleButton } from "../inputs/circle-button"
-import { Grid } from "../layout/grid"
-import { componentAnimation } from "../theming/mixins"
-import { StyledButton } from "../inputs/button/button.styles"
+import { Card } from '../card'
+import { CircleButton } from '../inputs/circle-button'
+import { Grid } from '../layout/grid'
+import { componentAnimation } from '../theming/mixins'
+import { StyledButton } from '../inputs/button/button.styles'
 
 export const StyledCard = styled(Card)`
   ${({ theme: { Calendar } }) => css`
     background-color: ${Calendar.backgroundColor};
 
-    border: ${Calendar.borderWidth} ${Calendar.borderStyle}
-      ${Calendar.borderColor};
+    border: ${Calendar.borderWidth} ${Calendar.borderStyle} ${Calendar.borderColor};
     border-radius: ${Calendar.borderRadius};
 
     box-shadow: none;
@@ -88,10 +87,8 @@ export const DayNamesGrid = styled(Grid)`
 
     text-transform: capitalize;
 
-    border-top: ${Calendar.weekdayDividerWidth} solid
-      ${Calendar.weekdayDividerColor};
-    border-bottom: ${Calendar.weekdayDividerWidth} solid
-      ${Calendar.weekdayDividerColor};
+    border-top: ${Calendar.weekdayDividerWidth} solid ${Calendar.weekdayDividerColor};
+    border-bottom: ${Calendar.weekdayDividerWidth} solid ${Calendar.weekdayDividerColor};
   `};
 `
 
@@ -140,16 +137,16 @@ export const CellContent = styled.div`
 
     border-radius: ${Calendar.borderRadius};
 
-    ${componentAnimation("background-color, border-color, color")};
+    ${componentAnimation('background-color, border-color, color')};
   `};
 `
 
 /** A day rendered in the calendar */
 export const DayCell = styled.div<{
-  size?: "large";
-  isSelected: boolean;
-  isToday: boolean;
-  isCurrentMonth: boolean;
+  size?: 'large'
+  isSelected: boolean
+  isToday: boolean
+  isCurrentMonth: boolean
 }>`
   ${({ isCurrentMonth, isSelected, isToday, size, theme: { Calendar } }) => css`
     width: ${Calendar.dayCellWidth};
@@ -168,7 +165,7 @@ export const DayCell = styled.div<{
 
     cursor: pointer;
 
-    ${size === "large" &&
+    ${size === 'large' &&
     css`
       width: ${Calendar.dayCellLargeWidth};
       height: ${Calendar.dayCellLargeHeight};

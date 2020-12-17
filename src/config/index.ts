@@ -1,1 +1,1 @@
-export { default as i18nConfig } from "./i18n"
+export { default as i18nConfig } from './i18n'

@@ -1,6 +1,6 @@
-import styled, { css } from "styled-components/macro"
-import { Card } from "../../../card"
-import { SidebarModuleStyleProps } from "./sidebarmodule.interfaces"
+import styled, { css } from 'styled-components/macro'
+import { Card } from '../../../card'
+import { SidebarModuleStyleProps } from './sidebarmodule.interfaces'
 
 export const StyledSidebarModule = styled(Card)`
   ${({ theme: { SidebarModule } }) => css`
@@ -41,7 +41,7 @@ export const Content = styled.div<SidebarModuleStyleProps>`
   ${({ contentPadding, theme: { SidebarModule } }) => css`
     position: relative;
     display: flex;
-    padding: ${contentPadding === "none" ? "0" : SidebarModule.content.padding};
+    padding: ${contentPadding === 'none' ? '0' : SidebarModule.content.padding};
     flex-direction: column;
   `};
 `

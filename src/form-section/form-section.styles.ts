@@ -1,17 +1,12 @@
-import styled, { css } from "styled-components/macro"
+import styled, { css } from 'styled-components/macro'
 
-import { StyledHeading } from "../typography/heading/heading.styles"
+import { StyledHeading } from '../typography/heading/heading.styles'
 
-import {
-  FormSectionComponentProps,
-  FormSectionRequiredStyleProps,
-} from "./form-section.interfaces"
+import { FormSectionComponentProps, FormSectionRequiredStyleProps } from './form-section.interfaces'
 
 export const StyledFormSection = styled.div<FormSectionRequiredStyleProps>`
   ${({ border, theme: { FormSection } }) => {
-    const borderBottom =
-      border &&
-      `${FormSection.border.width} ${FormSection.border.style} ${FormSection.border.color}`
+    const borderBottom = border && `${FormSection.border.width} ${FormSection.border.style} ${FormSection.border.color}`
 
     return css`
       display: flex;

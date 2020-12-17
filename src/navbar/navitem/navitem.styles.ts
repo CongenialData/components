@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/explicit-function-return-type */
-import styled, { css } from "styled-components/macro"
-import { StyledNavItemProps } from "./navitem"
+import styled, { css } from 'styled-components/macro'
+import { StyledNavItemProps } from './navitem'
 
 export const Label = styled.span`
   ${({ theme: { NavItem } }) => css`

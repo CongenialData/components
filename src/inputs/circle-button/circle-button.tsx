@@ -1,36 +1,29 @@
-import React from "react"
+import React from 'react'
 
 /* Import components here */
-import {
-  StyledCircleButton,
-  Title,
-  TitleAndIcon,
-} from "./circle-button.styles"
+import { StyledCircleButton, Title, TitleAndIcon } from './circle-button.styles'
 
 /* Import interfaces here */
-import { CircleButtonProps } from "./circle-button.interfaces"
-import { circleButtonTheme } from "./circle-button.theme"
-import { ThemedComponent } from "../../theming"
+import { CircleButtonProps } from './circle-button.interfaces'
+import { circleButtonTheme } from './circle-button.theme'
+import { ThemedComponent } from '../../theming'
 
-export const _CircleButton = React.forwardRef<
-  HTMLButtonElement,
-  CircleButtonProps
->(function CirceButton(
+export const _CircleButton = React.forwardRef<HTMLButtonElement, CircleButtonProps>(function CirceButton(
   {
     children,
     className,
     onClick,
     icon,
-    size = "medium",
-    horizontalSpacing = "normal",
-    verticalSpacing = "normal",
+    size = 'medium',
+    horizontalSpacing = 'normal',
+    verticalSpacing = 'normal',
     style,
     title,
     type,
-    variant = "primary",
+    variant = 'primary',
     disabled,
   }: CircleButtonProps,
-  ref
+  ref,
 ): JSX.Element {
   return (
     <StyledCircleButton
@@ -63,7 +56,7 @@ export const _CircleButton = React.forwardRef<
   )
 })
 
-type TCircleButton = typeof _CircleButton & ThemedComponent;
+type TCircleButton = typeof _CircleButton & ThemedComponent
 export const CircleButton: TCircleButton = _CircleButton
 
 CircleButton.defaultTheme = circleButtonTheme

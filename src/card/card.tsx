@@ -1,11 +1,11 @@
-import * as React from "react"
+import * as React from 'react'
 
 /* Import components here */
-import { Content, Footer, Header, StyledCard, Title } from "./card.styles"
+import { Content, Footer, Header, StyledCard, Title } from './card.styles'
 
 /* Import interfaces here */
-import { CardProps } from "./card.interfaces"
-import { cardTheme } from "./card.theme"
+import { CardProps } from './card.interfaces'
+import { cardTheme } from './card.theme'
 
 /** A much reusable card for any type of card-based interface */
 export const Card = ({
@@ -16,8 +16,8 @@ export const Card = ({
   shadow = false,
   size,
   renderToolbar,
-  spacing = "normal",
-  status = "basic",
+  spacing = 'normal',
+  status = 'basic',
 }: CardProps): JSX.Element => {
   return (
     <StyledCard shadow={shadow} size={size} spacing={spacing} status={status}>

@@ -1,7 +1,7 @@
-import { ListDescriptionTheme } from "./listdescription.theme"
+import { ListDescriptionTheme } from './listdescription.theme'
 
-declare module "styled-components" {
+declare module 'styled-components' {
   export interface DefaultTheme {
-    ListDescription: ListDescriptionTheme;
+    ListDescription: ListDescriptionTheme
   }
 }

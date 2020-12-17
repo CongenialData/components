@@ -1,6 +1,6 @@
 {
   "*.+(js,ts,tsx,json,md)": [
-    "yarn lint"
+    "eslint"
   ],
   "*.+(js|ts|tsx|json|md)": [
     "prettier --write",

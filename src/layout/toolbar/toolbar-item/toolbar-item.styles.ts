@@ -1,5 +1,5 @@
-import styled, { css } from "styled-components/macro"
-import { ToolbarItemStyleProps } from "./toolbar-item.interfaces"
+import styled, { css } from 'styled-components/macro'
+import { ToolbarItemStyleProps } from './toolbar-item.interfaces'
 
 export const StyledToolbarItem = styled.li<ToolbarItemStyleProps>`
   ${({ theme: { ToolbarItem }, flex = 1 }) => css`

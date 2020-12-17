@@ -1,7 +1,7 @@
-import { CalendarTheme } from "./calendar.theme"
+import { CalendarTheme } from './calendar.theme'
 
-declare module "styled-components" {
+declare module 'styled-components' {
   export interface DefaultTheme {
-    Calendar: CalendarTheme;
+    Calendar: CalendarTheme
   }
 }

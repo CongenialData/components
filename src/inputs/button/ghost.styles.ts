@@ -1,5 +1,5 @@
-import { css } from "styled-components/macro"
-import { TComponentStatus, outline } from "../../theming"
+import { css } from 'styled-components/macro'
+import { TComponentStatus, outline } from '../../theming'
 
 export const GhostButtonStyle = (status: TComponentStatus) =>
   css`
@@ -13,11 +13,7 @@ export const GhostButtonStyle = (status: TComponentStatus) =>
       },
     }) => {
       const insetShadow = ghost.focusInsetShadowLength
-      const cssWithOutline = outline(
-        outlineWidth,
-        outlineColor,
-        insetShadow.toString()
-      )
+      const cssWithOutline = outline(outlineWidth, outlineColor, insetShadow.toString())
 
       return css`
         background-color: ${ghost[status].backgroundColor};

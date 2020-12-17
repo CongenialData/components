@@ -1,8 +1,8 @@
-import React, { useCallback } from "react"
-import _ from "lodash"
-import { faAngleLeft, faAngleRight } from "@fortawesome/free-solid-svg-icons"
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { format, isSameDay, isSameMonth, isToday } from "date-fns"
+import React, { useCallback } from 'react'
+import _ from 'lodash'
+import { faAngleLeft, faAngleRight } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { format, isSameDay, isSameMonth, isToday } from 'date-fns'
 
 /* Import components here */
 import {
@@ -15,24 +15,24 @@ import {
   PageableNavigation,
   Picker,
   StyledCard,
-} from "./calendar.styles"
-import { HideWhileLoading } from "../hide-while-loading"
-import { Button } from "../inputs/button"
-import { DayNames } from "./day-names"
+} from './calendar.styles'
+import { HideWhileLoading } from '../hide-while-loading'
+import { Button } from '../inputs/button'
+import { DayNames } from './day-names'
 
 /* Import interfaces here */
-import { CalendarProps, DayProps } from "./calendar.interfaces"
-import { calendarTheme } from "./calendar.theme"
+import { CalendarProps, DayProps } from './calendar.interfaces'
+import { calendarTheme } from './calendar.theme'
 
 /* Import utilities here */
-import { generateCalendar, monthName } from "./calendar.utilities"
+import { generateCalendar, monthName } from './calendar.utilities'
 
 /**
  * Generate a string to be used as key in extraInfo
  * @param d - date to generate key for
  * @returns the key to be used
  */
-const getExtraInfoKey = (d: Date): string => format(d, "yyyy-MM-dd")
+const getExtraInfoKey = (d: Date): string => format(d, 'yyyy-MM-dd')
 
 /**
  * prepare props for the Day component
@@ -44,16 +44,9 @@ const getExtraInfoKey = (d: Date): string => format(d, "yyyy-MM-dd")
  *
  * @returns an object that can be used as props to the Day component
  */
-const prepareItem = _.curry(function <T>(
-  value: Date,
-  month: Date,
-  extraInfo: T,
-  date: Date
-): DayProps<T> {
+const prepareItem = _.curry(function <T>(value: Date, month: Date, extraInfo: T, date: Date): DayProps<T> {
   const key = getExtraInfoKey(date)
-  const info = extraInfo
-    ? (extraInfo as Record<string, never>)[key]
-    : undefined
+  const info = extraInfo ? (extraInfo as Record<string, never>)[key] : undefined
 
   return {
     date,
@@ -66,9 +59,7 @@ const prepareItem = _.curry(function <T>(
 
 // TODO: Use correct type and remove eslint disable
 // eslint-disable-next-line @typescript-eslint/ban-types
-const DefaultDayComponent = <T extends {}>(
-  dayProps: DayProps<T>
-): JSX.Element => {
+const DefaultDayComponent = <T extends {}>(dayProps: DayProps<T>): JSX.Element => {
   const { date, extraInfo, ...props } = dayProps
   return (
     <DayCell {...props}>
@@ -87,37 +78,22 @@ const Header = ({
   onPrevMonthClick,
   onNextMonthClick,
 }: {
-  isLoading: boolean;
-  onPrevMonthClick: () => void;
-  onNextMonthClick: () => void;
-  month: Date;
-  monthTitleLength?: number;
+  isLoading: boolean
+  onPrevMonthClick: () => void
+  onNextMonthClick: () => void
+  month: Date
+  monthTitleLength?: number
 }) => {
-  const monthYearTitle = `${monthName(
-    month,
-    monthTitleLength
-  )} ${month.getFullYear()}`
+  const monthYearTitle = `${monthName(month, monthTitleLength)} ${month.getFullYear()}`
 
   return (
     <Navigation>
       <DateMonthWrapper>{monthYearTitle}</DateMonthWrapper>
       <PageableNavigation>
-        <Button
-          appearance="ghost"
-          disabled={isLoading}
-          size="tiny"
-          type="button"
-          onClick={onPrevMonthClick}
-        >
+        <Button appearance="ghost" disabled={isLoading} size="tiny" type="button" onClick={onPrevMonthClick}>
           <FontAwesomeIcon icon={faAngleLeft} />
         </Button>
-        <Button
-          appearance="ghost"
-          disabled={isLoading}
-          size="tiny"
-          type="button"
-          onClick={onNextMonthClick}
-        >
+        <Button appearance="ghost" disabled={isLoading} size="tiny" type="button" onClick={onNextMonthClick}>
           <FontAwesomeIcon icon={faAngleRight} />
         </Button>
       </PageableNavigation>
@@ -125,9 +101,7 @@ const Header = ({
   )
 }
 
-export const Calendar = <T extends Record<string, never>>(
-  props: CalendarProps<T>
-): JSX.Element => {
+export const Calendar = <T extends Record<string, never>>(props: CalendarProps<T>): JSX.Element => {
   const {
     value,
     month,
@@ -145,9 +119,7 @@ export const Calendar = <T extends Record<string, never>>(
   // Make sure it's not undefined
   extraInfo = extraInfo || {}
 
-  const calendar: DayProps<T>[] = Array.from(generateCalendar(month)).map(
-    prepareItem(value, month, extraInfo)
-  )
+  const calendar: DayProps<T>[] = Array.from(generateCalendar(month)).map(prepareItem(value, month, extraInfo))
 
   const onNextMonthClick = useCallback((): void => {
     const monthCopy = new Date(month.getTime())
@@ -161,8 +133,7 @@ export const Calendar = <T extends Record<string, never>>(
     onChangeMonth(monthCopy)
   }, [onChangeMonth, month])
 
-  const DayComponent: React.FC<DayProps<T>> =
-    dayComponent || DefaultDayComponent
+  const DayComponent: React.FC<DayProps<T>> = dayComponent || DefaultDayComponent
 
   return (
     <StyledCard className={className} spacing="none" {...styleProps}>
@@ -186,7 +157,7 @@ export const Calendar = <T extends Record<string, never>>(
                     // eslint-disable-next-line react-perf/jsx-no-new-function-as-prop
                     onClick={onSelectDate.bind(null, dateProps.date)}
                   />
-                )
+                ),
               )}
             </DayPicker>
           </HideWhileLoading>

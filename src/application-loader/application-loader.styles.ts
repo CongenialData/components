@@ -1,6 +1,6 @@
-import styled, { keyframes } from "styled-components/macro"
+import styled, { keyframes } from 'styled-components/macro'
 
-import { Page } from "../layout/page"
+import { Page } from '../layout/page'
 
 export const Rotate = keyframes`
   0% {

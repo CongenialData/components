@@ -1,8 +1,8 @@
-import React, { useCallback, useRef } from "react"
-import { createPortal } from "react-dom"
-import FocusTrap from "focus-trap-react"
+import React, { useCallback, useRef } from 'react'
+import { createPortal } from 'react-dom'
+import FocusTrap from 'focus-trap-react'
 
-import { dialogBoxTheme } from "./dialogbox.theme"
+import { dialogBoxTheme } from './dialogbox.theme'
 
 /* Import components here */
 import {
@@ -15,19 +15,15 @@ import {
   StyledDialogBox,
   Overlay as StyledOverlay,
   TopSection,
-} from "./dialogbox.styles"
+} from './dialogbox.styles'
 
 /* Import interfaces here */
-import { DialogBoxProps, FooterProps } from "./dialogbox.interfaces"
+import { DialogBoxProps, FooterProps } from './dialogbox.interfaces'
 
 /* Import utilities here */
 
 const CloseButton = ({ onClick }: { onClick: () => void }): JSX.Element => (
-  <StyledCloseButton
-    aria-labelledby="close-modal"
-    className="c-modal__close"
-    onClick={onClick}
-  >
+  <StyledCloseButton aria-labelledby="close-modal" className="c-modal__close" onClick={onClick}>
     <Close className="u-hide-visually" id="close-modal">
       Close
     </Close>
@@ -42,9 +38,9 @@ const CloseButton = ({ onClick }: { onClick: () => void }): JSX.Element => (
  * Overlay is used as an clickable overlay
  */
 const Overlay = (props: {
-  className?: string;
-  onClick: () => void;
-  children: React.ReactChild | React.ReactChild[];
+  className?: string
+  onClick: () => void
+  children: React.ReactChild | React.ReactChild[]
 }): JSX.Element => {
   const { className, children /*onClick*/ } = props
   const ref = useRef<HTMLDivElement>(null)
@@ -68,12 +64,7 @@ const Overlay = (props: {
   }, [])
 
   return (
-    <StyledOverlay
-      ref={ref}
-      className={className}
-      onMouseDown={handleMouseDown}
-      onMouseUp={handleMouseUp}
-    >
+    <StyledOverlay ref={ref} className={className} onMouseDown={handleMouseDown} onMouseUp={handleMouseUp}>
       {children}
     </StyledOverlay>
   )
@@ -122,15 +113,9 @@ export const DialogBox = ({
   return null
 }
 
-const DialogFooter = ({
-  children,
-  justify: justifyProp,
-}: FooterProps): JSX.Element => {
+const DialogFooter = ({ children, justify: justifyProp }: FooterProps): JSX.Element => {
   // Let justify default on "evenly" if there is only one child
-  const justify =
-    React.Children.count(children) === 1
-      ? justifyProp || "evenly"
-      : justifyProp
+  const justify = React.Children.count(children) === 1 ? justifyProp || 'evenly' : justifyProp
   return <Footer justify={justify}>{children}</Footer>
 }
 

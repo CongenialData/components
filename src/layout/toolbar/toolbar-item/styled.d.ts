@@ -1,7 +1,7 @@
-import { ToolbarItemTheme } from "./toolbar-item.theme"
+import { ToolbarItemTheme } from './toolbar-item.theme'
 
-declare module "styled-components" {
+declare module 'styled-components' {
   export interface DefaultTheme {
-    ToolbarItem: ToolbarItemTheme;
+    ToolbarItem: ToolbarItemTheme
   }
 }

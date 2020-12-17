@@ -1,25 +1,20 @@
 /* eslint-disable react/prop-types */ // TODO: Remove disable rule and make it work
-import React from "react"
+import React from 'react'
 
 /* Import components here */
-import { Caption } from "../../typography/caption"
-import { Label } from "../../typography/label"
-import { InputWrapper, StyledInput } from "./text-input.styles"
+import { Caption } from '../../typography/caption'
+import { Label } from '../../typography/label'
+import { InputWrapper, StyledInput } from './text-input.styles'
 
 /* Import interfaces here */
-import { TextInputProps } from "./text-input.interfaces"
-import { textInputTheme } from "./text-input.theme"
-import { ThemedComponent } from "../../theming"
+import { TextInputProps } from './text-input.interfaces'
+import { textInputTheme } from './text-input.theme'
+import { ThemedComponent } from '../../theming'
 
-type TTextInput = React.ForwardRefExoticComponent<
-  TextInputProps & React.RefAttributes<HTMLInputElement>
-> &
-  ThemedComponent;
+type TTextInput = React.ForwardRefExoticComponent<TextInputProps & React.RefAttributes<HTMLInputElement>> &
+  ThemedComponent
 
-export const TextInput: TTextInput = React.forwardRef<
-  HTMLInputElement,
-  TextInputProps
->(
+export const TextInput: TTextInput = React.forwardRef<HTMLInputElement, TextInputProps>(
   (
     {
       autoComplete,
@@ -27,11 +22,11 @@ export const TextInput: TTextInput = React.forwardRef<
       captionType,
       className,
       disabled,
-      fieldSize = "medium",
+      fieldSize = 'medium',
       fullWidth = false,
       id,
       inputRef,
-      inputType = "text",
+      inputType = 'text',
       label,
       name,
       onBlur,
@@ -41,12 +36,12 @@ export const TextInput: TTextInput = React.forwardRef<
       pattern,
       placeholder,
       required,
-      shape = "rectangle",
-      status = "basic",
+      shape = 'rectangle',
+      status = 'basic',
       step,
       value,
     },
-    ref
+    ref,
   ): JSX.Element => {
     const [myID] = React.useState(id || Math.random().toString())
 
@@ -75,7 +70,7 @@ export const TextInput: TTextInput = React.forwardRef<
           onClick={onClick}
           onFocus={onFocus}
         />
-        {caption && typeof caption === "string" ? (
+        {caption && typeof caption === 'string' ? (
           <Caption status={status} type={captionType}>
             {caption}
           </Caption>
@@ -84,8 +79,8 @@ export const TextInput: TTextInput = React.forwardRef<
         )}
       </InputWrapper>
     )
-  }
+  },
 )
 
 TextInput.defaultTheme = textInputTheme
-TextInput.displayName = "TextInput"
+TextInput.displayName = 'TextInput'

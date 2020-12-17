@@ -1,7 +1,7 @@
-import { ModuleTheme } from "./module.theme"
+import { ModuleTheme } from './module.theme'
 
-declare module "styled-components" {
+declare module 'styled-components' {
   export interface DefaultTheme {
-    Module: ModuleTheme;
+    Module: ModuleTheme
   }
 }

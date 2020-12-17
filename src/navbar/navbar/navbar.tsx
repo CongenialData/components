@@ -1,9 +1,9 @@
-import * as React from "react"
+import * as React from 'react'
 
-import { StyledNavBar, StyledNavContainer } from "./navbar.styles"
-import { navbarTheme } from "./navbar.theme"
+import { StyledNavBar, StyledNavContainer } from './navbar.styles'
+import { navbarTheme } from './navbar.theme'
 
-import { NavBarProps } from "./navbar.interfaces"
+import { NavBarProps } from './navbar.interfaces'
 
 export const NavBar = (props: NavBarProps): JSX.Element => {
   return (

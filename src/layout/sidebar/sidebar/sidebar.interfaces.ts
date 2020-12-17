@@ -5,9 +5,9 @@ export interface SidebarComponentProps {
   /**
    * A main title for the sidebar, not for individual modules.
    */
-  title?: string;
+  title?: string
 }
 
 export interface SidebarProps extends SidebarStyleProps, SidebarComponentProps {
-  children?: React.ReactNode;
+  children?: React.ReactNode
 }

@@ -1,17 +1,12 @@
-import { TCommonTheme, TThemeFromFn, tuple } from "../theming"
+import { TCommonTheme, TThemeFromFn, tuple } from '../theming'
 
-export const cardTheme = ({
-  baseColors,
-  colors,
-  typography,
-  support,
-}: TCommonTheme) =>
+export const cardTheme = ({ baseColors, colors, typography, support }: TCommonTheme) =>
   tuple([
-    "Card",
+    'Card',
     {
       backgroundColor: colors.BACKGROUND_BASIC_COLOR_1,
-      borderWidth: "0.0625rem",
-      borderStyle: "solid",
+      borderWidth: '0.0625rem',
+      borderStyle: 'solid',
       borderColor: colors.BORDER_BASIC_COLOR_4,
       textColor: colors.TEXT_BASIC_COLOR,
       borderRadius: support.BORDER_RADIUS,
@@ -19,26 +14,26 @@ export const cardTheme = ({
       textFontSize: typography.TEXT_PARAGRAPH_FONT_SIZE,
       textFontWeight: typography.TEXT_PARAGRAPH_FONT_WEIGHT,
       textLineHeight: typography.TEXT_PARAGRAPH_LINE_HEIGHT,
-      marginBottom: "1rem",
+      marginBottom: '1rem',
       dividerColor: support.DIVIDER_COLOR,
       dividerStyle: support.DIVIDER_STYLE,
       dividerWidth: support.DIVIDER_WIDTH,
       size: {
-        tiny: "13.5rem",
-        small: "21.1875rem",
-        medium: "28.875rem",
-        large: "36.5625rem",
-        giant: "44.25rem",
+        tiny: '13.5rem',
+        small: '21.1875rem',
+        medium: '28.875rem',
+        large: '36.5625rem',
+        giant: '44.25rem',
       },
       spacing: {
-        none: "0",
-        small: "0.5rem 0.75rem",
-        normal: "1rem 1.5rem",
+        none: '0',
+        small: '0.5rem 0.75rem',
+        normal: '1rem 1.5rem',
       },
       shadow: support.SHADOW,
       description: {
-        fontWeight: "bold",
-        size: "0.875rem",
+        fontWeight: 'bold',
+        size: '0.875rem',
       },
       header: {
         textColor: colors.TEXT_BASIC_COLOR,
@@ -80,4 +75,4 @@ export const cardTheme = ({
     },
   ])
 
-export type CardTheme = TThemeFromFn<typeof cardTheme>;
+export type CardTheme = TThemeFromFn<typeof cardTheme>

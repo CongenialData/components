@@ -1,4 +1,4 @@
-import { FlattenSimpleInterpolation, css } from "styled-components/macro"
+import { FlattenSimpleInterpolation, css } from 'styled-components/macro'
 
 /**
  * Utility to add transitions to components
@@ -11,9 +11,7 @@ import { FlattenSimpleInterpolation, css } from "styled-components/macro"
  * ${componentAnimation('background-color, color')};
  * ```
  */
-export const componentAnimation = (
-  properties: string
-): FlattenSimpleInterpolation => {
+export const componentAnimation = (properties: string): FlattenSimpleInterpolation => {
   return css`
     transition-duration: 0.15s;
     transition-property: ${properties};
@@ -38,7 +36,7 @@ export const componentAnimation = (
 export const outline = (
   outlineWidth: string,
   outlineColor: string,
-  insetShadowLength: string | number = 0
+  insetShadowLength: string | number = 0,
 ): FlattenSimpleInterpolation => {
   const outsetShadow = `0 0 0 ${outlineWidth} ${outlineColor}`
 

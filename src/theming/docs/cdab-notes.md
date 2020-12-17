@@ -48,11 +48,11 @@ _Nedanstående fungerar inte_
 
 ```typescript
 const myObj = {
-  firstName: "John",
-  lastName: "Doe",
+  firstName: 'John',
+  lastName: 'Doe',
   age: 31,
   nickName: firstname,
-};
+}
 ```
 
 Exempel på lösning i `<Calendar />`

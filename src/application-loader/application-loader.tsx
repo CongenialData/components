@@ -1,19 +1,15 @@
-import React, { useEffect, useRef, useState } from "react"
+import React, { useEffect, useRef, useState } from 'react'
 
-import { Flex } from "../flex"
-import { Heading } from "../typography/heading"
+import { Flex } from '../flex'
+import { Heading } from '../typography/heading'
 
-import {
-  AnimatedWrapper,
-  Loader,
-  StyledPage,
-} from "./application-loader.styles"
-import { ApplicationLoaderProps } from "./application-loader.types"
+import { AnimatedWrapper, Loader, StyledPage } from './application-loader.styles'
+import { ApplicationLoaderProps } from './application-loader.types'
 
 export const ApplicationLoader = ({
   show = true,
   hideDelay = 500,
-  text
+  text,
 }: ApplicationLoaderProps): JSX.Element | null => {
   const timeoutRef = useRef<null>()
   const [hide, setHide] = useState(show)

@@ -1,5 +1,5 @@
-import { TBaseColors } from "./basecolors"
-import { TColors } from "./colors"
+import { TBaseColors } from './basecolors'
+import { TColors } from './colors'
 
 /**
  * **Support variables**
@@ -16,24 +16,24 @@ export const supportMapping = (baseColors: TBaseColors, colors: TColors) => {
 
   return {
     // FIXME: DET här fungerar inte att overrida
-    BORDER_RADIUS: "0.25rem",
+    BORDER_RADIUS: '0.25rem',
 
     OUTLINE_COLOR,
-    OUTLINE_WIDTH: "0.375rem",
+    OUTLINE_WIDTH: '0.375rem',
 
     SCROLLBAR_COLOR,
     SCROLLBAR_BACKGROUND_COLOR,
-    SCROLLBAR_WIDTH: "0.3125rem",
+    SCROLLBAR_WIDTH: '0.3125rem',
 
-    SHADOW: "0 0.5rem 1rem 0 rgba(44, 51, 73, 0.1)",
+    SHADOW: '0 0.5rem 1rem 0 rgba(44, 51, 73, 0.1)',
 
     DIVIDER_COLOR,
-    DIVIDER_STYLE: "solid",
-    DIVIDER_WIDTH: "1px",
+    DIVIDER_STYLE: 'solid',
+    DIVIDER_WIDTH: '1px',
   }
 }
 
-export type TSupport = ReturnType<typeof supportMapping>;
+export type TSupport = ReturnType<typeof supportMapping>
 
 /**
  * Type used allowing user to create a typed override object for support variables in theme.
@@ -53,4 +53,4 @@ export type TSupport = ReturnType<typeof supportMapping>;
  * })
  * ```
  */
-export type TCustomSupport = Partial<TSupport>;
+export type TCustomSupport = Partial<TSupport>

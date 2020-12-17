@@ -1,12 +1,12 @@
-import * as React from "react"
+import * as React from 'react'
 
 /* Import components here */
-import { faTimesCircle } from "@fortawesome/free-solid-svg-icons"
-import { Icon, RemoveIcon, StyledChip, Text } from "./chip.styles"
+import { faTimesCircle } from '@fortawesome/free-solid-svg-icons'
+import { Icon, RemoveIcon, StyledChip, Text } from './chip.styles'
 
 /* Import interfaces here */
-import { ChipProps } from "./chip.interfaces"
-import { chipTheme } from "./chip.theme"
+import { ChipProps } from './chip.interfaces'
+import { chipTheme } from './chip.theme'
 
 /* Import utilities here */
 

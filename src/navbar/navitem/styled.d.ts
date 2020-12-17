@@ -1,7 +1,7 @@
-import { NavItemTheme } from "./navitem.theme"
+import { NavItemTheme } from './navitem.theme'
 
-declare module "styled-components" {
+declare module 'styled-components' {
   export interface DefaultTheme {
-    NavItem: NavItemTheme;
+    NavItem: NavItemTheme
   }
 }

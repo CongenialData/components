@@ -1,12 +1,10 @@
 export interface ToolbarItemStyleProps {
-  flex?: number | string;
+  flex?: number | string
 }
 
 export interface ToolbarItemComponentProps {
-  children: React.ReactChild | React.ReactChild[];
-  icon?: JSX.Element;
+  children: React.ReactChild | React.ReactChild[]
+  icon?: JSX.Element
 }
 
-export interface ToolbarItemProps
-  extends ToolbarItemComponentProps,
-    ToolbarItemStyleProps {}
+export interface ToolbarItemProps extends ToolbarItemComponentProps, ToolbarItemStyleProps {}

@@ -1,5 +1,5 @@
 export interface ApplicationLoaderProps {
-  show?: boolean;
-  hideDelay?: number;
-  text?: string;
+  show?: boolean
+  hideDelay?: number
+  text?: string
 }

@@ -1,22 +1,17 @@
-import { TCommonTheme, TThemeFromFn, tuple } from "../../theming"
+import { TCommonTheme, TThemeFromFn, tuple } from '../../theming'
 
-export const textInputTheme = ({
-  baseColors,
-  colors,
-  support,
-  typography,
-}: TCommonTheme) =>
+export const textInputTheme = ({ baseColors, colors, support, typography }: TCommonTheme) =>
   tuple([
-    "TextInput",
+    'TextInput',
     {
-      borderStyle: "solid",
-      borderWidth: "1px",
+      borderStyle: 'solid',
+      borderWidth: '1px',
       outlineColor: support.OUTLINE_COLOR,
       outlineWidth: support.OUTLINE_WIDTH,
       placeholderTextFontFamily: typography.TEXT_PARAGRAPH_FONT_FAMILY,
       textFontFamily: typography.TEXT_SUBTITLE_FONT_FAMILY,
       message: {
-        marginBottom: "0.5rem",
+        marginBottom: '0.5rem',
         error: {
           color: colors.TEXT_DANGER_COLOR,
         },
@@ -25,8 +20,8 @@ export const textInputTheme = ({
       /** Shape */
       shape: {
         rectangle: support.BORDER_RADIUS,
-        semiround: "0.75rem",
-        round: "1.5rem",
+        semiround: '0.75rem',
+        round: '1.5rem',
       },
 
       /** Statuses */
@@ -140,8 +135,8 @@ export const textInputTheme = ({
           placeholderTextFontSize: typography.TEXT_PARAGRAPH_FONT_SIZE,
           placeholderTextFontWeight: typography.TEXT_PARAGRAPH_FONT_WEIGHT,
           placeholderTextLineHeight: typography.TEXT_PARAGRAPH_LINE_HEIGHT,
-          padding: "0.1875rem 1rem",
-          maxWidth: "20rem",
+          padding: '0.1875rem 1rem',
+          maxWidth: '20rem',
         },
         small: {
           textFontSize: typography.TEXT_SUBTITLE_2_FONT_SIZE,
@@ -150,8 +145,8 @@ export const textInputTheme = ({
           placeholderTextFontSize: typography.TEXT_PARAGRAPH_FONT_SIZE,
           placeholderTextFontWeight: typography.TEXT_PARAGRAPH_FONT_WEIGHT,
           placeholderTextLineHeight: typography.TEXT_PARAGRAPH_LINE_HEIGHT,
-          padding: "0.1875rem 1rem",
-          maxWidth: "20rem",
+          padding: '0.1875rem 1rem',
+          maxWidth: '20rem',
         },
         medium: {
           textFontSize: typography.TEXT_SUBTITLE_FONT_SIZE,
@@ -160,8 +155,8 @@ export const textInputTheme = ({
           placeholderTextFontSize: typography.TEXT_PARAGRAPH_FONT_SIZE,
           placeholderTextFontWeight: typography.TEXT_PARAGRAPH_FONT_WEIGHT,
           placeholderTextLineHeight: typography.TEXT_PARAGRAPH_LINE_HEIGHT,
-          padding: "0.4375rem 1rem",
-          maxWidth: "20rem",
+          padding: '0.4375rem 1rem',
+          maxWidth: '20rem',
         },
         large: {
           textFontSize: typography.TEXT_SUBTITLE_FONT_SIZE,
@@ -170,8 +165,8 @@ export const textInputTheme = ({
           placeholderTextFontSize: typography.TEXT_PARAGRAPH_FONT_SIZE,
           placeholderTextFontWeight: typography.TEXT_PARAGRAPH_FONT_WEIGHT,
           placeholderTextLineHeight: typography.TEXT_PARAGRAPH_LINE_HEIGHT,
-          padding: "0.6875rem 1rem",
-          maxWidth: "30rem",
+          padding: '0.6875rem 1rem',
+          maxWidth: '30rem',
         },
         giant: {
           textFontSize: typography.TEXT_HEADING_6_FONT_SIZE,
@@ -180,11 +175,11 @@ export const textInputTheme = ({
           placeholderTextFontSize: typography.TEXT_PARAGRAPH_FONT_SIZE,
           placeholderTextFontWeight: typography.TEXT_PARAGRAPH_FONT_WEIGHT,
           placeholderTextLineHeight: typography.TEXT_PARAGRAPH_LINE_HEIGHT,
-          padding: "0.9375rem 1rem",
-          maxWidth: "30rem",
+          padding: '0.9375rem 1rem',
+          maxWidth: '30rem',
         },
       },
     },
   ])
 
-export type TextInputTheme = TThemeFromFn<typeof textInputTheme>;
+export type TextInputTheme = TThemeFromFn<typeof textInputTheme>

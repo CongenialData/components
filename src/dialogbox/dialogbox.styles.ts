@@ -1,6 +1,6 @@
-import styled from "styled-components/macro"
+import styled from 'styled-components/macro'
 
-import { justify as JUSTIFY, Justify } from "./dialogbox.interfaces"
+import { justify as JUSTIFY, Justify } from './dialogbox.interfaces'
 
 export const StyledDialogBox = styled.div`
   position: fixed;
@@ -101,11 +101,11 @@ export const Body = styled.div`
 const flexMap = (x?: Justify) =>
   x
     ? {
-        [JUSTIFY.left]: "flex-start",
-        [JUSTIFY.right]: "flex-end",
-        [JUSTIFY.evenly]: "space-around",
+        [JUSTIFY.left]: 'flex-start',
+        [JUSTIFY.right]: 'flex-end',
+        [JUSTIFY.evenly]: 'space-around',
       }[x]
-    : "space-between"
+    : 'space-between'
 
 export const Footer = styled.div<{ justify?: Justify }>`
   display: flex;

@@ -1,16 +1,8 @@
-import styled, {
-  FlattenSimpleInterpolation,
-  css,
-} from "styled-components/macro"
+import styled, { FlattenSimpleInterpolation, css } from 'styled-components/macro'
 
-import { StyledHeadingProps } from "./heading.interfaces"
+import { StyledHeadingProps } from './heading.interfaces'
 
-type ConditionalStyle<T> =
-  | FlattenSimpleInterpolation
-  | string
-  | undefined
-  | false
-  | T;
+type ConditionalStyle<T> = FlattenSimpleInterpolation | string | undefined | false | T
 
 const truncateStyle = (): FlattenSimpleInterpolation => css`
   white-space: nowrap;
@@ -18,10 +10,8 @@ const truncateStyle = (): FlattenSimpleInterpolation => css`
   text-overflow: ellipsis;
 `
 
-export const StyledHeading = styled.h1.attrs({ role: "heading" })<
-  StyledHeadingProps
->`
-  align-self: ${({ alignSelf }): string => alignSelf || "auto"};
+export const StyledHeading = styled.h1.attrs({ role: 'heading' })<StyledHeadingProps>`
+  align-self: ${({ alignSelf }): string => alignSelf || 'auto'};
 
   color: ${({ color, theme }): string => color || theme.Heading.color};
 
@@ -32,6 +22,5 @@ export const StyledHeading = styled.h1.attrs({ role: "heading" })<
 
   text-align: ${({ textAlign }): string => textAlign};
 
-  ${({ truncate }): ConditionalStyle<typeof truncateStyle> =>
-    truncate && truncateStyle()}
+  ${({ truncate }): ConditionalStyle<typeof truncateStyle> => truncate && truncateStyle()}
 `

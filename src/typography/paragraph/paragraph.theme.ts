@@ -1,19 +1,19 @@
-import { TCommonTheme, TThemeFromFn, tuple } from "../../theming"
+import { TCommonTheme, TThemeFromFn, tuple } from '../../theming'
 
 // eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
 export const paragraphTheme = ({ colors, typography }: TCommonTheme) =>
   tuple([
-    "Paragraph",
+    'Paragraph',
     {
       margin: {
-        none: "0",
-        xxsmall: "0.25rem",
-        xsmall: "0.5rem",
-        small: "0.75rem",
-        medium: "1rem",
-        large: "1.25rem",
-        xlarge: "1.5rem",
-        xxlarge: "2rem",
+        none: '0',
+        xxsmall: '0.25rem',
+        xsmall: '0.5rem',
+        small: '0.75rem',
+        medium: '1rem',
+        large: '1.25rem',
+        xlarge: '1.5rem',
+        xxlarge: '2rem',
       },
       variant: {
         default: {
@@ -34,4 +34,4 @@ export const paragraphTheme = ({ colors, typography }: TCommonTheme) =>
     },
   ])
 
-export type ParagraphTheme = TThemeFromFn<typeof paragraphTheme>;
+export type ParagraphTheme = TThemeFromFn<typeof paragraphTheme>

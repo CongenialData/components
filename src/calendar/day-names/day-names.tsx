@@ -1,10 +1,10 @@
-import React from "react"
+import React from 'react'
 
 /* Import components here */
-import { DayName, DayNamesGrid } from "./day-names.styles"
+import { DayName, DayNamesGrid } from './day-names.styles'
 
 /* Import utilities here */
-import { getDayNames } from "../calendar.utilities"
+import { getDayNames } from '../calendar.utilities'
 
 export const DayNames = (props: { dayTitleLength?: number }): JSX.Element => {
   const { dayTitleLength = 2 } = props
@@ -15,7 +15,7 @@ export const DayNames = (props: { dayTitleLength?: number }): JSX.Element => {
       {getDayNames(dayTitleLength).map(
         (dayName, index): JSX.Element => (
           <DayName key={`dayname${index}`}>{dayName}</DayName>
-        )
+        ),
       )}
     </DayNamesGrid>
   )

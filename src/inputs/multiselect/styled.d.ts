@@ -1,7 +1,7 @@
-import { MultiSelectTheme } from "./multiselect.theme"
+import { MultiSelectTheme } from './multiselect.theme'
 
-declare module "styled-components" {
+declare module 'styled-components' {
   export interface DefaultTheme {
-    MultiSelect: MultiSelectTheme;
+    MultiSelect: MultiSelectTheme
   }
 }

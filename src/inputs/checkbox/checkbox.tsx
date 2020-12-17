@@ -1,22 +1,15 @@
-import React from "react"
+import React from 'react'
 
-import { faCheck } from "@fortawesome/free-solid-svg-icons"
+import { faCheck } from '@fortawesome/free-solid-svg-icons'
 
 /* Import components here */
-import { Caption } from "../../typography/caption"
-import {
-  CheckboxWrapper,
-  CustomCheckbox,
-  Icon,
-  LabelAndCaption,
-  NativeInput,
-  Text,
-} from "./checkbox.styles"
+import { Caption } from '../../typography/caption'
+import { CheckboxWrapper, CustomCheckbox, Icon, LabelAndCaption, NativeInput, Text } from './checkbox.styles'
 // import { CheckboxWrapper, CustomCheckbox, HiddenCheckbox, Icon, Label } from './checkbox.styles'
-import { checkboxTheme } from "./checkbox.theme"
+import { checkboxTheme } from './checkbox.theme'
 
 /* Import interfaces here */
-import { CheckboxProps } from "./checkbox.interfaces"
+import { CheckboxProps } from './checkbox.interfaces'
 
 // Component
 export const Checkbox = ({
@@ -29,7 +22,7 @@ export const Checkbox = ({
   label,
   caption,
   captionType,
-  status = "basic",
+  status = 'basic',
 }: CheckboxProps): JSX.Element => {
   return (
     <CheckboxWrapper className={className} htmlFor={id}>

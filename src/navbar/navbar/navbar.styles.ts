@@ -1,12 +1,12 @@
-import styled, { css } from "styled-components/macro"
+import styled, { css } from 'styled-components/macro'
 
 export const StyledNavContainer = styled.div`
   ${({ theme: { breakpoints, NavBar } }) => css`
     z-index: 1;
     display: flex;
     flex-direction: row-reverse;
-    box-shadow: ${NavBar.shadow.offsetX} ${NavBar.shadow.offsetY}
-      ${NavBar.shadow.blurRadius} ${NavBar.shadow.spread} ${NavBar.shadow.color};
+    box-shadow: ${NavBar.shadow.offsetX} ${NavBar.shadow.offsetY} ${NavBar.shadow.blurRadius} ${NavBar.shadow.spread}
+      ${NavBar.shadow.color};
 
     height: 100%;
     width: 100%;

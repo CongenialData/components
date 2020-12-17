@@ -1,10 +1,10 @@
-import styled, { css } from "styled-components/macro"
-import { Chip } from "../../chip"
-import { Text } from "../../chip/chip.styles"
-import { DialogBox } from "../../dialogbox"
+import styled, { css } from 'styled-components/macro'
+import { Chip } from '../../chip'
+import { Text } from '../../chip/chip.styles'
+import { DialogBox } from '../../dialogbox'
 
 export const StyledDialogBox = styled(DialogBox)`
-  input[type="checkbox"] {
+  input[type='checkbox'] {
     margin-right: 1rem;
   }
 `

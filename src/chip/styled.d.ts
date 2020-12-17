@@ -1,7 +1,7 @@
-import { ChipTheme } from "./chip.theme"
+import { ChipTheme } from './chip.theme'
 
-declare module "styled-components" {
+declare module 'styled-components' {
   export interface DefaultTheme {
-    Chip: ChipTheme;
+    Chip: ChipTheme
   }
 }

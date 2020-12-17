@@ -1,5 +1,5 @@
-import { css } from "styled-components/macro"
-import { TComponentStatus } from "../../theming"
+import { css } from 'styled-components/macro'
+import { TComponentStatus } from '../../theming'
 
 export const OutlineButtonStyle = (status: TComponentStatus) => css`
   ${({

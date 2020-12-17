@@ -1,6 +1,6 @@
 module.exports = {
   parser: '@typescript-eslint/parser',
-  plugins: ['react', 'prettier',  "@typescript-eslint", 'react-hooks', 'react-perf'],
+  plugins: ['react', 'prettier', '@typescript-eslint', 'react-hooks', 'react-perf'],
   extends: [
     'react-app',
     'plugin:react/recommended',
@@ -10,17 +10,22 @@ module.exports = {
     'plugin:prettier/recommended',
   ],
   settings: {
-    react: { 
+    react: {
       version: 'detect',
+    },
+  },
+  parserOptions: {
+    sourceType: 'module', // Allows for the use of imports
+    ecmaFeatures: {
+      jsx: true, // Allows for the parsing of JSX,
     },
   },
   rules: {
     // Allow Prettier to throw errors via ESLint
-    "prettier/prettier": 'error',
     'no-console': 'warn',
-    'semi': ['error', 'never'],
+    semi: ['error', 'never'],
     'react/prop-types': 'off',
     'react-hooks/rules-of-hooks': 'error',
     'react-hooks/exhaustive-deps': 'warn',
   },
-};
+}

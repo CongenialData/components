@@ -1,4 +1,4 @@
-import React from "react"
+import React from 'react'
 
 import {
   ContextualInformation,
@@ -8,19 +8,12 @@ import {
   SecondaryControls,
   StyledToolbar,
   Title,
-} from "./toolbar.styles"
-import { toolbarTheme } from "./toolbar.theme"
-import { ToolbarProps } from "./toolbar.types"
+} from './toolbar.styles'
+import { toolbarTheme } from './toolbar.theme'
+import { ToolbarProps } from './toolbar.types'
 
 export const Toolbar = (props: ToolbarProps): JSX.Element => {
-  const {
-    icon,
-    primaryControlsComponent,
-    secondaryControlsComponent,
-    projectTitle,
-    title,
-    ...restProps
-  } = props
+  const { icon, primaryControlsComponent, secondaryControlsComponent, projectTitle, title, ...restProps } = props
 
   return (
     <StyledToolbar {...restProps}>
@@ -29,9 +22,7 @@ export const Toolbar = (props: ToolbarProps): JSX.Element => {
         <ProjectTitle>{projectTitle}</ProjectTitle>
       </MenuTitleWrapper>
       <PrimaryControls>{primaryControlsComponent}</PrimaryControls>
-      <ContextualInformation>
-        {!!title && <Title>{title}</Title>}
-      </ContextualInformation>
+      <ContextualInformation>{!!title && <Title>{title}</Title>}</ContextualInformation>
       <SecondaryControls>{secondaryControlsComponent}</SecondaryControls>
     </StyledToolbar>
   )

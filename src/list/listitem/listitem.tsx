@@ -1,34 +1,34 @@
 /* eslint-disable @typescript-eslint/no-use-before-define */
-import React, { PropsWithChildren } from "react"
+import React, { PropsWithChildren } from 'react'
 
 /* Import components here */
-import { StyledListContent, StyledListItem } from "./listitem.styles"
+import { StyledListContent, StyledListItem } from './listitem.styles'
 
-import { ListDescription } from "../listdescription"
-import { ListExtraLeft } from "../listextraleft"
-import { ListExtraRight } from "../listextraright"
-import { ListTitle } from "../listtitle"
+import { ListDescription } from '../listdescription'
+import { ListExtraLeft } from '../listextraleft'
+import { ListExtraRight } from '../listextraright'
+import { ListTitle } from '../listtitle'
 
 /* Import interfaces here */
-import { IListItemProps } from "./listitem.interfaces"
+import { IListItemProps } from './listitem.interfaces'
 
 // TODO: Rewrite List and all it's components. It's very hard to use it easily and with our theme.
 
-export const _ListItem = React.forwardRef<
-  HTMLLIElement,
-  PropsWithChildren<IListItemProps>
->(function ListItem(props, ref): JSX.Element {
+export const _ListItem = React.forwardRef<HTMLLIElement, PropsWithChildren<IListItemProps>>(function ListItem(
+  props,
+  ref,
+): JSX.Element {
   // eslint-disable-next-line react/prop-types
   const { className, style, children } = props
 
   const sortChildren = (
-    children: React.ReactElement[]
+    children: React.ReactElement[],
   ): {
-    rest: React.ReactElement[] | [];
-    description: React.ReactElement | undefined;
-    left: React.ReactElement | undefined;
-    right: React.ReactElement | undefined;
-    title: React.ReactElement | undefined;
+    rest: React.ReactElement[] | []
+    description: React.ReactElement | undefined
+    left: React.ReactElement | undefined
+    right: React.ReactElement | undefined
+    title: React.ReactElement | undefined
   } => {
     const rest: React.ReactElement[] = []
 
@@ -75,21 +75,13 @@ export const _ListItem = React.forwardRef<
   }
 
   const { left, right, rest, title, description } = sortChildren(
-    React.Children.map(
-      children || [],
-      (child): JSX.Element => child as React.ReactElement
-    )
+    React.Children.map(children || [], (child): JSX.Element => child as React.ReactElement),
   )
 
   return (
     // FIXME: Add correct types
     // eslint-disable-next-line react/prop-types
-    <StyledListItem
-      ref={ref}
-      className={className}
-      style={style}
-      onClick={props.onClick}
-    >
+    <StyledListItem ref={ref} className={className} style={style} onClick={props.onClick}>
       {!!left && left}
       <StyledListContent>
         {!!title && title}

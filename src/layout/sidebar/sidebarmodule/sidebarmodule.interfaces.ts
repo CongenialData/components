@@ -1,21 +1,19 @@
 export interface SidebarModuleStyleProps {
-  contentPadding?: "none";
+  contentPadding?: 'none'
 }
 
 export interface SidebarModuleComponentProps {
   /**
    * A footer for the module.
    */
-  footer?: string;
+  footer?: string
 
   /**
    * The title for the module.
    */
-  header?: string;
+  header?: string
 }
 
-export interface SidebarModuleProps
-  extends SidebarModuleStyleProps,
-    SidebarModuleComponentProps {
-  children?: React.ReactNode;
+export interface SidebarModuleProps extends SidebarModuleStyleProps, SidebarModuleComponentProps {
+  children?: React.ReactNode
 }

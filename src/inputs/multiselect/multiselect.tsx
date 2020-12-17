@@ -1,9 +1,9 @@
-import React from "react"
-import _ from "lodash"
-import { faEdit } from "@fortawesome/free-solid-svg-icons"
-import { useCallback, useEffect, useMemo, useRef, useState } from "react"
+import React from 'react'
+import _ from 'lodash'
+import { faEdit } from '@fortawesome/free-solid-svg-icons'
+import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
 
-import { multiSelectTheme } from "./multiselect.theme"
+import { multiSelectTheme } from './multiselect.theme'
 
 /* Import components here */
 import {
@@ -13,14 +13,14 @@ import {
   HiddenSelect,
   StyledDialogBox,
   StyledMultiSelect,
-} from "./multiselect.styles"
-import { Button } from "../button"
-import { List } from "../../list"
+} from './multiselect.styles'
+import { Button } from '../button'
+import { List } from '../../list'
 
 /* Import interfaces here */
-import { MultiSelectProps } from "./multiselect.interfaces"
-import { useConfirmation } from "../../confirm-modal"
-import { Writeable, isRefObject } from "../../utils"
+import { MultiSelectProps } from './multiselect.interfaces'
+import { useConfirmation } from '../../confirm-modal'
+import { Writeable, isRefObject } from '../../utils'
 
 /* Import utilities here */
 
@@ -31,31 +31,21 @@ const noop = (): void => undefined
  * Multiselect input widget, renders selected values as chips
  */
 export const MultiSelect = (props: MultiSelectProps<string>): JSX.Element => {
-  const {
-    name,
-    showAddButtonWhenDisabled = false,
-    disabled = false,
-    addButtonText = "",
-    options,
-    inputRef,
-  } = props
+  const { name, showAddButtonWhenDisabled = false, disabled = false, addButtonText = '', options, inputRef } = props
   const selectRef = useRef<HTMLSelectElement>()
   const [selectedValues, setSelectedValues] = useState<string[]>([])
   const [show, setShow] = useState(false)
 
-  const [confirmRemove, ConfirmRemoveDialog] = useConfirmation(
-    `Do you want to remove ${name}?`,
-    [
-      // TODO: Fix types
-      // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-      // @ts-ignore
-      { text: "No", value: false },
-      // TODO: Fix types
-      // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-      // @ts-ignore
-      { text: "Yes", value: true },
-    ]
-  )
+  const [confirmRemove, ConfirmRemoveDialog] = useConfirmation(`Do you want to remove ${name}?`, [
+    // TODO: Fix types
+    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+    // @ts-ignore
+    { text: 'No', value: false },
+    // TODO: Fix types
+    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+    // @ts-ignore
+    { text: 'Yes', value: true },
+  ])
 
   // Initialize values
   useEffect(() => {
@@ -64,30 +54,22 @@ export const MultiSelect = (props: MultiSelectProps<string>): JSX.Element => {
     const values = _.reduce<HTMLOptionElement, string[]>(
       options,
       (acc, cur) => (cur.selected ? [...acc, cur.value] : acc),
-      []
+      [],
     )
     setSelectedValues(values)
   }, [options])
 
-  const labelMap: Record<string, never> = _.reduce(
-    options,
-    (acc, cur) => ({ ...acc, [cur.value]: cur.label }),
-    {}
-  )
+  const labelMap: Record<string, never> = _.reduce(options, (acc, cur) => ({ ...acc, [cur.value]: cur.label }), {})
 
   const isChecked = useMemo(() => {
-    const valueMap: { [key: string]: true } = _.reduce(
-      selectedValues,
-      (acc, cur) => ({ ...acc, [cur]: true }),
-      {}
-    )
+    const valueMap: { [key: string]: true } = _.reduce(selectedValues, (acc, cur) => ({ ...acc, [cur]: true }), {})
     return (key: string): boolean => valueMap[key] || false
   }, [selectedValues])
 
   const fireChangeEvent = useCallback((): void => {
     setTimeout(() => {
-      const change = new Event("input", { bubbles: true, cancelable: true })
-      const blur = new Event("blur", { bubbles: true, cancelable: true })
+      const change = new Event('input', { bubbles: true, cancelable: true })
+      const blur = new Event('blur', { bubbles: true, cancelable: true })
       selectRef.current?.dispatchEvent(change)
       selectRef.current?.dispatchEvent(blur)
     }, 0)
@@ -102,7 +84,7 @@ export const MultiSelect = (props: MultiSelectProps<string>): JSX.Element => {
       setSelectedValues(values)
       fireChangeEvent()
     },
-    [fireChangeEvent, selectedValues]
+    [fireChangeEvent, selectedValues],
   )
 
   /**
@@ -110,15 +92,15 @@ export const MultiSelect = (props: MultiSelectProps<string>): JSX.Element => {
    */
   const resetValue = useCallback(
     (value: string) => {
-      const values = _.filter(selectedValues, (v) => v !== value)
+      const values = _.filter(selectedValues, v => v !== value)
       setSelectedValues(values)
       fireChangeEvent()
     },
-    [fireChangeEvent, selectedValues]
+    [fireChangeEvent, selectedValues],
   )
 
   const handleClickCheck = (e: React.ChangeEvent<HTMLInputElement>): void => {
-    const value = e.target.dataset.val || ""
+    const value = e.target.dataset.val || ''
     if (e.target.checked) {
       setValue(value)
     } else {
@@ -140,7 +122,7 @@ export const MultiSelect = (props: MultiSelectProps<string>): JSX.Element => {
         // eslint-disable-next-line @typescript-eslint/ban-ts-comment
         // @ts-ignore
         // eslint-disable-next-line no-extra-semi
-        (inputRef as Writeable<typeof inputRef>).current = ref
+        ;(inputRef as Writeable<typeof inputRef>).current = ref
       } else {
         // TODO: Fix correct types and remove disabled rules
         // eslint-disable-next-line @typescript-eslint/ban-ts-comment
@@ -148,7 +130,7 @@ export const MultiSelect = (props: MultiSelectProps<string>): JSX.Element => {
         inputRef(ref)
       }
     },
-    [inputRef]
+    [inputRef],
   )
 
   // Handles show/hide of selection box
@@ -167,7 +149,7 @@ export const MultiSelect = (props: MultiSelectProps<string>): JSX.Element => {
   return (
     <StyledMultiSelect>
       <Display>
-        {selectedValues.map((v) => (
+        {selectedValues.map(v => (
           <Chip
             key={v}
             disabled={disabled}
@@ -178,45 +160,23 @@ export const MultiSelect = (props: MultiSelectProps<string>): JSX.Element => {
           />
         ))}
         {!disabled || (disabled && showAddButtonWhenDisabled) ? (
-          <AddChip
-            disabled={disabled}
-            icon={faEdit}
-            text={addButtonText}
-            onClick={handleClick}
-          />
+          <AddChip disabled={disabled} icon={faEdit} text={addButtonText} onClick={handleClick} />
         ) : null}
       </Display>
-      <HiddenSelect
-        ref={refCallback}
-        multiple
-        disabled={disabled}
-        name={name}
-        value={selectedValues}
-        onChange={noop}
-      >
+      <HiddenSelect ref={refCallback} multiple disabled={disabled} name={name} value={selectedValues} onChange={noop}>
         {options.map(({ value, label }, i) => (
           <option key={i} value={value}>
             {label}
           </option>
         ))}
       </HiddenSelect>
-      <StyledDialogBox
-        header="Available workers"
-        show={show}
-        showCloseButton={false}
-        onClose={handleClose}
-      >
+      <StyledDialogBox header="Available workers" show={show} showCloseButton={false} onClose={handleClose}>
         <List>
           {options.map(({ value, label }, i) => (
             <List.Item key={i}>
               <List.Item.Description>
                 <label>
-                  <input
-                    checked={isChecked(value)}
-                    data-val={value}
-                    type="checkbox"
-                    onChange={handleClickCheck}
-                  />
+                  <input checked={isChecked(value)} data-val={value} type="checkbox" onChange={handleClickCheck} />
                   {label}
                 </label>
               </List.Item.Description>

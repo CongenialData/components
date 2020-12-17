@@ -1,20 +1,15 @@
-import styled from "styled-components/macro"
+import styled from 'styled-components/macro'
 
-import { ModuleStyleProps } from "./module.interfaces"
+import { ModuleStyleProps } from './module.interfaces'
 
-const numberToString = (
-  value: number | undefined,
-  defaultValue: string
-): string => (value ? String(value) : defaultValue)
+const numberToString = (value: number | undefined, defaultValue: string): string =>
+  value ? String(value) : defaultValue
 
 export const StyledModule = styled.div<ModuleStyleProps>`
   /* Different values for the grid column span */
-  --columns: ${({ columns }): string =>
-    numberToString(columns, "var(--grid-columns)")};
-  --md-columns: ${({ mdColumns }): string =>
-    numberToString(mdColumns, "var(--columns)")};
-  --xl-columns: ${({ xlColumns }): string =>
-    numberToString(xlColumns, "var(--md-columns)")};
+  --columns: ${({ columns }): string => numberToString(columns, 'var(--grid-columns)')};
+  --md-columns: ${({ mdColumns }): string => numberToString(mdColumns, 'var(--columns)')};
+  --xl-columns: ${({ xlColumns }): string => numberToString(xlColumns, 'var(--md-columns)')};
 
   /*
    * The grid column span rule
@@ -23,12 +18,9 @@ export const StyledModule = styled.div<ModuleStyleProps>`
   --column-span: var(--columns);
 
   /* Different values for the grid offset column */
-  --start-column: ${({ startColumn }): string =>
-    numberToString(startColumn, "auto")};
-  --md-start-column: ${({ mdStartColumn }): string =>
-    numberToString(mdStartColumn, "var(--start-column)")};
-  --xl-start-column: ${({ xlStartColumn }): string =>
-    numberToString(xlStartColumn, "var(--md-start-column)")};
+  --start-column: ${({ startColumn }): string => numberToString(startColumn, 'auto')};
+  --md-start-column: ${({ mdStartColumn }): string => numberToString(mdStartColumn, 'var(--start-column)')};
+  --xl-start-column: ${({ xlStartColumn }): string => numberToString(xlStartColumn, 'var(--md-start-column)')};
 
   /* The grid offset column rule */
   --offset-column: var(--start-column);

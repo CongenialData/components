@@ -1,7 +1,7 @@
-import styled, { css } from "styled-components/macro"
+import styled, { css } from 'styled-components/macro'
 
-import { Card } from "../../card/card"
-import { Header, Title } from "../../card/card.styles"
+import { Card } from '../../card/card'
+import { Header, Title } from '../../card/card.styles'
 
 export const StyledPage = styled.div`
   ${({ theme: { Page } }) => css`

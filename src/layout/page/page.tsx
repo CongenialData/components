@@ -1,18 +1,13 @@
-import React, { memo } from "react"
+import React, { memo } from 'react'
 
-import { NavItem } from "../../navbar/navitem"
-import { NavBar } from "../../navbar/navbar"
-import { Toolbar } from "../toolbar"
-import { ThemedComponent } from "../../theming"
+import { NavItem } from '../../navbar/navitem'
+import { NavBar } from '../../navbar/navbar'
+import { Toolbar } from '../toolbar'
+import { ThemedComponent } from '../../theming'
 
-import {
-  PageBody,
-  PageContainer,
-  PageContentWrapper,
-  StyledPage,
-} from "./page.styles"
-import { pageTheme } from "./page.theme"
-import { PageProps } from "./page.interfaces"
+import { PageBody, PageContainer, PageContentWrapper, StyledPage } from './page.styles'
+import { pageTheme } from './page.theme'
+import { PageProps } from './page.interfaces'
 
 export const Page: React.FC<PageProps> & ThemedComponent = memo(
   ({
@@ -40,7 +35,8 @@ export const Page: React.FC<PageProps> & ThemedComponent = memo(
             {disableMenu || (
               <NavBar>
                 <>
-                  {navItems && navItems.map(item => <NavItem key={item.label} icon={item.icon} label={item.label} to={item.to} />)}
+                  {navItems &&
+                    navItems.map(item => <NavItem key={item.label} icon={item.icon} label={item.label} to={item.to} />)}
                 </>
               </NavBar>
             )}
@@ -50,8 +46,8 @@ export const Page: React.FC<PageProps> & ThemedComponent = memo(
         </PageContainer>
       </StyledPage>
     )
-  }
+  },
 )
 
 Page.defaultTheme = pageTheme
-Page.displayName = "Page"
+Page.displayName = 'Page'

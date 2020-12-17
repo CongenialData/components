@@ -1,4 +1,4 @@
-import styled, { css } from "styled-components/macro"
+import styled, { css } from 'styled-components/macro'
 
 export const StyledToolbar = styled.header`
   ${({ theme: { breakpoints, Toolbar } }) => css`
@@ -13,9 +13,8 @@ export const StyledToolbar = styled.header`
     width: 100%;
     z-index: 2;
 
-    box-shadow: ${Toolbar.shadow.offsetX} ${Toolbar.shadow.offsetY}
-      ${Toolbar.shadow.blurRadius} ${Toolbar.shadow.spread}
-      ${Toolbar.shadow.color};
+    box-shadow: ${Toolbar.shadow.offsetX} ${Toolbar.shadow.offsetY} ${Toolbar.shadow.blurRadius}
+      ${Toolbar.shadow.spread} ${Toolbar.shadow.color};
 
     @media screen and (min-width: ${breakpoints.mdContainer}) {
       background: ${Toolbar.backgroundColor};

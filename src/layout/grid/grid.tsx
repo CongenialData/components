@@ -1,11 +1,11 @@
-import * as React from "react"
+import * as React from 'react'
 
 /* Import components here */
-import { StyledGrid } from "./grid.styles"
+import { StyledGrid } from './grid.styles'
 
 /* Import interfaces here */
-import { GridProps } from "./grid.interfaces"
-import { gridTheme } from "./grid.theme"
+import { GridProps } from './grid.interfaces'
+import { gridTheme } from './grid.theme'
 
 export const Grid = (props: GridProps): JSX.Element => {
   const { children, columns = 4, mdColumns, xlColumns, ...restProps } = props

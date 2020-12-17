@@ -1,21 +1,17 @@
-import React from "react"
+import React from 'react'
 
 /* Import components here */
-import { ListItem } from "../listitem"
-import {
-  StyledList,
-  StyledOrderedList,
-  StyledUnurderedList,
-} from "./list.styles"
+import { ListItem } from '../listitem'
+import { StyledList, StyledOrderedList, StyledUnurderedList } from './list.styles'
 
 /* Import interfaces here */
-import { ListProps } from "./list.interfaces"
+import { ListProps } from './list.interfaces'
 
 const _List = React.forwardRef<HTMLDivElement, ListProps>(function List(
   // TODO: Fix types
   // eslint-disable-next-line react/prop-types
   { children, className, ordered },
-  ref
+  ref,
 ): JSX.Element {
   return (
     <StyledList ref={ref} className={className}>
@@ -29,8 +25,8 @@ const _List = React.forwardRef<HTMLDivElement, ListProps>(function List(
 })
 
 type TList = typeof _List & {
-  Item: typeof ListItem;
-};
+  Item: typeof ListItem
+}
 export const List: TList = _List as any
 
 List.Item = ListItem

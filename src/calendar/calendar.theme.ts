@@ -1,10 +1,6 @@
-import { TCommonTheme, TThemeFromFn, tuple } from "../theming"
+import { TCommonTheme, TThemeFromFn, tuple } from '../theming'
 
-export const calendarTheme = ({
-  support,
-  typography,
-  colors,
-}: TCommonTheme) => {
+export const calendarTheme = ({ support, typography, colors }: TCommonTheme) => {
   // Pre-defined variable mapping. See note in src/components/theming/docs/cdab-notes.md
 
   const calendar: any = {
@@ -14,9 +10,9 @@ export const calendarTheme = ({
     TEXT_FONT_WEIGHT: typography.TEXT_SUBTITLE_FONT_WEIGHT,
     TEXT_LINE_HEIGHT: typography.TEXT_SUBTITLE_LINE_HEIGHT,
     WEEKDAY_TEXT_COLOR: colors.TEXT_HINT_COLOR,
-    DAY_CELL_HEIGHT: "2.75rem",
-    DAY_CELL_WIDTH: "2.75rem",
-    MONTH_CELL_WIDTH: "4.8125rem",
+    DAY_CELL_HEIGHT: '2.75rem',
+    DAY_CELL_WIDTH: '2.75rem',
+    MONTH_CELL_WIDTH: '4.8125rem',
   }
   calendar.WEEKDAY_HEIGHT = calendar.DAY_CELL_HEIGHT
   calendar.MONTH_CELL_HEIGHT = calendar.DAY_CELL_HEIGHT
@@ -25,13 +21,13 @@ export const calendarTheme = ({
   calendar.WEEKDAY_WIDTH = calendar.DAY_CELL_WIDTH
 
   return tuple([
-    "Calendar",
+    'Calendar',
     {
-      width: "20.625rem",
+      width: '20.625rem',
       backgroundColor: colors.BACKGROUND_BASIC_COLOR_1,
       borderColor: colors.BORDER_BASIC_COLOR_4,
-      borderStyle: "solid",
-      borderWidth: "0.0625rem",
+      borderStyle: 'solid',
+      borderWidth: '0.0625rem',
       borderRadius: support.BORDER_RADIUS,
       textColor: colors.TEXT_BASIC_COLOR,
       textFontFamily: typography.TEXT_SUBTITLE_FONT_FAMILY,
@@ -39,17 +35,17 @@ export const calendarTheme = ({
       textFontWeight: typography.TEXT_SUBTITLE_FONT_WEIGHT,
       textLineHeight: typography.TEXT_SUBTITLE_LINE_HEIGHT,
 
-      pickerPaddingTop: "0.25rem",
-      pickerPaddingBottom: "0.625rem",
-      pickerPaddingStart: "0.625rem",
-      pickerPaddingEnd: "0.625rem",
+      pickerPaddingTop: '0.25rem',
+      pickerPaddingBottom: '0.625rem',
+      pickerPaddingStart: '0.625rem',
+      pickerPaddingEnd: '0.625rem',
 
       navigationTextColor: colors.TEXT_BASIC_COLOR,
       navigationTextFontFamily: typography.TEXT_BUTTON_FONT_FAMILY,
       navigationTitleTextFontSize: typography.TEXT_BUTTON_MEDIUM_FONT_SIZE,
       navigationTitleTextFontWeight: typography.TEXT_BUTTON_FONT_WEIGHT,
       navigationTitleTextLineHeight: typography.TEXT_BUTTON_MEDIUM_LINE_HEIGHT,
-      navigationPadding: "0.625rem 0.25rem",
+      navigationPadding: '0.625rem 0.25rem',
 
       cellInactiveTextColor: colors.TEXT_HINT_COLOR,
 
@@ -78,30 +74,24 @@ export const calendarTheme = ({
       cellTodayHoverBackgroundColor: colors.COLOR_PRIMARY_TRANSPARENT_HOVER,
       cellTodayHoverBorderColor: colors.COLOR_PRIMARY_TRANSPARENT_HOVER_BORDER,
       cellTodayActiveBackgroundColor: colors.COLOR_PRIMARY_TRANSPARENT_ACTIVE,
-      cellTodayActiveBorderColor:
-        colors.COLOR_PRIMARY_TRANSPARENT_ACTIVE_BORDER,
+      cellTodayActiveBorderColor: colors.COLOR_PRIMARY_TRANSPARENT_ACTIVE_BORDER,
       cellTodayDisabledBorderColor: colors.BORDER_BASIC_COLOR_4,
 
-      cellTodaySelectedBackgroundColor:
-        colors.COLOR_CONTROL_TRANSPARENT_DEFAULT,
-      cellTodaySelectedBorderColor: "transparent",
+      cellTodaySelectedBackgroundColor: colors.COLOR_CONTROL_TRANSPARENT_DEFAULT,
+      cellTodaySelectedBorderColor: 'transparent',
       cellTodaySelectedTextColor: colors.TEXT_CONTROL_COLOR,
-      cellTodaySelectedHoverBackgroundColor:
-        colors.COLOR_CONTROL_TRANSPARENT_HOVER,
-      cellTodaySelectedHoverBorderColor: "transparent",
-      cellTodaySelectedActiveBackgroundColor:
-        colors.COLOR_CONTROL_TRANSPARENT_ACTIVE,
-      cellTodaySelectedActiveBorderColor: "transparent",
+      cellTodaySelectedHoverBackgroundColor: colors.COLOR_CONTROL_TRANSPARENT_HOVER,
+      cellTodaySelectedHoverBorderColor: 'transparent',
+      cellTodaySelectedActiveBackgroundColor: colors.COLOR_CONTROL_TRANSPARENT_ACTIVE,
+      cellTodaySelectedActiveBorderColor: 'transparent',
 
       cellTodayInRangeBackgroundColor: colors.COLOR_CONTROL_TRANSPARENT_DEFAULT,
-      cellTodayInRangeBorderColor: "transparent",
+      cellTodayInRangeBorderColor: 'transparent',
       cellTodayInRangeTextColor: colors.TEXT_CONTROL_COLOR,
-      cellTodayInRangeHoverBackgroundColor:
-        colors.COLOR_CONTROL_TRANSPARENT_HOVER,
-      cellTodayInRangeHoverBorderColor: "transparent",
-      cellTodayInRangeActiveBackgroundColor:
-        colors.COLOR_CONTROL_TRANSPARENT_ACTIVE,
-      cellTodayInRangeActiveBorderColor: "transparent",
+      cellTodayInRangeHoverBackgroundColor: colors.COLOR_CONTROL_TRANSPARENT_HOVER,
+      cellTodayInRangeHoverBorderColor: 'transparent',
+      cellTodayInRangeActiveBackgroundColor: colors.COLOR_CONTROL_TRANSPARENT_ACTIVE,
+      cellTodayInRangeActiveBorderColor: 'transparent',
 
       cellSelectedBackgroundColor: colors.COLOR_PRIMARY_DEFAULT,
       cellSelectedBorderColor: colors.COLOR_PRIMARY_DEFAULT_BORDER,
@@ -120,7 +110,7 @@ export const calendarTheme = ({
       yearCellWidth: calendar.MONTH_CELL_WIDTH,
       yearCellHeight: calendar.MONTH_CELL_HEIGHT,
 
-      weekdayBackground: "transparent",
+      weekdayBackground: 'transparent',
       weekdayDividerColor: support.DIVIDER_COLOR,
       weekdayDividerWidth: support.DIVIDER_WIDTH,
       weekdayTextColor: colors.TEXT_HINT_COLOR,
@@ -131,7 +121,7 @@ export const calendarTheme = ({
       weekdayHeight: calendar.DAY_CELL_HEIGHT,
       weekdayWidth: calendar.DAY_CELL_WIDTH,
 
-      weeknumberBackground: "transparent",
+      weeknumberBackground: 'transparent',
       weeknumberDividerColor: support.DIVIDER_COLOR,
       weeknumberDividerWidth: support.DIVIDER_WIDTH,
       weeknumberTextColor: colors.TEXT_HINT_COLOR,
@@ -142,14 +132,14 @@ export const calendarTheme = ({
       weeknumberWidth: calendar.WEEKDAY_WIDTH,
 
       // LARGE
-      largeWidth: "22.375rem",
-      dayCellLargeWidth: "3rem",
-      dayCellLargeHeight: "3rem",
+      largeWidth: '22.375rem',
+      dayCellLargeWidth: '3rem',
+      dayCellLargeHeight: '3rem',
       weekdayLargeHeight: calendar.DAY_CELL_LARGE_WIDTH,
       weekdayLargeWidth: calendar.DAY_CELL_LARGE_HEIGHT,
       weeknumberLargeHeight: calendar.WEEKDAY_LARGE_HEIGHT,
       weeknumberLargeWidth: calendar.WEEKDAY_LARGE_WIDTH,
-      monthCellLargeWidth: "5.25rem",
+      monthCellLargeWidth: '5.25rem',
       monthCellLargeHeight: calendar.DAY_CELL_LARGE_HEIGHT,
       yearCellLargeWidth: calendar.MONTH_CELL_LARGE_WIDTH,
       yearCellLargeHeight: calendar.MONTH_CELL_LARGE_HEIGHT,
@@ -157,4 +147,4 @@ export const calendarTheme = ({
   ])
 }
 
-export type CalendarTheme = TThemeFromFn<typeof calendarTheme>;
+export type CalendarTheme = TThemeFromFn<typeof calendarTheme>

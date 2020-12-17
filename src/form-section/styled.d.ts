@@ -1,7 +1,7 @@
-import { FormSectionTheme } from "./form-section.theme"
+import { FormSectionTheme } from './form-section.theme'
 
-declare module "styled-components" {
+declare module 'styled-components' {
   export interface DefaultTheme {
-    FormSection: FormSectionTheme;
+    FormSection: FormSectionTheme
   }
 }

@@ -1,8 +1,8 @@
-import { TCommonTheme, TThemeFromFn, tuple } from "../../theming"
+import { TCommonTheme, TThemeFromFn, tuple } from '../../theming'
 
 export const multiSelectTheme = (theme: TCommonTheme) =>
   tuple([
-    "MultiSelect",
+    'MultiSelect',
     {
       background: theme.colors.COLOR_BASIC_DEFAULT,
       add: {
@@ -18,4 +18,4 @@ export const multiSelectTheme = (theme: TCommonTheme) =>
     },
   ])
 
-export type MultiSelectTheme = TThemeFromFn<typeof multiSelectTheme>;
+export type MultiSelectTheme = TThemeFromFn<typeof multiSelectTheme>

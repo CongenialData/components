@@ -1,10 +1,7 @@
-import styled, { css } from "styled-components/macro"
-import {
-  CheckboxComponentProps,
-  CheckboxRequiredStyleProps,
-} from "./checkbox.interfaces"
-import { componentAnimation, outline } from "../../theming/"
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import styled, { css } from 'styled-components/macro'
+import { CheckboxComponentProps, CheckboxRequiredStyleProps } from './checkbox.interfaces'
+import { componentAnimation, outline } from '../../theming/'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 export const Icon = styled(FontAwesomeIcon)``
 
@@ -37,12 +34,10 @@ export const LabelAndCaption = styled.div`
   }
 `
 
-export const CustomCheckbox = styled.span<
-  CheckboxComponentProps & CheckboxRequiredStyleProps
->`
+export const CustomCheckbox = styled.span<CheckboxComponentProps & CheckboxRequiredStyleProps>`
   ${({ theme: { Checkbox }, checked, status }) => {
     return css`
-      ${componentAnimation("background-color, border, box-shadow")};
+      ${componentAnimation('background-color, border, box-shadow')};
       flex-shrink: 0;
 
       height: ${Checkbox.height};
@@ -73,8 +68,7 @@ export const CustomCheckbox = styled.span<
         border-color: ${Checkbox.status[status].checkedBorderColor};
 
         ${Icon} {
-          color: ${Checkbox.status[status]
-            .checkedCheckmarkColor}; /* TODO: Fungerar det här? */
+          color: ${Checkbox.status[status].checkedCheckmarkColor}; /* TODO: Fungerar det här? */
         }
       `};
 
@@ -84,8 +78,7 @@ export const CustomCheckbox = styled.span<
 
         ${checked &&
         css`
-          background-color: ${Checkbox.status[status]
-            .hoverCheckedBackgroundColor};
+          background-color: ${Checkbox.status[status].hoverCheckedBackgroundColor};
           border-color: ${Checkbox.status[status].hoverCheckedBorderColor};
         `}
       }
@@ -95,7 +88,7 @@ export const CustomCheckbox = styled.span<
 
 export const Text = styled.span<CheckboxRequiredStyleProps>`
   ${({ theme: { Checkbox }, status }) => css`
-    ${componentAnimation("color")};
+    ${componentAnimation('color')};
 
     font-family: ${Checkbox.textFontFamily};
     font-size: ${Checkbox.textFontSize};
@@ -115,22 +108,12 @@ const Hidden = styled.div`
   clip: rect(1px, 1px, 1px, 1px);
 `
 
-export const NativeInput = styled(Hidden.withComponent("input"))<
-  CheckboxRequiredStyleProps & CheckboxComponentProps
->`
+export const NativeInput = styled(Hidden.withComponent('input'))<CheckboxRequiredStyleProps & CheckboxComponentProps>`
   ${({ theme: { Checkbox, support }, checked, status }) => css`
-    ${outline(
-      support.OUTLINE_WIDTH,
-      support.OUTLINE_COLOR,
-      Checkbox.focusInsetShadowLength
-    )};
+    ${outline(support.OUTLINE_WIDTH, support.OUTLINE_COLOR, Checkbox.focusInsetShadowLength)};
 
     &:focus:not(:checked) + ${CustomCheckbox} {
-      ${outline(
-        Checkbox.outlineWidth,
-        Checkbox.outlineColor,
-        Checkbox.focusInsetShadowLength
-      )};
+      ${outline(Checkbox.outlineWidth, Checkbox.outlineColor, Checkbox.focusInsetShadowLength)};
     }
 
     &:focus:checked + ${CustomCheckbox} {
@@ -143,8 +126,7 @@ export const NativeInput = styled(Hidden.withComponent("input"))<
 
       ${checked &&
       css`
-        background-color: ${Checkbox.status[status]
-          .focusCheckedBackgroundColor};
+        background-color: ${Checkbox.status[status].focusCheckedBackgroundColor};
         border-color: ${Checkbox.status[status].focusCheckedBorderColor};
       `};
     }
@@ -155,8 +137,7 @@ export const NativeInput = styled(Hidden.withComponent("input"))<
 
       ${checked &&
       css`
-        background-color: ${Checkbox.status[status]
-          .activeCheckedBackgroundColor};
+        background-color: ${Checkbox.status[status].activeCheckedBackgroundColor};
         border-color: ${Checkbox.status[status].activeCheckedBorderColor};
       `};
     }
@@ -176,8 +157,7 @@ export const NativeInput = styled(Hidden.withComponent("input"))<
       }
 
       &:checked + ${CustomCheckbox} {
-        background-color: ${Checkbox.status[status]
-          .disabledCheckedBackgroundColor};
+        background-color: ${Checkbox.status[status].disabledCheckedBackgroundColor};
         border-color: ${Checkbox.status[status].disabledCheckedBorderColor};
       }
     }

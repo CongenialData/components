@@ -1,7 +1,7 @@
-import { CircleButtonTheme } from "./circle-button.theme"
+import { CircleButtonTheme } from './circle-button.theme'
 
-declare module "styled-components" {
+declare module 'styled-components' {
   export interface DefaultTheme {
-    CircleButton: CircleButtonTheme;
+    CircleButton: CircleButtonTheme
   }
 }

@@ -1,12 +1,12 @@
-import React, { PropsWithChildren } from "react"
+import React, { PropsWithChildren } from 'react'
 
 /* Import components here */
-import { Heading } from "../typography/heading"
-import { Body, Header, StyledFormSection } from "./form-section.styles"
+import { Heading } from '../typography/heading'
+import { Body, Header, StyledFormSection } from './form-section.styles'
 
 /* Import interfaces here */
-import { FormSectionProps } from "./form-section.interfaces"
-import { formSectionTheme } from "./form-section.theme"
+import { FormSectionProps } from './form-section.interfaces'
+import { formSectionTheme } from './form-section.theme'
 
 export const FormSection = ({
   border = false,

@@ -1,26 +1,21 @@
-import _ from "lodash"
-import React, { useCallback, useEffect, useRef, useState } from "react"
-import { format } from "date-fns"
+import _ from 'lodash'
+import React, { useCallback, useEffect, useRef, useState } from 'react'
+import { format } from 'date-fns'
 
 /* Import components here */
-import { Calendar } from "../calendar"
-import { InputWrapper } from "../inputs"
-import { Label } from "../typography/label"
-import { TextInput } from "../inputs/text-input"
-import {
-  StyledDatePicker,
-  StyledDialogBox,
-  StyledSelect,
-  TimeWrapper,
-} from "./date-picker.styles"
+import { Calendar } from '../calendar'
+import { InputWrapper } from '../inputs'
+import { Label } from '../typography/label'
+import { TextInput } from '../inputs/text-input'
+import { StyledDatePicker, StyledDialogBox, StyledSelect, TimeWrapper } from './date-picker.styles'
 
 /* Import interfaces here */
-import { DatePickerProps } from "./date-picker.interfaces"
-import { datePickerTheme } from "./date-picker.theme"
+import { DatePickerProps } from './date-picker.interfaces'
+import { datePickerTheme } from './date-picker.theme'
 
-import { Writeable, isRefObject } from "../utils"
+import { Writeable, isRefObject } from '../utils'
 
-const MINUTES = ["00", "15", "30", "45"]
+const MINUTES = ['00', '15', '30', '45']
 
 const fireEvent = (eventName: string, element: HTMLInputElement) => {
   setTimeout(() => {
@@ -36,20 +31,17 @@ export const DatePicker = ({
   label,
   initialValue,
   inputRef,
-  status = "basic",
-  minTime = "00:00",
-  maxTime = "24:00",
+  status = 'basic',
+  minTime = '00:00',
+  maxTime = '24:00',
   name,
   onChange,
 }: DatePickerProps): JSX.Element => {
-  const hours = _.range(
-    parseInt(minTime.split(":")[0]),
-    parseInt(maxTime.split(":")[0]) + 1
-  )
+  const hours = _.range(parseInt(minTime.split(':')[0]), parseInt(maxTime.split(':')[0]) + 1)
     .map(String)
-    .map((h) => h.padStart(2, "0"))
+    .map(h => h.padStart(2, '0'))
 
-  const [dateValue, setDateValue] = useState("")
+  const [dateValue, setDateValue] = useState('')
   const [hourValue, setHourValue] = useState(hours[0])
   const [minuteValue, setMinuteValue] = useState(MINUTES[0])
 
@@ -72,7 +64,7 @@ export const DatePicker = ({
       // eslint-disable-next-line
       // @ts-ignore
       // eslint-disable-next-line no-extra-semi
-      (inputRef as Writeable<typeof inputRef>).current = ref
+      ;(inputRef as Writeable<typeof inputRef>).current = ref
     } else {
       // eslint-disable-next-line
       // @ts-ignore
@@ -80,11 +72,7 @@ export const DatePicker = ({
     }
   }
 
-  const updateHiddenValue = (
-    date: string,
-    hour: string,
-    minute: string
-  ): void => {
+  const updateHiddenValue = (date: string, hour: string, minute: string): void => {
     if (hiddenInputRef.current === undefined) return
 
     const value = `${date}T${hour}:${minute}`
@@ -94,15 +82,15 @@ export const DatePicker = ({
   const onChangeDate = useCallback(
     (e: React.ChangeEvent<HTMLInputElement>) => {
       updateHiddenValue(e.target.value, hourValue, minuteValue)
-      hiddenInputRef.current && fireEvent("input", hiddenInputRef.current)
+      hiddenInputRef.current && fireEvent('input', hiddenInputRef.current)
     },
-    [hourValue, minuteValue]
+    [hourValue, minuteValue],
   )
 
   const onSelectDate = (date: Date) => {
-    updateHiddenValue(format(date, "yyyy-MM-dd"), hourValue, minuteValue)
-    hiddenInputRef.current && fireEvent("input", hiddenInputRef.current)
-    hiddenInputRef.current && fireEvent("blur", hiddenInputRef.current)
+    updateHiddenValue(format(date, 'yyyy-MM-dd'), hourValue, minuteValue)
+    hiddenInputRef.current && fireEvent('input', hiddenInputRef.current)
+    hiddenInputRef.current && fireEvent('blur', hiddenInputRef.current)
     setCalendarIsOpen(false)
   }
 
@@ -110,22 +98,22 @@ export const DatePicker = ({
   const handleChangeHour = (e: React.ChangeEvent<HTMLSelectElement>) => {
     setHourValue(e.target.value)
     updateHiddenValue(dateValue, e.target.value, minuteValue)
-    hiddenInputRef.current && fireEvent("input", hiddenInputRef.current)
+    hiddenInputRef.current && fireEvent('input', hiddenInputRef.current)
   }
 
   // eslint-disable-next-line react-perf/jsx-no-new-function-as-prop
   const handleChangeMinute = (e: React.ChangeEvent<HTMLSelectElement>) => {
     setMinuteValue(e.target.value)
     updateHiddenValue(dateValue, hourValue, e.target.value)
-    hiddenInputRef.current && fireEvent("input", hiddenInputRef.current)
+    hiddenInputRef.current && fireEvent('input', hiddenInputRef.current)
   }
   // eslint-disable-next-line react-perf/jsx-no-new-function-as-prop
   const handleBlurTime = () => {
-    hiddenInputRef.current && fireEvent("blur", hiddenInputRef.current)
+    hiddenInputRef.current && fireEvent('blur', hiddenInputRef.current)
   }
 
   const handleBlur = useCallback(() => {
-    hiddenInputRef.current && fireEvent("blur", hiddenInputRef.current)
+    hiddenInputRef.current && fireEvent('blur', hiddenInputRef.current)
   }, [])
 
   // Store onChange in a ref, so it can be used without triggering other effects
@@ -140,25 +128,17 @@ export const DatePicker = ({
     // Redefined the value property on the hidden input to catch changes from
     // react-hook-forms
 
-    const originalValuePropertyDescriptor = Object.getOwnPropertyDescriptor(
-      hiddenInputRef.current,
-      "value"
-    )
-    if (originalValuePropertyDescriptor === undefined)
-      throw new Error("Unable to get descriptor")
+    const originalValuePropertyDescriptor = Object.getOwnPropertyDescriptor(hiddenInputRef.current, 'value')
+    if (originalValuePropertyDescriptor === undefined) throw new Error('Unable to get descriptor')
 
-    Object.defineProperty(
-      hiddenInputRef.current,
-      "_value",
-      originalValuePropertyDescriptor
-    )
-    Object.defineProperty(hiddenInputRef.current, "value", {
+    Object.defineProperty(hiddenInputRef.current, '_value', originalValuePropertyDescriptor)
+    Object.defineProperty(hiddenInputRef.current, 'value', {
       get() {
         return this._value
       },
       set(value: string) {
-        const [date, time] = value.split("T")
-        const [h, m] = time.split(":")
+        const [date, time] = value.split('T')
+        const [h, m] = time.split(':')
         setDateValue(date)
         setHourValue(h)
         setMinuteValue(m)
@@ -172,8 +152,8 @@ export const DatePicker = ({
 
     // Set initial values
     const { value } = hiddenInputRef.current
-    const [date, time] = value.split("T")
-    const [h, m] = time.split(":")
+    const [date, time] = value.split('T')
+    const [h, m] = time.split(':')
     setDateValue(date)
     setHourValue(h)
     setMinuteValue(m)
@@ -189,12 +169,7 @@ export const DatePicker = ({
    * Defined the calendar component to render. This way we don't have to describe the component twice since it is rendered conditionally.
    */
   const Component = () => (
-    <Calendar
-      month={month}
-      value={new Date(dateValue)}
-      onChangeMonth={setMonth}
-      onSelectDate={onSelectDate}
-    />
+    <Calendar month={month} value={new Date(dateValue)} onChangeMonth={setMonth} onSelectDate={onSelectDate} />
   )
 
   return (
@@ -218,7 +193,7 @@ export const DatePicker = ({
             onBlur={handleBlurTime}
             onChange={handleChangeHour}
           >
-            {hours.map((h) => (
+            {hours.map(h => (
               <option key={h} value={h}>
                 {h}
               </option>
@@ -232,7 +207,7 @@ export const DatePicker = ({
             onBlur={handleBlurTime}
             onChange={handleChangeMinute}
           >
-            {MINUTES.map((m) => (
+            {MINUTES.map(m => (
               <option key={m} value={m}>
                 {m}
               </option>

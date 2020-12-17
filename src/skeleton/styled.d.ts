@@ -1,7 +1,7 @@
-import { SkeletonTheme } from "./skeleton.theme"
+import { SkeletonTheme } from './skeleton.theme'
 
-declare module "styled-components" {
+declare module 'styled-components' {
   export interface DefaultTheme {
-    Skeleton: SkeletonTheme;
+    Skeleton: SkeletonTheme
   }
 }

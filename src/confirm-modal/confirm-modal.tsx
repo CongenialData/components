@@ -1,30 +1,22 @@
-import React, {
-  useCallback,
-  useEffect,
-  useMemo,
-  useRef,
-  useState,
-} from "react"
+import React, { useCallback, useEffect, useMemo, useRef, useState } from 'react'
 
-import { DialogBox } from "../dialogbox"
-import { Button } from "../inputs/button"
-import _ from "lodash"
-import { StyledDialogBox } from "./confirm-modal.styles"
+import { DialogBox } from '../dialogbox'
+import { Button } from '../inputs/button'
+import _ from 'lodash'
+import { StyledDialogBox } from './confirm-modal.styles'
 
-type TAnswer<T> = { text: string; value: T };
-type TContext = { [key: string]: string | number };
-type TUseConfirmation<T> = [(context?: TContext) => Promise<T>, JSX.Element];
+type TAnswer<T> = { text: string; value: T }
+type TContext = { [key: string]: string | number }
+type TUseConfirmation<T> = [(context?: TContext) => Promise<T>, JSX.Element]
 
 interface IConfirmModalProps<TValue> {
-  message: string;
-  onResult: (value: TValue) => void;
-  buttons: TAnswer<TValue>[];
-  show: boolean;
+  message: string
+  onResult: (value: TValue) => void
+  buttons: TAnswer<TValue>[]
+  show: boolean
 }
 
-const ConfirmModal = <T extends Record<string, never>>(
-  props: IConfirmModalProps<T>
-): JSX.Element => {
+const ConfirmModal = <T extends Record<string, never>>(props: IConfirmModalProps<T>): JSX.Element => {
   function onClick(answer: TAnswer<T>) {
     props.onResult.bind(null, answer.value)
     return undefined
@@ -58,7 +50,7 @@ const ConfirmModal = <T extends Record<string, never>>(
 export const useConfirmation = <T extends Record<string, never>>(
   info: string,
   buttons: TAnswer<T>[],
-  resultCallback?: (value: T) => void
+  resultCallback?: (value: T) => void,
 ): TUseConfirmation<T> => {
   const [template, setTemplate] = useState(info)
   const [context, setContext] = useState<TContext | undefined>()
@@ -71,7 +63,7 @@ export const useConfirmation = <T extends Record<string, never>>(
     try {
       return compiled(context)
     } catch {
-      return "invalid-template"
+      return 'invalid-template'
     }
   }, [template, context])
 
@@ -92,7 +84,7 @@ export const useConfirmation = <T extends Record<string, never>>(
   }, [])
 
   const showConfirmation = (context?: TContext): Promise<T> => {
-    const promise = new Promise<T>((resolve) => {
+    const promise = new Promise<T>(resolve => {
       resolverRef.current = resolve
       setContext(context)
       setShowDialog(true)
@@ -100,13 +92,6 @@ export const useConfirmation = <T extends Record<string, never>>(
     return promise
   }
 
-  const component = (
-    <ConfirmModal
-      buttons={buttons}
-      message={message}
-      show={showDialog}
-      onResult={handleResult}
-    />
-  )
+  const component = <ConfirmModal buttons={buttons} message={message} show={showDialog} onResult={handleResult} />
   return [showConfirmation, component]
 }

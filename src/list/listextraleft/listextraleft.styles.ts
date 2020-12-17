@@ -1,4 +1,4 @@
-import styled from "styled-components/macro"
+import styled from 'styled-components/macro'
 
 export const StyledListExtraLeft = styled.div`
   flex: 0 1 auto;
