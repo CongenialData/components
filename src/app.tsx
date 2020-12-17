@@ -12,7 +12,7 @@ export interface Props extends HTMLAttributes<HTMLDivElement> {
  */     
 export const Thing: FC<Props> = ({ children }) => {
   function herp() {
-           console.log(true)
+            console.log(true)
     return true
   }
 
@@ -21,4 +21,4 @@ export const Thing: FC<Props> = ({ children }) => {
       {children || `the snozzberries taste like snozzberries`}
     </div>
   )
-} 
+}
