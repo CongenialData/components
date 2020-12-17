@@ -9,6 +9,7 @@
   },
 
   "editor.defaultFormatter": "dbaeumer.vscode-eslint",
+  "eslint.validate": ["javascript", "typescript", "typescriptreact"],
 
   // Enable per-language
   "[markdown]": {
