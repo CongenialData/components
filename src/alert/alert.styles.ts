@@ -35,9 +35,10 @@ export const StyledAlert = styled.div<AlertOptionalStyleProps & AlertRequiredSty
 
     /**
      * Accent
+     test
      */
     ${accent &&
-      `
+    `
         border-top: ${Alert.borderRadius} solid ${Alert.accent[accent]};
     `};
 
@@ -45,7 +46,7 @@ export const StyledAlert = styled.div<AlertOptionalStyleProps & AlertRequiredSty
      * Outline
      */
     ${outline &&
-      `
+    `
 
         border: ${Alert.outlineWidth} solid ${Alert.outline[outline]};
 

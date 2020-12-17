@@ -1,5 +1,8 @@
 {
   "*.+(js,ts,tsx,json,md)": [
     "yarn lint"
+  ],
+  "*.+(js|ts|tsx|json|md)": [
+    "yarn check-format",
   ]
 }
