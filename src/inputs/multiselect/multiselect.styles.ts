@@ -1,17 +1,17 @@
-import styled, { css } from "styled-components/macro";
-import { Chip } from "../../chip";
-import { Text } from "../../chip/chip.styles";
-import { DialogBox } from "../../dialogbox";
+import styled, { css } from "styled-components/macro"
+import { Chip } from "../../chip"
+import { Text } from "../../chip/chip.styles"
+import { DialogBox } from "../../dialogbox"
 
 export const StyledDialogBox = styled(DialogBox)`
   input[type="checkbox"] {
     margin-right: 1rem;
   }
-`;
+`
 
-export const StyledMultiSelect = styled.div``;
+export const StyledMultiSelect = styled.div``
 
-export const StyledChip = styled(Chip)``;
+export const StyledChip = styled(Chip)``
 
 export const AddChip = styled(Chip)`
   ${({ disabled, theme: { MultiSelect } }) => css`
@@ -32,7 +32,7 @@ export const AddChip = styled(Chip)`
       }
     `};
   `};
-`;
+`
 
 export const HiddenSelect = styled.select`
   display: block;
@@ -46,8 +46,8 @@ export const HiddenSelect = styled.select`
     margin: 0;
     border: none;
   }
-`;
+`
 export const Display = styled.div`
   display: flex;
   font-size: 0.8rem;
-`;
+`

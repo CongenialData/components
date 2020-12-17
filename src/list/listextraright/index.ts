@@ -1,1 +1,1 @@
-export * from "./listextraright";
+export * from "./listextraright"

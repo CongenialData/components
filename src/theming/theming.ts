@@ -1,20 +1,20 @@
-import _ from "lodash";
-import { DeepPartial, Tuple } from "ts-essentials";
-import { DefaultTheme } from "styled-components/macro";
+import _ from "lodash"
+import { DeepPartial, Tuple } from "ts-essentials"
+import { DefaultTheme } from "styled-components/macro"
 
-import { BASE_COLORS } from "./basecolors";
-import { TColors, colorMapping } from "./colors";
-import { BASE_TYPOGRAPHY } from "./typography";
-import { TSupport, supportMapping } from "./support";
-import { breakpoints } from "./breakpoints";
-import { spacing } from "./spacing";
+import { BASE_COLORS } from "./basecolors"
+import { TColors, colorMapping } from "./colors"
+import { BASE_TYPOGRAPHY } from "./typography"
+import { TSupport, supportMapping } from "./support"
+import { breakpoints } from "./breakpoints"
+import { spacing } from "./spacing"
 
 const COMMON_THEME_DECLARATIONS = {
   baseColors: BASE_COLORS,
   breakpoints,
   spacing,
   typography: BASE_TYPOGRAPHY,
-};
+}
 
 export type TCommonTheme = typeof COMMON_THEME_DECLARATIONS & {
   colors: TColors;
@@ -22,8 +22,8 @@ export type TCommonTheme = typeof COMMON_THEME_DECLARATIONS & {
 };
 
 export const tuple = <T extends Tuple>(t: T): T => {
-  return t;
-};
+  return t
+}
 type TTheme = {
   [key: string]: TThemeValue;
 };
@@ -45,7 +45,7 @@ export interface ThemedComponent {
 // TODO: Fix correct types
 // eslint-disable-next-line
 export const isThemedComponent = (obj: any): obj is ThemedComponent =>
-  obj && obj.defaultTheme;
+  obj && obj.defaultTheme
 
 /**
  * createTheme creates a theme for all given components. All components imported
@@ -76,37 +76,37 @@ export const createTheme = (
       ...COMMON_THEME_DECLARATIONS,
     },
     baseTheme
-  );
+  )
 
-  const colors = colorMapping(partialBase.baseColors);
-  const support = supportMapping(partialBase.baseColors, colors);
+  const colors = colorMapping(partialBase.baseColors)
+  const support = supportMapping(partialBase.baseColors, colors)
 
   const base = _.merge(partialBase, {
     colors,
     support,
-  });
+  })
 
   const theme: DeepPartial<DefaultTheme> = _.reduce(
     components,
     (acc, component) => {
       // Either expect a themed component or a theme function
-      let themeFn: TComponentThemeFn;
+      let themeFn: TComponentThemeFn
       if (isThemedComponent(component)) {
         if (component.defaultTheme === undefined)
-          throw new Error(`createTheme: Component must have a theme`);
-        themeFn = component.defaultTheme;
+          throw new Error(`createTheme: Component must have a theme`)
+        themeFn = component.defaultTheme
       } else {
-        themeFn = component;
+        themeFn = component
       }
 
-      const [ns, t] = themeFn(acc);
+      const [ns, t] = themeFn(acc)
       return {
         ...acc,
         [ns]: t,
-      };
+      }
     },
     base
-  );
+  )
 
-  return _.merge(theme, baseTheme) as DefaultTheme;
-};
+  return _.merge(theme, baseTheme) as DefaultTheme
+}

@@ -1,8 +1,8 @@
-import React from "react";
+import React from "react"
 
-import { StyledToolbarItem } from "./toolbar-item.styles";
-import { ToolbarItemProps } from "./toolbar-item.interfaces";
-import { toolbarItemTheme } from "./toolbar-item.theme";
+import { StyledToolbarItem } from "./toolbar-item.styles"
+import { ToolbarItemProps } from "./toolbar-item.interfaces"
+import { toolbarItemTheme } from "./toolbar-item.theme"
 
 export const ToolbarItem = ({
   children,
@@ -14,8 +14,8 @@ export const ToolbarItem = ({
       {icon && icon}
       {children}
     </StyledToolbarItem>
-  );
-};
+  )
+}
 
-ToolbarItem.defaultTheme = toolbarItemTheme;
-ToolbarItem.displayName = "ToolbarItem";
+ToolbarItem.defaultTheme = toolbarItemTheme
+ToolbarItem.displayName = "ToolbarItem"

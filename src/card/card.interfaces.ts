@@ -1,4 +1,4 @@
-import { TComponentSize, TComponentStatus } from "../theming";
+import { TComponentSize, TComponentStatus } from "../theming"
 
 export type Spacing = "none" | "small" | "normal";
 

@@ -1,18 +1,18 @@
-import React, { memo } from "react";
+import React, { memo } from "react"
 
-import { NavItem } from "../../navbar/navitem";
-import { NavBar } from "../../navbar/navbar";
-import { Toolbar } from "../toolbar";
-import { ThemedComponent } from "../../theming";
+import { NavItem } from "../../navbar/navitem"
+import { NavBar } from "../../navbar/navbar"
+import { Toolbar } from "../toolbar"
+import { ThemedComponent } from "../../theming"
 
 import {
   PageBody,
   PageContainer,
   PageContentWrapper,
   StyledPage,
-} from "./page.styles";
-import { pageTheme } from "./page.theme";
-import { PageProps } from "./page.interfaces";
+} from "./page.styles"
+import { pageTheme } from "./page.theme"
+import { PageProps } from "./page.interfaces"
 
 export const Page: React.FC<PageProps> & ThemedComponent = memo(
   ({
@@ -49,9 +49,9 @@ export const Page: React.FC<PageProps> & ThemedComponent = memo(
           </PageBody>
         </PageContainer>
       </StyledPage>
-    );
+    )
   }
-);
+)
 
-Page.defaultTheme = pageTheme;
-Page.displayName = "Page";
+Page.defaultTheme = pageTheme
+Page.displayName = "Page"

@@ -1,4 +1,4 @@
-import { SidebarTheme } from "./sidebar.theme";
+import { SidebarTheme } from "./sidebar.theme"
 
 declare module "styled-components" {
   export interface DefaultTheme {

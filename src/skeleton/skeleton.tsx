@@ -1,11 +1,11 @@
-import React from "react";
+import React from "react"
 
 /* Import components here */
-import { SkeletonLine } from "./skeleton.styles";
+import { SkeletonLine } from "./skeleton.styles"
 
 /* Import interfaces here */
-import { SkeletonProps } from "./skeleton.interfaces";
-import { skeletonTheme } from "./skeleton.theme";
+import { SkeletonProps } from "./skeleton.interfaces"
+import { skeletonTheme } from "./skeleton.theme"
 
 /* Import utilities here */
 
@@ -16,7 +16,7 @@ export const Skeleton = ({
 }: SkeletonProps): JSX.Element => {
   return (
     <SkeletonLine height={height} translucent={translucent} width={width} />
-  );
-};
+  )
+}
 
-Skeleton.defaultTheme = skeletonTheme;
+Skeleton.defaultTheme = skeletonTheme

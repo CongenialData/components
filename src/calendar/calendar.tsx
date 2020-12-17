@@ -1,8 +1,8 @@
-import React, { useCallback } from "react";
-import _ from "lodash";
-import { faAngleLeft, faAngleRight } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { format, isSameDay, isSameMonth, isToday } from "date-fns";
+import React, { useCallback } from "react"
+import _ from "lodash"
+import { faAngleLeft, faAngleRight } from "@fortawesome/free-solid-svg-icons"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { format, isSameDay, isSameMonth, isToday } from "date-fns"
 
 /* Import components here */
 import {
@@ -15,24 +15,24 @@ import {
   PageableNavigation,
   Picker,
   StyledCard,
-} from "./calendar.styles";
-import { HideWhileLoading } from "../hide-while-loading";
-import { Button } from "../inputs/button";
-import { DayNames } from "./day-names";
+} from "./calendar.styles"
+import { HideWhileLoading } from "../hide-while-loading"
+import { Button } from "../inputs/button"
+import { DayNames } from "./day-names"
 
 /* Import interfaces here */
-import { CalendarProps, DayProps } from "./calendar.interfaces";
-import { calendarTheme } from "./calendar.theme";
+import { CalendarProps, DayProps } from "./calendar.interfaces"
+import { calendarTheme } from "./calendar.theme"
 
 /* Import utilities here */
-import { generateCalendar, monthName } from "./calendar.utilities";
+import { generateCalendar, monthName } from "./calendar.utilities"
 
 /**
  * Generate a string to be used as key in extraInfo
  * @param d - date to generate key for
  * @returns the key to be used
  */
-const getExtraInfoKey = (d: Date): string => format(d, "yyyy-MM-dd");
+const getExtraInfoKey = (d: Date): string => format(d, "yyyy-MM-dd")
 
 /**
  * prepare props for the Day component
@@ -50,10 +50,10 @@ const prepareItem = _.curry(function <T>(
   extraInfo: T,
   date: Date
 ): DayProps<T> {
-  const key = getExtraInfoKey(date);
+  const key = getExtraInfoKey(date)
   const info = extraInfo
     ? (extraInfo as Record<string, never>)[key]
-    : undefined;
+    : undefined
 
   return {
     date,
@@ -61,15 +61,15 @@ const prepareItem = _.curry(function <T>(
     isSelected: isSameDay(value, date),
     isCurrentMonth: isSameMonth(month, date),
     extraInfo: info,
-  };
-});
+  }
+})
 
 // TODO: Use correct type and remove eslint disable
 // eslint-disable-next-line @typescript-eslint/ban-types
 const DefaultDayComponent = <T extends {}>(
   dayProps: DayProps<T>
 ): JSX.Element => {
-  const { date, extraInfo, ...props } = dayProps;
+  const { date, extraInfo, ...props } = dayProps
   return (
     <DayCell {...props}>
       <CellContent>
@@ -77,8 +77,8 @@ const DefaultDayComponent = <T extends {}>(
         {extraInfo && `&nbsp;:&nbsp; ${extraInfo}`}
       </CellContent>
     </DayCell>
-  );
-};
+  )
+}
 
 const Header = ({
   month,
@@ -96,7 +96,7 @@ const Header = ({
   const monthYearTitle = `${monthName(
     month,
     monthTitleLength
-  )} ${month.getFullYear()}`;
+  )} ${month.getFullYear()}`
 
   return (
     <Navigation>
@@ -122,8 +122,8 @@ const Header = ({
         </Button>
       </PageableNavigation>
     </Navigation>
-  );
-};
+  )
+}
 
 export const Calendar = <T extends Record<string, never>>(
   props: CalendarProps<T>
@@ -139,30 +139,30 @@ export const Calendar = <T extends Record<string, never>>(
     error,
     monthTitleLength,
     ...styleProps
-  } = props;
-  let { extraInfo } = props;
+  } = props
+  let { extraInfo } = props
 
   // Make sure it's not undefined
-  extraInfo = extraInfo || {};
+  extraInfo = extraInfo || {}
 
   const calendar: DayProps<T>[] = Array.from(generateCalendar(month)).map(
     prepareItem(value, month, extraInfo)
-  );
+  )
 
   const onNextMonthClick = useCallback((): void => {
-    const monthCopy = new Date(month.getTime());
-    monthCopy.setMonth(monthCopy.getMonth() + 1);
-    onChangeMonth(monthCopy);
-  }, [onChangeMonth, month]);
+    const monthCopy = new Date(month.getTime())
+    monthCopy.setMonth(monthCopy.getMonth() + 1)
+    onChangeMonth(monthCopy)
+  }, [onChangeMonth, month])
 
   const onPrevMonthClick = useCallback((): void => {
-    const monthCopy = new Date(month.getTime());
-    monthCopy.setMonth(monthCopy.getMonth() - 1);
-    onChangeMonth(monthCopy);
-  }, [onChangeMonth, month]);
+    const monthCopy = new Date(month.getTime())
+    monthCopy.setMonth(monthCopy.getMonth() - 1)
+    onChangeMonth(monthCopy)
+  }, [onChangeMonth, month])
 
   const DayComponent: React.FC<DayProps<T>> =
-    dayComponent || DefaultDayComponent;
+    dayComponent || DefaultDayComponent
 
   return (
     <StyledCard className={className} spacing="none" {...styleProps}>
@@ -198,7 +198,7 @@ export const Calendar = <T extends Record<string, never>>(
         </Picker>
       </Body>
     </StyledCard>
-  );
-};
+  )
+}
 
-Calendar.defaultTheme = calendarTheme;
+Calendar.defaultTheme = calendarTheme

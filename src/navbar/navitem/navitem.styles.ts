@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/explicit-function-return-type */
-import styled, { css } from "styled-components/macro";
-import { StyledNavItemProps } from "./navitem";
+import styled, { css } from "styled-components/macro"
+import { StyledNavItemProps } from "./navitem"
 
 export const Label = styled.span`
   ${({ theme: { NavItem } }) => css`
@@ -9,11 +9,11 @@ export const Label = styled.span`
     margin-left: 1rem;
     vertical-align: middle;
   `};
-`;
+`
 
 export const IconWrapper = styled.div`
   width: 3rem;
-`;
+`
 
 export const StyledNavItem = styled.li<StyledNavItemProps>`
   ${({ theme: { NavItem } }) => css`
@@ -59,4 +59,4 @@ export const StyledNavItem = styled.li<StyledNavItemProps>`
 
     // TODO: Add styling to active <NavItem />
   `};
-`;
+`

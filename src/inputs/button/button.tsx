@@ -1,12 +1,12 @@
 /* eslint-disable react/prop-types */
-import * as React from "react";
+import * as React from "react"
 
 /* Import components here */
-import { StyledButton } from "./button.styles";
+import { StyledButton } from "./button.styles"
 
 /* Import interfaces here */
-import { ButtonProps } from "./button.interfaces";
-import { buttonTheme } from "./button.theme";
+import { ButtonProps } from "./button.interfaces"
+import { buttonTheme } from "./button.theme"
 
 export const Button = ({
   children,
@@ -37,7 +37,7 @@ export const Button = ({
     >
       {children}
     </StyledButton>
-  );
-};
+  )
+}
 
-Button.defaultTheme = buttonTheme;
+Button.defaultTheme = buttonTheme

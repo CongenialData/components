@@ -1,4 +1,4 @@
-import { PageTheme } from "./page.theme";
+import { PageTheme } from "./page.theme"
 
 declare module "styled-components" {
   export interface DefaultTheme {

@@ -1,7 +1,7 @@
-import styled, { css } from "styled-components/macro";
+import styled, { css } from "styled-components/macro"
 
 /* Import interfaces here */
-import { GridStyleProps } from "./grid.interfaces";
+import { GridStyleProps } from "./grid.interfaces"
 
 const calculateGridColumns = (
   columns: number,
@@ -22,8 +22,8 @@ const calculateGridColumns = (
         theme.breakpoints.xlContainer}) {
       grid-template-columns: repeat(${xlColumns}, 1fr);
     }
-  `;
-};
+  `
+}
 
 export const StyledGrid = styled.div<GridStyleProps>`
   --grid-columns: ${({ columns }): string => String(columns)};
@@ -37,4 +37,4 @@ export const StyledGrid = styled.div<GridStyleProps>`
 
   ${({ columns, mdColumns, xlColumns }) =>
     calculateGridColumns(columns, mdColumns, xlColumns)};
-`;
+`

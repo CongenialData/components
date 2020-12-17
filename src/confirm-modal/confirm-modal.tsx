@@ -4,12 +4,12 @@ import React, {
   useMemo,
   useRef,
   useState,
-} from "react";
+} from "react"
 
-import { DialogBox } from "../dialogbox";
-import { Button } from "../inputs/button";
-import _ from "lodash";
-import { StyledDialogBox } from "./confirm-modal.styles";
+import { DialogBox } from "../dialogbox"
+import { Button } from "../inputs/button"
+import _ from "lodash"
+import { StyledDialogBox } from "./confirm-modal.styles"
 
 type TAnswer<T> = { text: string; value: T };
 type TContext = { [key: string]: string | number };
@@ -26,8 +26,8 @@ const ConfirmModal = <T extends Record<string, never>>(
   props: IConfirmModalProps<T>
 ): JSX.Element => {
   function onClick(answer: TAnswer<T>) {
-    props.onResult.bind(null, answer.value);
-    return undefined;
+    props.onResult.bind(null, answer.value)
+    return undefined
   }
 
   return (
@@ -41,8 +41,8 @@ const ConfirmModal = <T extends Record<string, never>>(
         ))}
       </DialogBox.Footer>
     </StyledDialogBox>
-  );
-};
+  )
+}
 
 /**
  * useConfirmation can be used to show a confirmation dialog box
@@ -60,45 +60,45 @@ export const useConfirmation = <T extends Record<string, never>>(
   buttons: TAnswer<T>[],
   resultCallback?: (value: T) => void
 ): TUseConfirmation<T> => {
-  const [template, setTemplate] = useState(info);
-  const [context, setContext] = useState<TContext | undefined>();
-  const [showDialog, setShowDialog] = useState(false);
-  const resolverRef = useRef<((value: T) => void) | null>(null);
-  const callbackRef = useRef<((value: T) => void) | null>(null);
+  const [template, setTemplate] = useState(info)
+  const [context, setContext] = useState<TContext | undefined>()
+  const [showDialog, setShowDialog] = useState(false)
+  const resolverRef = useRef<((value: T) => void) | null>(null)
+  const callbackRef = useRef<((value: T) => void) | null>(null)
 
   const message = useMemo(() => {
-    const compiled = _.template(template);
+    const compiled = _.template(template)
     try {
-      return compiled(context);
+      return compiled(context)
     } catch {
-      return "invalid-template";
+      return "invalid-template"
     }
-  }, [template, context]);
+  }, [template, context])
 
   // Update message if modified
   useEffect(() => {
-    setTemplate(info);
-  }, [info]);
+    setTemplate(info)
+  }, [info])
 
   // Update callback if modified
   useEffect(() => {
-    callbackRef.current = resultCallback || null;
-  }, [resultCallback]);
+    callbackRef.current = resultCallback || null
+  }, [resultCallback])
 
   const handleResult = useCallback((result: T) => {
-    setShowDialog(false);
-    if (callbackRef.current) callbackRef.current(result);
-    if (resolverRef.current) resolverRef.current(result);
-  }, []);
+    setShowDialog(false)
+    if (callbackRef.current) callbackRef.current(result)
+    if (resolverRef.current) resolverRef.current(result)
+  }, [])
 
   const showConfirmation = (context?: TContext): Promise<T> => {
     const promise = new Promise<T>((resolve) => {
-      resolverRef.current = resolve;
-      setContext(context);
-      setShowDialog(true);
-    });
-    return promise;
-  };
+      resolverRef.current = resolve
+      setContext(context)
+      setShowDialog(true)
+    })
+    return promise
+  }
 
   const component = (
     <ConfirmModal
@@ -107,6 +107,6 @@ export const useConfirmation = <T extends Record<string, never>>(
       show={showDialog}
       onResult={handleResult}
     />
-  );
-  return [showConfirmation, component];
-};
+  )
+  return [showConfirmation, component]
+}

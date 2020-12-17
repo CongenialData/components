@@ -1,17 +1,17 @@
-import styled, { css } from "styled-components/macro";
+import styled, { css } from "styled-components/macro"
 
-import { StyledHeading } from "../typography/heading/heading.styles";
+import { StyledHeading } from "../typography/heading/heading.styles"
 
 import {
   FormSectionComponentProps,
   FormSectionRequiredStyleProps,
-} from "./form-section.interfaces";
+} from "./form-section.interfaces"
 
 export const StyledFormSection = styled.div<FormSectionRequiredStyleProps>`
   ${({ border, theme: { FormSection } }) => {
     const borderBottom =
       border &&
-      `${FormSection.border.width} ${FormSection.border.style} ${FormSection.border.color}`;
+      `${FormSection.border.width} ${FormSection.border.style} ${FormSection.border.color}`
 
     return css`
       display: flex;
@@ -19,9 +19,9 @@ export const StyledFormSection = styled.div<FormSectionRequiredStyleProps>`
       padding: ${FormSection.padding};
 
       border-bottom: ${borderBottom};
-    `;
+    `
   }}
-`;
+`
 
 export const Header = styled.div<FormSectionComponentProps>`
   ${({ theme: { FormSection } }) => css`
@@ -42,6 +42,6 @@ export const Header = styled.div<FormSectionComponentProps>`
       line-height: initial;
     }
   `}
-`;
+`
 
-export const Body = styled.div``;
+export const Body = styled.div``

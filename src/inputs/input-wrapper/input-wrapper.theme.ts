@@ -1,4 +1,4 @@
-import { TThemeFromFn, tuple } from "../../theming";
+import { TThemeFromFn, tuple } from "../../theming"
 
 export const inputWrapperTheme = () =>
   tuple([
@@ -13,6 +13,6 @@ export const inputWrapperTheme = () =>
         giant: "5rem",
       },
     },
-  ]);
+  ])
 
 export type InputWrapperTheme = TThemeFromFn<typeof inputWrapperTheme>;

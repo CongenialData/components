@@ -1,4 +1,4 @@
-import { TComponentStatus } from "../../theming/styled";
+import { TComponentStatus } from "../../theming/styled"
 
 export interface StyledCaptionRequiredProps {
   /**

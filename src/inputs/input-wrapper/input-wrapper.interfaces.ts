@@ -1,4 +1,4 @@
-import { TComponentSize } from "../../theming";
+import { TComponentSize } from "../../theming"
 
 export interface StyledInputWrapperRequiredProps {
   /**

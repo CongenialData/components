@@ -1,15 +1,15 @@
-import React from "react";
+import React from "react"
 
 /* Import components here */
-import { ListItem } from "../listitem";
+import { ListItem } from "../listitem"
 import {
   StyledList,
   StyledOrderedList,
   StyledUnurderedList,
-} from "./list.styles";
+} from "./list.styles"
 
 /* Import interfaces here */
-import { ListProps } from "./list.interfaces";
+import { ListProps } from "./list.interfaces"
 
 const _List = React.forwardRef<HTMLDivElement, ListProps>(function List(
   // TODO: Fix types
@@ -25,12 +25,12 @@ const _List = React.forwardRef<HTMLDivElement, ListProps>(function List(
         <StyledUnurderedList>{children}</StyledUnurderedList>
       )}
     </StyledList>
-  );
-});
+  )
+})
 
 type TList = typeof _List & {
   Item: typeof ListItem;
 };
-export const List: TList = _List as any;
+export const List: TList = _List as any
 
-List.Item = ListItem;
+List.Item = ListItem

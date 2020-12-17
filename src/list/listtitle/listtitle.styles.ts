@@ -1,4 +1,4 @@
-import styled from "styled-components/macro";
+import styled from "styled-components/macro"
 
 export const StyledListTitle = styled.span`
   color: ${({ theme }): string => theme.colors.TEXT_BASIC_COLOR};
@@ -6,4 +6,4 @@ export const StyledListTitle = styled.span`
   font-size: ${({ theme }): string => theme.ListTitle.fontSize};
   font-weight: ${({ theme }): string => theme.ListTitle.fontWeight};
   line-height: 24px;
-`;
+`

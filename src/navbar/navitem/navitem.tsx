@@ -1,7 +1,7 @@
-import * as React from "react";
+import * as React from "react"
 
-import { navitemTheme } from "./navitem.theme";
-import { IconWrapper, Label, StyledNavItem } from "./navitem.styles";
+import { navitemTheme } from "./navitem.theme"
+import { IconWrapper, Label, StyledNavItem } from "./navitem.styles"
 
 interface NavItemComponentsProps {
   icon: JSX.Element;
@@ -16,7 +16,7 @@ export interface StyledNavItemProps {
 interface NavItemProps extends NavItemComponentsProps, StyledNavItemProps {}
 
 export const NavItem = (props: NavItemProps): JSX.Element => {
-  const { icon, to, label } = props;
+  const { icon, to, label } = props
 
   return (
     <StyledNavItem to={to}>
@@ -25,7 +25,7 @@ export const NavItem = (props: NavItemProps): JSX.Element => {
       </IconWrapper>
       <Label>{label}</Label>
     </StyledNavItem>
-  );
-};
+  )
+}
 
-NavItem.defaultTheme = navitemTheme;
+NavItem.defaultTheme = navitemTheme

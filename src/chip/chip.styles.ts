@@ -1,10 +1,10 @@
-import styled, { css } from "styled-components/macro";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import styled, { css } from "styled-components/macro"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 
 import {
   ChipOptionalStyleProps,
   ChipRequiredStyleProps,
-} from "./chip.interfaces";
+} from "./chip.interfaces"
 
 export const Text = styled.span`
   ${({ theme: { Chip } }) => css`
@@ -18,7 +18,7 @@ export const Text = styled.span`
     line-height: 1rem;
     text-transform: ${Chip.text.transform};
   `};
-`;
+`
 
 export const StyledChip = styled.div<
   ChipOptionalStyleProps & ChipRequiredStyleProps
@@ -65,11 +65,11 @@ export const StyledChip = styled.div<
         }
       `};
   `}
-`;
+`
 
 export const Icon = styled(FontAwesomeIcon)`
   margin-right: 0.5rem;
-`;
+`
 export const RemoveIcon = styled(FontAwesomeIcon)`
   margin-left: 0.5rem;
-`;
+`

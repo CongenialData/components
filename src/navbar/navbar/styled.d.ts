@@ -1,4 +1,4 @@
-import { NavBarTheme } from "./navbar.theme";
+import { NavBarTheme } from "./navbar.theme"
 
 declare module "styled-components" {
   export interface DefaultTheme {

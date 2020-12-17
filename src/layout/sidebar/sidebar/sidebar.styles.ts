@@ -1,7 +1,7 @@
-import styled, { css } from "styled-components/macro";
+import styled, { css } from "styled-components/macro"
 
-import { Module } from "../../module";
-import { StyledListContent } from "../../../list/listitem/listitem.styles";
+import { Module } from "../../module"
+import { StyledListContent } from "../../../list/listitem/listitem.styles"
 
 export const StyledSidebar = styled(Module)`
   ${({ theme: { breakpoints, Sidebar } }) => css`
@@ -18,4 +18,4 @@ export const StyledSidebar = styled(Module)`
       margin-right: 0; /* FIXME: Rewrite the list component and remove this*/
     }
   `};
-`;
+`

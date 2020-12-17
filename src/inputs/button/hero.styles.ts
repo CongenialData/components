@@ -1,18 +1,18 @@
-import { css, keyframes } from "styled-components/macro";
-import { TComponentStatus } from "../../theming";
+import { css, keyframes } from "styled-components/macro"
+import { TComponentStatus } from "../../theming"
 
 export const HeroButtonStyle = (
   status: TComponentStatus,
   pulse: boolean
 ) => css`
   ${({ theme }) => {
-    const leftColor = theme.Button.appearance.hero[status].leftBackgroundColor;
+    const leftColor = theme.Button.appearance.hero[status].leftBackgroundColor
     const rightColor =
-      theme.Button.appearance.hero[status].rightBackgroundColor;
-    const bevel = `${theme.Button.appearance.hero.bevelSize} ${theme.Button.appearance.hero[status].bevelColor}`;
-    const glow = `${theme.Button.appearance.hero.glowSize} ${theme.Button.appearance.hero[status].glowColor}`;
-    const { shadow } = theme.Button.appearance.hero;
-    const heroBoxShadows = `${bevel}, ${glow}, ${shadow}`;
+      theme.Button.appearance.hero[status].rightBackgroundColor
+    const bevel = `${theme.Button.appearance.hero.bevelSize} ${theme.Button.appearance.hero[status].bevelColor}`
+    const glow = `${theme.Button.appearance.hero.glowSize} ${theme.Button.appearance.hero[status].glowColor}`
+    const { shadow } = theme.Button.appearance.hero
+    const heroBoxShadows = `${bevel}, ${glow}, ${shadow}`
 
     const pulseAnimation = () => {
       const anim = keyframes`
@@ -25,12 +25,12 @@ export const HeroButtonStyle = (
           box-shadow: 0 0 1rem 0 ${leftColor};
           opacity: 0.8;
         }
-      `;
+      `
 
       return css`
         animation: ${anim} 0.75s infinite alternate;
-      `;
-    };
+      `
+    }
 
     return css`
       text-shadow: ${theme.Button.appearance.hero.textShadow};
@@ -44,9 +44,9 @@ export const HeroButtonStyle = (
       &:focus {
         ${() => {
           const leftFocusColor =
-            theme.Button.appearance.hero[status].focusLeftBackgroundColor;
+            theme.Button.appearance.hero[status].focusLeftBackgroundColor
           const rightFocusColor =
-            theme.Button.appearance.hero[status].focusRightBackgroundColor;
+            theme.Button.appearance.hero[status].focusRightBackgroundColor
 
           return css`
             background-image: linear-gradient(
@@ -57,16 +57,16 @@ export const HeroButtonStyle = (
             box-shadow: ${heroBoxShadows},
               0 0 0 ${theme.Button.appearance.hero.outlineWidth}
                 ${theme.Button.appearance.hero.outlineColor};
-          `;
+          `
         }};
       }
 
       &:hover {
         ${() => {
           const leftHoverColor =
-            theme.Button.appearance.hero[status].hoverLeftBackgroundColor;
+            theme.Button.appearance.hero[status].hoverLeftBackgroundColor
           const rightHoverColor =
-            theme.Button.appearance.hero[status].hoverRightBackgroundColor;
+            theme.Button.appearance.hero[status].hoverRightBackgroundColor
 
           return css`
             background-image: linear-gradient(
@@ -74,16 +74,16 @@ export const HeroButtonStyle = (
               ${leftHoverColor},
               ${rightHoverColor}
             );
-          `;
+          `
         }}
       }
 
       &:active {
         ${() => {
           const leftActiveColor =
-            theme.Button.appearance.hero[status].activeLeftBackgroundColor;
+            theme.Button.appearance.hero[status].activeLeftBackgroundColor
           const rightActiveColor =
-            theme.Button.appearance.hero[status].activeRightBackgroundColor;
+            theme.Button.appearance.hero[status].activeRightBackgroundColor
 
           return css`
             background-image: linear-gradient(
@@ -91,7 +91,7 @@ export const HeroButtonStyle = (
               ${leftActiveColor},
               ${rightActiveColor}
             );
-          `;
+          `
         }};
       }
 
@@ -102,7 +102,7 @@ export const HeroButtonStyle = (
               .disabledBackgroundColor};
             background-image: none;
             color: ${theme.Button.appearance.hero[status].disabledTextColor};
-          `;
+          `
         }};
       }
 
@@ -110,6 +110,6 @@ export const HeroButtonStyle = (
        * Add a pulse animation
        */
       ${pulse && pulseAnimation()}
-    `;
+    `
   }};
-`;
+`

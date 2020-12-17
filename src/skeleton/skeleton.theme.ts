@@ -1,4 +1,4 @@
-import { TThemeFromFn, tuple } from "../theming";
+import { TThemeFromFn, tuple } from "../theming"
 
 // eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
 export const skeletonTheme = () => {
@@ -29,7 +29,7 @@ export const skeletonTheme = () => {
         full: "100%",
       },
     },
-  ]);
-};
+  ])
+}
 
 export type SkeletonTheme = TThemeFromFn<typeof skeletonTheme>;

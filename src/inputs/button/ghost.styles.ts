@@ -1,5 +1,5 @@
-import { css } from "styled-components/macro";
-import { TComponentStatus, outline } from "../../theming";
+import { css } from "styled-components/macro"
+import { TComponentStatus, outline } from "../../theming"
 
 export const GhostButtonStyle = (status: TComponentStatus) =>
   css`
@@ -12,12 +12,12 @@ export const GhostButtonStyle = (status: TComponentStatus) =>
         },
       },
     }) => {
-      const insetShadow = ghost.focusInsetShadowLength;
+      const insetShadow = ghost.focusInsetShadowLength
       const cssWithOutline = outline(
         outlineWidth,
         outlineColor,
         insetShadow.toString()
-      );
+      )
 
       return css`
         background-color: ${ghost[status].backgroundColor};
@@ -46,6 +46,6 @@ export const GhostButtonStyle = (status: TComponentStatus) =>
           border-color: ${ghost[status].disabledBorderColor};
           color: ${ghost[status].disabledTextColor};
         }
-      `;
+      `
     }};
-  `;
+  `

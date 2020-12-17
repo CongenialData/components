@@ -1,12 +1,12 @@
-import styled, { css } from "styled-components/macro";
+import styled, { css } from "styled-components/macro"
 import {
   CheckboxComponentProps,
   CheckboxRequiredStyleProps,
-} from "./checkbox.interfaces";
-import { componentAnimation, outline } from "../../theming/";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+} from "./checkbox.interfaces"
+import { componentAnimation, outline } from "../../theming/"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 
-export const Icon = styled(FontAwesomeIcon)``;
+export const Icon = styled(FontAwesomeIcon)``
 
 export const CheckboxWrapper = styled.label`
   ${({ theme: { Checkbox } }) => css`
@@ -21,7 +21,7 @@ export const CheckboxWrapper = styled.label`
     display: flex;
     flex-direction: row;
   `};
-`;
+`
 
 export const LabelAndCaption = styled.div`
   display: flex;
@@ -35,7 +35,7 @@ export const LabelAndCaption = styled.div`
        * @include nb-rtl(padding-right, nb-theme(checkbox-text-space));
        */
   }
-`;
+`
 
 export const CustomCheckbox = styled.span<
   CheckboxComponentProps & CheckboxRequiredStyleProps
@@ -89,9 +89,9 @@ export const CustomCheckbox = styled.span<
           border-color: ${Checkbox.status[status].hoverCheckedBorderColor};
         `}
       }
-    `;
+    `
   }};
-`;
+`
 
 export const Text = styled.span<CheckboxRequiredStyleProps>`
   ${({ theme: { Checkbox }, status }) => css`
@@ -104,7 +104,7 @@ export const Text = styled.span<CheckboxRequiredStyleProps>`
 
     color: ${Checkbox.status[status].textColor};
   `};
-`;
+`
 
 const Hidden = styled.div`
   position: absolute !important;
@@ -113,7 +113,7 @@ const Hidden = styled.div`
   overflow: hidden;
   clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
   clip: rect(1px, 1px, 1px, 1px);
-`;
+`
 
 export const NativeInput = styled(Hidden.withComponent("input"))<
   CheckboxRequiredStyleProps & CheckboxComponentProps
@@ -182,4 +182,4 @@ export const NativeInput = styled(Hidden.withComponent("input"))<
       }
     }
   `};
-`;
+`

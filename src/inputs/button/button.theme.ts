@@ -1,4 +1,4 @@
-import { TCommonTheme, TThemeFromFn, tuple } from "../../theming";
+import { TCommonTheme, TThemeFromFn, tuple } from "../../theming"
 
 export const buttonTheme = (theme: TCommonTheme) =>
   tuple([
@@ -628,6 +628,6 @@ export const buttonTheme = (theme: TCommonTheme) =>
         },
       },
     },
-  ]);
+  ])
 
 export type ButtonTheme = TThemeFromFn<typeof buttonTheme>;

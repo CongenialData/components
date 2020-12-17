@@ -1,4 +1,4 @@
-import { TCommonTheme, TThemeFromFn, tuple } from "../../theming";
+import { TCommonTheme, TThemeFromFn, tuple } from "../../theming"
 
 export const textInputTheme = ({
   baseColors,
@@ -185,6 +185,6 @@ export const textInputTheme = ({
         },
       },
     },
-  ]);
+  ])
 
 export type TextInputTheme = TThemeFromFn<typeof textInputTheme>;

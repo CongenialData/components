@@ -1,4 +1,4 @@
-import { NavItemTheme } from "./navitem.theme";
+import { NavItemTheme } from "./navitem.theme"
 
 declare module "styled-components" {
   export interface DefaultTheme {

@@ -1,11 +1,11 @@
-import * as React from "react";
+import * as React from "react"
 
 /* Import components here */
-import { Content, Footer, Header, StyledCard, Title } from "./card.styles";
+import { Content, Footer, Header, StyledCard, Title } from "./card.styles"
 
 /* Import interfaces here */
-import { CardProps } from "./card.interfaces";
-import { cardTheme } from "./card.theme";
+import { CardProps } from "./card.interfaces"
+import { cardTheme } from "./card.theme"
 
 /** A much reusable card for any type of card-based interface */
 export const Card = ({
@@ -30,7 +30,7 @@ export const Card = ({
       <Content spacing={spacing}>{children}</Content>
       {footer && <Footer spacing={spacing}>{footer}</Footer>}
     </StyledCard>
-  );
-};
+  )
+}
 
-Card.defaultTheme = cardTheme;
+Card.defaultTheme = cardTheme

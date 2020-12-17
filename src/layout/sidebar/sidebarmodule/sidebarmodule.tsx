@@ -1,6 +1,6 @@
-import React, { useState } from "react";
-import useResizeAware from "react-resize-aware";
-import { animated, config, useSpring } from "react-spring";
+import React, { useState } from "react"
+import useResizeAware from "react-resize-aware"
+import { animated, config, useSpring } from "react-spring"
 
 /* Import components here */
 import {
@@ -8,11 +8,11 @@ import {
   StyledHeader,
   StyledSidebarModule,
   Title,
-} from "./sidebarmodule.styles";
+} from "./sidebarmodule.styles"
 
 /* Import interfaces here */
-import { sidebarModuleTheme } from "./sidebarmodule.theme";
-import { SidebarModuleProps } from "./sidebarmodule.interfaces";
+import { sidebarModuleTheme } from "./sidebarmodule.theme"
+import { SidebarModuleProps } from "./sidebarmodule.interfaces"
 
 export const SidebarModule = ({
   children,
@@ -20,17 +20,17 @@ export const SidebarModule = ({
   contentPadding,
   header,
 }: SidebarModuleProps): JSX.Element => {
-  const [isClosed, toggleClosed] = useState(false);
-  const [resizeListener, { height }] = useResizeAware();
+  const [isClosed, toggleClosed] = useState(false)
+  const [resizeListener, { height }] = useResizeAware()
 
   const animProps = useSpring({
     config: config.gentle,
     height: isClosed ? 0 : height || 1,
     opacity: isClosed ? 0 : 1,
-  });
+  })
 
   function onClick() {
-    toggleClosed(!isClosed);
+    toggleClosed(!isClosed)
   }
 
   return (
@@ -47,7 +47,7 @@ export const SidebarModule = ({
         </Content>
       </animated.div>
     </StyledSidebarModule>
-  );
-};
+  )
+}
 
-SidebarModule.defaultTheme = sidebarModuleTheme;
+SidebarModule.defaultTheme = sidebarModuleTheme

@@ -1,4 +1,4 @@
-import styled, { css } from "styled-components/macro";
+import styled, { css } from "styled-components/macro"
 
 export const StyledNavContainer = styled.div`
   ${({ theme: { breakpoints, NavBar } }) => css`
@@ -18,7 +18,7 @@ export const StyledNavContainer = styled.div`
       flex-direction: column;
     }
   `}
-`;
+`
 export const StyledNavBar = styled.nav`
   ${({ theme: { breakpoints, NavBar } }) => css`
     display: flex;
@@ -41,4 +41,4 @@ export const StyledNavBar = styled.nav`
       margin-top: ${NavBar.itemsTopMarginDesktop};
     }
   `};
-`;
+`

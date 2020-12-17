@@ -1,4 +1,4 @@
-import * as React from "react";
+import * as React from "react"
 
 /* Import components here */
 import {
@@ -6,11 +6,11 @@ import {
   StyledEmptyState,
   StyledIcon,
   StyledTitle,
-} from "./empty-state.styles";
+} from "./empty-state.styles"
 
 /* Import interfaces here */
-import { EmptyStateProps } from "./empty-state.interfaces";
-import { emptyState } from "./empty-state.theme";
+import { EmptyStateProps } from "./empty-state.interfaces"
+import { emptyState } from "./empty-state.theme"
 
 /* Import utilities here */
 
@@ -26,7 +26,7 @@ export const EmptyState = ({
       {!!title && <StyledTitle>{title}</StyledTitle>}
       {!!description && <StyledDescription>{description}</StyledDescription>}
     </StyledEmptyState>
-  );
-};
+  )
+}
 
-EmptyState.defaultTheme = emptyState;
+EmptyState.defaultTheme = emptyState

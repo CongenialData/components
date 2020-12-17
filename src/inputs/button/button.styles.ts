@@ -1,17 +1,17 @@
-import styled, { css } from "styled-components/macro";
-import { componentAnimation, outline } from "../../theming/mixins";
+import styled, { css } from "styled-components/macro"
+import { componentAnimation, outline } from "../../theming/mixins"
 
 import {
   ButtonOptionalStyleProps,
   ButtonRequiredStyleProps,
-} from "./button.interfaces";
+} from "./button.interfaces"
 
-import { HeroButtonStyle } from "./hero.styles";
-import { FilledButtonStyle } from "./filled.styles";
-import { GhostButtonStyle } from "./ghost.styles";
-import { OutlineButtonStyle } from "./outline.styles";
+import { HeroButtonStyle } from "./hero.styles"
+import { FilledButtonStyle } from "./filled.styles"
+import { GhostButtonStyle } from "./ghost.styles"
+import { OutlineButtonStyle } from "./outline.styles"
 
-export const Title = styled.span``;
+export const Title = styled.span``
 
 export const StyledButton = styled.button<
   ButtonRequiredStyleProps & ButtonOptionalStyleProps
@@ -80,10 +80,10 @@ export const StyledButton = styled.button<
    * Status
    */
   ${({ appearance, pulse, status }) => {
-    if (appearance === "filled") return FilledButtonStyle(status);
-    if (appearance === "ghost") return GhostButtonStyle(status);
-    if (appearance === "hero") return HeroButtonStyle(status, !!pulse);
-    if (appearance === "outline") return OutlineButtonStyle(status);
-    return null;
+    if (appearance === "filled") return FilledButtonStyle(status)
+    if (appearance === "ghost") return GhostButtonStyle(status)
+    if (appearance === "hero") return HeroButtonStyle(status, !!pulse)
+    if (appearance === "outline") return OutlineButtonStyle(status)
+    return null
   }}
-`;
+`

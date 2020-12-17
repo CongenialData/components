@@ -1,1 +1,1 @@
-export * from "./toolbar-item";
+export * from "./toolbar-item"

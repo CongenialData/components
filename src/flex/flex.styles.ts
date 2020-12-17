@@ -1,6 +1,6 @@
-import styled from "styled-components/macro";
+import styled from "styled-components/macro"
 
-import { FlexProps } from "./flex.interfaces";
+import { FlexProps } from "./flex.interfaces"
 
 export const StyledFlex = styled.div<FlexProps>`
   display: ${({ container }) => (container ? "flex" : "block")};
@@ -17,4 +17,4 @@ export const StyledFlex = styled.div<FlexProps>`
   width: ${({ width }) => width || "auto"};
   height: ${({ height }) => height || "auto"};
   max-width: ${({ maxWidth }) => maxWidth || "none"};
-`;
+`

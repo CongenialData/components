@@ -1,4 +1,4 @@
-import { TThemeFromFn, tuple } from "../theming";
+import { TThemeFromFn, tuple } from "../theming"
 
 export const chipTheme = () =>
   tuple([
@@ -23,6 +23,6 @@ export const chipTheme = () =>
         transform: "none",
       },
     },
-  ]);
+  ])
 
 export type ChipTheme = TThemeFromFn<typeof chipTheme>;

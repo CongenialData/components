@@ -2,7 +2,7 @@ export const justify = {
   evenly: "evenly",
   left: "left",
   right: "right",
-} as const;
+} as const
 
 export type Justify = typeof justify[keyof typeof justify];
 

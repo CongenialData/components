@@ -1,9 +1,9 @@
 import styled, {
   FlattenSimpleInterpolation,
   css,
-} from "styled-components/macro";
+} from "styled-components/macro"
 
-import { StyledHeadingProps } from "./heading.interfaces";
+import { StyledHeadingProps } from "./heading.interfaces"
 
 type ConditionalStyle<T> =
   | FlattenSimpleInterpolation
@@ -16,7 +16,7 @@ const truncateStyle = (): FlattenSimpleInterpolation => css`
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-`;
+`
 
 export const StyledHeading = styled.h1.attrs({ role: "heading" })<
   StyledHeadingProps
@@ -34,4 +34,4 @@ export const StyledHeading = styled.h1.attrs({ role: "heading" })<
 
   ${({ truncate }): ConditionalStyle<typeof truncateStyle> =>
     truncate && truncateStyle()}
-`;
+`

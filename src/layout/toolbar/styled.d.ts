@@ -1,4 +1,4 @@
-import { ToolbarTheme } from "./toolbar.theme";
+import { ToolbarTheme } from "./toolbar.theme"
 
 declare module "styled-components" {
   export interface DefaultTheme {

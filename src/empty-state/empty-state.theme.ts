@@ -1,4 +1,4 @@
-import { TCommonTheme, TThemeFromFn, tuple } from "../theming";
+import { TCommonTheme, TThemeFromFn, tuple } from "../theming"
 
 export const emptyState = ({ colors }: TCommonTheme) =>
   tuple([
@@ -18,6 +18,6 @@ export const emptyState = ({ colors }: TCommonTheme) =>
         fontWeight: "normal",
       },
     },
-  ]);
+  ])
 
 export type EmptyStateTheme = TThemeFromFn<typeof emptyState>;

@@ -1,4 +1,4 @@
-import { TComponentSize, TDefaultStatuses } from "../theming";
+import { TComponentSize, TDefaultStatuses } from "../theming"
 
 export interface AlertRequiredStyleProps {
   /**

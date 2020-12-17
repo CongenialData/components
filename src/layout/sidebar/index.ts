@@ -1,2 +1,2 @@
-export * from "./sidebar";
-export * from "./sidebarmodule";
+export * from "./sidebar"
+export * from "./sidebarmodule"

@@ -1,5 +1,5 @@
-import styled from "styled-components/macro";
-import { CircleButtonRequiredStyleProps } from "./circle-button.interfaces";
+import styled from "styled-components/macro"
+import { CircleButtonRequiredStyleProps } from "./circle-button.interfaces"
 
 export const StyledCircleButton = styled.button<CircleButtonRequiredStyleProps>`
   display: flex;
@@ -42,17 +42,17 @@ export const StyledCircleButton = styled.button<CircleButtonRequiredStyleProps>`
     theme.CircleButton.spacing[horizontalSpacing]};
   margin-right: ${({ horizontalSpacing, theme }): string =>
     theme.CircleButton.spacing[horizontalSpacing]};
-`;
+`
 
 export const TitleAndIcon = styled.div`
   display: flex;
   align-items: center;
   flex-direction: column;
-`;
+`
 
 export const Title = styled.span<{
   props: Pick<CircleButtonRequiredStyleProps, "size">;
 }>`
   font-size: ${({ props, theme }): string =>
     theme.CircleButton.title.size[props.size]};
-`;
+`

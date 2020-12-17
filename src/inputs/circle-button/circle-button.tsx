@@ -1,16 +1,16 @@
-import React from "react";
+import React from "react"
 
 /* Import components here */
 import {
   StyledCircleButton,
   Title,
   TitleAndIcon,
-} from "./circle-button.styles";
+} from "./circle-button.styles"
 
 /* Import interfaces here */
-import { CircleButtonProps } from "./circle-button.interfaces";
-import { circleButtonTheme } from "./circle-button.theme";
-import { ThemedComponent } from "../../theming";
+import { CircleButtonProps } from "./circle-button.interfaces"
+import { circleButtonTheme } from "./circle-button.theme"
+import { ThemedComponent } from "../../theming"
 
 export const _CircleButton = React.forwardRef<
   HTMLButtonElement,
@@ -60,10 +60,10 @@ export const _CircleButton = React.forwardRef<
       ) : null}
       {children}
     </StyledCircleButton>
-  );
-});
+  )
+})
 
 type TCircleButton = typeof _CircleButton & ThemedComponent;
-export const CircleButton: TCircleButton = _CircleButton;
+export const CircleButton: TCircleButton = _CircleButton
 
-CircleButton.defaultTheme = circleButtonTheme;
+CircleButton.defaultTheme = circleButtonTheme

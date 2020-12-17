@@ -1,4 +1,4 @@
-import { TCommonTheme, TThemeFromFn, tuple } from "../../theming";
+import { TCommonTheme, TThemeFromFn, tuple } from "../../theming"
 
 // eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
 export const listDescriptionTheme = ({ colors }: TCommonTheme) =>
@@ -9,6 +9,6 @@ export const listDescriptionTheme = ({ colors }: TCommonTheme) =>
       lineHeight: "1rem",
       textColor: colors.TEXT_BASIC_COLOR,
     },
-  ]);
+  ])
 
 export type ListDescriptionTheme = TThemeFromFn<typeof listDescriptionTheme>;

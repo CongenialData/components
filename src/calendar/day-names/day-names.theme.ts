@@ -1,4 +1,4 @@
-import { TThemeFromFn, tuple } from "../../theming";
+import { TThemeFromFn, tuple } from "../../theming"
 
 export const dayNamesTheme = () =>
   tuple([
@@ -6,6 +6,6 @@ export const dayNamesTheme = () =>
     {
       width: "20.625rem",
     },
-  ]);
+  ])
 
 export type DayNamesTheme = TThemeFromFn<typeof dayNamesTheme>;

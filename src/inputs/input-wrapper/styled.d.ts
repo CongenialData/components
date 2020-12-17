@@ -1,4 +1,4 @@
-import { InputWrapperTheme } from "./input-wrapper.theme";
+import { InputWrapperTheme } from "./input-wrapper.theme"
 
 declare module "styled-components" {
   export interface DefaultTheme {

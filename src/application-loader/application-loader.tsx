@@ -1,40 +1,40 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react"
 
-import { Flex } from "../flex";
-import { Heading } from "../typography/heading";
+import { Flex } from "../flex"
+import { Heading } from "../typography/heading"
 
 import {
   AnimatedWrapper,
   Loader,
   StyledPage,
-} from "./application-loader.styles";
-import { ApplicationLoaderProps } from "./application-loader.types";
+} from "./application-loader.styles"
+import { ApplicationLoaderProps } from "./application-loader.types"
 
 export const ApplicationLoader = ({
   show = true,
   hideDelay = 500,
   text
 }: ApplicationLoaderProps): JSX.Element | null => {
-  const timeoutRef = useRef<null>();
-  const [hide, setHide] = useState(show);
+  const timeoutRef = useRef<null>()
+  const [hide, setHide] = useState(show)
 
   // Let the loader show a little longer than nessecary, to prevent flickering
   useEffect(() => {
     if (timeoutRef.current) {
-      clearTimeout(timeoutRef.current);
+      clearTimeout(timeoutRef.current)
     }
 
     if (show === false) {
       setTimeout(() => {
-        setHide(true);
-      }, hideDelay);
+        setHide(true)
+      }, hideDelay)
     } else {
-      setHide(false);
+      setHide(false)
     }
-  }, [hideDelay, show]);
+  }, [hideDelay, show])
 
   if (hide) {
-    return null;
+    return null
   }
 
   return (
@@ -53,5 +53,5 @@ export const ApplicationLoader = ({
         </Flex>
       </AnimatedWrapper>
     </StyledPage>
-  );
-};
+  )
+}

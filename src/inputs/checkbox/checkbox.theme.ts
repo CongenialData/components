@@ -1,4 +1,4 @@
-import { TCommonTheme, TThemeFromFn, tuple } from "../../theming";
+import { TCommonTheme, TThemeFromFn, tuple } from "../../theming"
 
 export const checkboxTheme = ({
   support,
@@ -237,6 +237,6 @@ export const checkboxTheme = ({
         },
       },
     },
-  ]);
+  ])
 
 export type CheckboxTheme = TThemeFromFn<typeof checkboxTheme>;

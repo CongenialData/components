@@ -3,8 +3,8 @@ import {
   TComponentSize,
   TComponentStatus,
   TComponentType,
-} from "../../theming/styled";
-import { NotVoid } from "lodash";
+} from "../../theming/styled"
+import { NotVoid } from "lodash"
 
 // eslint-disable-next-line @typescript-eslint/no-empty-interface
 export interface TextInputOptionalStyleProps {}

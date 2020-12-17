@@ -1,8 +1,8 @@
-import React, { useCallback, useRef } from "react";
-import { createPortal } from "react-dom";
-import FocusTrap from "focus-trap-react";
+import React, { useCallback, useRef } from "react"
+import { createPortal } from "react-dom"
+import FocusTrap from "focus-trap-react"
 
-import { dialogBoxTheme } from "./dialogbox.theme";
+import { dialogBoxTheme } from "./dialogbox.theme"
 
 /* Import components here */
 import {
@@ -15,10 +15,10 @@ import {
   StyledDialogBox,
   Overlay as StyledOverlay,
   TopSection,
-} from "./dialogbox.styles";
+} from "./dialogbox.styles"
 
 /* Import interfaces here */
-import { DialogBoxProps, FooterProps } from "./dialogbox.interfaces";
+import { DialogBoxProps, FooterProps } from "./dialogbox.interfaces"
 
 /* Import utilities here */
 
@@ -35,7 +35,7 @@ const CloseButton = ({ onClick }: { onClick: () => void }): JSX.Element => (
       <path d="M 10,10 L 30,30 M 30,10 L 10,30" />
     </CloseIcon>
   </StyledCloseButton>
-);
+)
 
 /**
  *
@@ -46,15 +46,15 @@ const Overlay = (props: {
   onClick: () => void;
   children: React.ReactChild | React.ReactChild[];
 }): JSX.Element => {
-  const { className, children /*onClick*/ } = props;
-  const ref = useRef<HTMLDivElement>(null);
-  const clickStatusRef = useRef(false);
+  const { className, children /*onClick*/ } = props
+  const ref = useRef<HTMLDivElement>(null)
+  const clickStatusRef = useRef(false)
 
   const handleMouseDown = useCallback((e: React.MouseEvent<HTMLDivElement>) => {
     if (e.target === ref.current) {
-      clickStatusRef.current = true;
+      clickStatusRef.current = true
     }
-  }, []);
+  }, [])
 
   const handleMouseUp = useCallback((e: React.MouseEvent<HTMLDivElement>) => {
     try {
@@ -63,9 +63,9 @@ const Overlay = (props: {
         // onClick()
       }
     } finally {
-      clickStatusRef.current = false;
+      clickStatusRef.current = false
     }
-  }, []);
+  }, [])
 
   return (
     <StyledOverlay
@@ -76,10 +76,10 @@ const Overlay = (props: {
     >
       {children}
     </StyledOverlay>
-  );
-};
+  )
+}
 
-const focusTrapOptions = { clickOutsideDeactivates: false };
+const focusTrapOptions = { clickOutsideDeactivates: false }
 export const DialogBox = ({
   className,
   children,
@@ -91,12 +91,12 @@ export const DialogBox = ({
   footer,
   inPortal: inPortalProp = true,
 }: DialogBoxProps): JSX.Element | React.ReactPortal | null => {
-  const show = showProp === undefined ? true : showProp;
-  const inPortal = inPortalProp === undefined ? true : inPortalProp;
+  const show = showProp === undefined ? true : showProp
+  const inPortal = inPortalProp === undefined ? true : inPortalProp
 
   const handleClose = useCallback(() => {
-    if (onClose) onClose();
-  }, [onClose]);
+    if (onClose) onClose()
+  }, [onClose])
 
   const innerDialog = (
     <FocusTrap focusTrapOptions={focusTrapOptions}>
@@ -109,18 +109,18 @@ export const DialogBox = ({
         {footer}
       </StyledDialogBox>
     </FocusTrap>
-  );
+  )
 
-  const outerDialog = <Overlay onClick={handleClose}>{innerDialog}</Overlay>;
+  const outerDialog = <Overlay onClick={handleClose}>{innerDialog}</Overlay>
 
-  const dialog = hasBackdrop ? outerDialog : innerDialog;
+  const dialog = hasBackdrop ? outerDialog : innerDialog
 
   if (show) {
-    return inPortal ? createPortal(dialog, document.body) : dialog;
+    return inPortal ? createPortal(dialog, document.body) : dialog
   }
 
-  return null;
-};
+  return null
+}
 
 const DialogFooter = ({
   children,
@@ -130,9 +130,9 @@ const DialogFooter = ({
   const justify =
     React.Children.count(children) === 1
       ? justifyProp || "evenly"
-      : justifyProp;
-  return <Footer justify={justify}>{children}</Footer>;
-};
+      : justifyProp
+  return <Footer justify={justify}>{children}</Footer>
+}
 
-DialogBox.Footer = DialogFooter;
-DialogBox.defaultTheme = dialogBoxTheme;
+DialogBox.Footer = DialogFooter
+DialogBox.defaultTheme = dialogBoxTheme

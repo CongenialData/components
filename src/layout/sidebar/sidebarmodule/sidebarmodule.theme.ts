@@ -1,4 +1,4 @@
-import { TCommonTheme, TThemeFromFn, tuple } from "../../../theming";
+import { TCommonTheme, TThemeFromFn, tuple } from "../../../theming"
 
 export const sidebarModuleTheme = (theme: TCommonTheme) =>
   tuple([
@@ -17,6 +17,6 @@ export const sidebarModuleTheme = (theme: TCommonTheme) =>
         padding: "1rem",
       },
     },
-  ]);
+  ])
 
 export type SidebarModuleTheme = TThemeFromFn<typeof sidebarModuleTheme>;

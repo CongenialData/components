@@ -1,4 +1,4 @@
-import { TextInputTheme } from "./text-input.theme";
+import { TextInputTheme } from "./text-input.theme"
 
 declare module "styled-components" {
   export interface DefaultTheme {

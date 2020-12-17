@@ -1,4 +1,4 @@
-import { DialogBoxTheme } from "./dialogbox.theme";
+import { DialogBoxTheme } from "./dialogbox.theme"
 
 declare module "styled-components" {
   export interface DefaultTheme {

@@ -1,11 +1,11 @@
-import styled from "styled-components/macro";
+import styled from "styled-components/macro"
 
-import { ModuleStyleProps } from "./module.interfaces";
+import { ModuleStyleProps } from "./module.interfaces"
 
 const numberToString = (
   value: number | undefined,
   defaultValue: string
-): string => (value ? String(value) : defaultValue);
+): string => (value ? String(value) : defaultValue)
 
 export const StyledModule = styled.div<ModuleStyleProps>`
   /* Different values for the grid column span */
@@ -51,11 +51,11 @@ export const StyledModule = styled.div<ModuleStyleProps>`
   }
 
   /* -- End: Update the grid column rules with a proper value based on the screen size */
-`;
+`
 
 export const Title = styled.h3`
   margin-bottom: 1rem;
   font-size: 1.5rem;
   font-weight: 600;
   line-height: 1;
-`;
+`

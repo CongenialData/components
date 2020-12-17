@@ -1,10 +1,10 @@
-import styled, { css } from "styled-components/macro";
+import styled, { css } from "styled-components/macro"
 
-import { Card } from "../card";
-import { CircleButton } from "../inputs/circle-button";
-import { Grid } from "../layout/grid";
-import { componentAnimation } from "../theming/mixins";
-import { StyledButton } from "../inputs/button/button.styles";
+import { Card } from "../card"
+import { CircleButton } from "../inputs/circle-button"
+import { Grid } from "../layout/grid"
+import { componentAnimation } from "../theming/mixins"
+import { StyledButton } from "../inputs/button/button.styles"
 
 export const StyledCard = styled(Card)`
   ${({ theme: { Calendar } }) => css`
@@ -22,7 +22,7 @@ export const StyledCard = styled(Card)`
 
     overflow: hidden;
   `};
-`;
+`
 
 export const Navigation = styled.div`
   ${({ theme: { Calendar } }) => css`
@@ -38,7 +38,7 @@ export const Navigation = styled.div`
     font-weight: ${Calendar.navigationTitleTextFontWeight};
     line-height: ${Calendar.navigationTitleTextLineHeight};
   `};
-`;
+`
 
 export const DateMonthWrapper = styled.div`
   ${({ theme: { Calendar } }) => css`
@@ -61,7 +61,7 @@ export const DateMonthWrapper = styled.div`
     font-weight: ${Calendar.navigationTitleTextFontWeight};
     line-height: ${Calendar.navigationTitleTextLineHeight};
   `};
-`;
+`
 
 export const PageableNavigation = styled.div`
   ${({ theme: { Calendar } }) => css`
@@ -73,9 +73,9 @@ export const PageableNavigation = styled.div`
       line-height: ${Calendar.navigationTitleTextLineHeight};
     }
   `};
-`;
+`
 
-export const Body = styled.div``;
+export const Body = styled.div``
 
 /** Grid of daynames shown above the days, like Mon, Tue, Wed etc */
 export const DayNamesGrid = styled(Grid)`
@@ -93,7 +93,7 @@ export const DayNamesGrid = styled(Grid)`
     border-bottom: ${Calendar.weekdayDividerWidth} solid
       ${Calendar.weekdayDividerColor};
   `};
-`;
+`
 
 /** A day rendered in DayNamesGrid */
 export const StyledDayName = styled.div<{ holiday?: boolean }>`
@@ -115,11 +115,11 @@ export const StyledDayName = styled.div<{ holiday?: boolean }>`
       color: ${Calendar.weekdayHolidayTextColor};
     `};
   `};
-`;
+`
 
 export const Picker = styled.div`
   display: block;
-`;
+`
 
 export const DayPicker = styled(Grid)`
   ${({ theme: { Calendar } }) => css`
@@ -128,7 +128,7 @@ export const DayPicker = styled(Grid)`
     padding-right: ${Calendar.pickerPaddingEnd};
     padding-left: ${Calendar.pickerPaddingStart};
   `};
-`;
+`
 
 export const CellContent = styled.div`
   ${({ theme: { Calendar } }) => css`
@@ -142,7 +142,7 @@ export const CellContent = styled.div`
 
     ${componentAnimation("background-color, border-color, color")};
   `};
-`;
+`
 
 /** A day rendered in the calendar */
 export const DayCell = styled.div<{
@@ -265,7 +265,7 @@ export const DayCell = styled.div<{
       }
     `};
   `};
-`;
+`
 
 export const MonthButton = styled(CircleButton)`
   background: ${({ theme }): string => theme.colors.BACKGROUND_BASIC_COLOR_2};
@@ -274,4 +274,4 @@ export const MonthButton = styled(CircleButton)`
   &[disabled] {
     background: ${({ theme }): string => theme.Calendar.borderColor};
   }
-`;
+`

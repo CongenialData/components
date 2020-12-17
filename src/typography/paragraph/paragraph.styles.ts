@@ -1,12 +1,12 @@
 import styled, {
   FlattenSimpleInterpolation,
   css,
-} from "styled-components/macro";
+} from "styled-components/macro"
 
 import {
   StyledParagraphOptionalProps,
   StyledParagraphRequiredProps,
-} from "./paragraph.interfaces";
+} from "./paragraph.interfaces"
 
 type TConditionalStyle<T> =
   | FlattenSimpleInterpolation
@@ -19,7 +19,7 @@ const truncateStyle = (): FlattenSimpleInterpolation => css`
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-`;
+`
 
 export const StyledParagraph = styled.p<
   StyledParagraphRequiredProps & StyledParagraphOptionalProps
@@ -42,4 +42,4 @@ export const StyledParagraph = styled.p<
 
   ${({ truncate }): TConditionalStyle<typeof truncateStyle> =>
     truncate && truncateStyle()}
-`;
+`

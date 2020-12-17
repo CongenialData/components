@@ -2,7 +2,7 @@ import {
   TComponentShape,
   TComponentSize,
   TComponentStatus,
-} from "../../theming/styled";
+} from "../../theming/styled"
 
 export interface ButtonOptionalStyleProps {
   /**

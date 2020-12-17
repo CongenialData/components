@@ -1,13 +1,13 @@
-import * as React from "react";
+import * as React from "react"
 
 /* Import components here */
-import { StyledParagraph } from "./paragraph.styles";
+import { StyledParagraph } from "./paragraph.styles"
 
 /* Import interfaces here */
-import { ParagraphProps } from "./paragraph.interfaces";
+import { ParagraphProps } from "./paragraph.interfaces"
 
 /* Import utilities here */
-import { paragraphTheme } from "./paragraph.theme";
+import { paragraphTheme } from "./paragraph.theme"
 
 export const Paragraph = ({
   alignSelf = "start",
@@ -23,7 +23,7 @@ export const Paragraph = ({
     >
       {children}
     </StyledParagraph>
-  );
-};
+  )
+}
 
-Paragraph.defaultTheme = paragraphTheme;
+Paragraph.defaultTheme = paragraphTheme

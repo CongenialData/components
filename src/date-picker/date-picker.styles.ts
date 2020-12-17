@@ -1,25 +1,25 @@
-import styled from "styled-components/macro";
+import styled from "styled-components/macro"
 
 import {
   DatePickerOptionalStyleProps,
   DatePickerRequiredStyleProps,
-} from "./date-picker.interfaces";
-import { DialogBox } from "../dialogbox/";
+} from "./date-picker.interfaces"
+import { DialogBox } from "../dialogbox/"
 
 export const StyledDatePicker = styled.div<
   Omit<DatePickerRequiredStyleProps, "status"> & DatePickerOptionalStyleProps
->``;
+>``
 
 export const StyledDialogBox = styled(DialogBox)`
   padding: 0;
   width: auto;
-`;
+`
 
 export const TimeWrapper = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-`;
+`
 
 export const StyledSelect = styled.select`
   font-size: ${({ theme }) => theme.typography.TEXT_SUBTITLE_FONT_SIZE};
@@ -30,4 +30,4 @@ export const StyledSelect = styled.select`
   border-color: ${({ theme }) => theme.colors.BORDER_BASIC_COLOR_4};
   color: ${({ theme }) => theme.colors.TEXT_BASIC_COLOR};
   padding: 0.58rem;
-`;
+`

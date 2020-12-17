@@ -1,4 +1,4 @@
-import { TCommonTheme, TThemeFromFn, tuple } from "../theming";
+import { TCommonTheme, TThemeFromFn, tuple } from "../theming"
 
 export const calendarTheme = ({
   support,
@@ -17,12 +17,12 @@ export const calendarTheme = ({
     DAY_CELL_HEIGHT: "2.75rem",
     DAY_CELL_WIDTH: "2.75rem",
     MONTH_CELL_WIDTH: "4.8125rem",
-  };
-  calendar.WEEKDAY_HEIGHT = calendar.DAY_CELL_HEIGHT;
-  calendar.MONTH_CELL_HEIGHT = calendar.DAY_CELL_HEIGHT;
-  calendar.YEAR_CELL_WIDTH = calendar.MONTH_CELL_WIDTH;
-  calendar.YEAR_CELL_HEIGHT = calendar.MONTH_CELL_HEIGHT;
-  calendar.WEEKDAY_WIDTH = calendar.DAY_CELL_WIDTH;
+  }
+  calendar.WEEKDAY_HEIGHT = calendar.DAY_CELL_HEIGHT
+  calendar.MONTH_CELL_HEIGHT = calendar.DAY_CELL_HEIGHT
+  calendar.YEAR_CELL_WIDTH = calendar.MONTH_CELL_WIDTH
+  calendar.YEAR_CELL_HEIGHT = calendar.MONTH_CELL_HEIGHT
+  calendar.WEEKDAY_WIDTH = calendar.DAY_CELL_WIDTH
 
   return tuple([
     "Calendar",
@@ -154,7 +154,7 @@ export const calendarTheme = ({
       yearCellLargeWidth: calendar.MONTH_CELL_LARGE_WIDTH,
       yearCellLargeHeight: calendar.MONTH_CELL_LARGE_HEIGHT,
     },
-  ]);
-};
+  ])
+}
 
 export type CalendarTheme = TThemeFromFn<typeof calendarTheme>;

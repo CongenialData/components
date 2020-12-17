@@ -1,4 +1,4 @@
-import React from "react";
+import React from "react"
 
 import {
   ContextualInformation,
@@ -8,9 +8,9 @@ import {
   SecondaryControls,
   StyledToolbar,
   Title,
-} from "./toolbar.styles";
-import { toolbarTheme } from "./toolbar.theme";
-import { ToolbarProps } from "./toolbar.types";
+} from "./toolbar.styles"
+import { toolbarTheme } from "./toolbar.theme"
+import { ToolbarProps } from "./toolbar.types"
 
 export const Toolbar = (props: ToolbarProps): JSX.Element => {
   const {
@@ -20,7 +20,7 @@ export const Toolbar = (props: ToolbarProps): JSX.Element => {
     projectTitle,
     title,
     ...restProps
-  } = props;
+  } = props
 
   return (
     <StyledToolbar {...restProps}>
@@ -34,7 +34,7 @@ export const Toolbar = (props: ToolbarProps): JSX.Element => {
       </ContextualInformation>
       <SecondaryControls>{secondaryControlsComponent}</SecondaryControls>
     </StyledToolbar>
-  );
-};
+  )
+}
 
-Toolbar.defaultTheme = toolbarTheme;
+Toolbar.defaultTheme = toolbarTheme

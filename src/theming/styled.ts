@@ -1,9 +1,9 @@
-import { TSpacing } from "./spacing";
-import { TBreakpoints } from "./breakpoints";
-import { TBaseColors } from "./basecolors";
-import { TColors } from "./colors";
-import { TSupport } from "./support";
-import { TBaseTypography } from "./typography";
+import { TSpacing } from "./spacing"
+import { TBreakpoints } from "./breakpoints"
+import { TBaseColors } from "./basecolors"
+import { TColors } from "./colors"
+import { TSupport } from "./support"
+import { TBaseTypography } from "./typography"
 
 declare module "styled-components" {
   export interface DefaultTheme {

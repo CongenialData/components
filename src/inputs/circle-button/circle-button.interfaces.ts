@@ -1,11 +1,11 @@
-import React from "react";
+import React from "react"
 
 const sizes = {
   small: "small",
   medium: "medium",
   large: "large",
   xl: "xl",
-} as const;
+} as const
 type TSize = typeof sizes[keyof typeof sizes];
 
 const variant = {
@@ -13,7 +13,7 @@ const variant = {
   primary: "primary",
   danger: "danger",
   secondary: "secondary",
-} as const;
+} as const
 type TVariant = typeof variant[keyof typeof variant];
 
 const spacing = {
@@ -21,7 +21,7 @@ const spacing = {
   wide: "wide",
   normal: "normal",
   none: "none",
-} as const;
+} as const
 type TSpacing = typeof spacing[keyof typeof spacing];
 
 export interface CircleButtonRequiredStyleProps {

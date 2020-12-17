@@ -1,9 +1,9 @@
-import styled, { css } from "styled-components/macro";
+import styled, { css } from "styled-components/macro"
 
 import {
   AlertOptionalStyleProps,
   AlertRequiredStyleProps,
-} from "./alert.interfaces";
+} from "./alert.interfaces"
 
 export const StyledAlert = styled.div<
   AlertOptionalStyleProps & AlertRequiredStyleProps
@@ -56,4 +56,4 @@ export const StyledAlert = styled.div<
 
     `};
   `};
-`;
+`

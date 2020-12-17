@@ -1,4 +1,4 @@
-import { LabelTheme } from "./label.theme";
+import { LabelTheme } from "./label.theme"
 
 declare module "styled-components" {
   export interface DefaultTheme {
