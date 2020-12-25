@@ -91,7 +91,7 @@
     "@storybook/addon-essentials": "^6.1.10",
     "@storybook/addon-info": "^5.3.21",
     "@storybook/addon-links": "^6.1.10",
-    "@storybook/addons": "^6.1.10",
+    "@storybook/addons": "^6.1.11",
     "@storybook/react": "^6.1.10",
     "@testing-library/jest-dom": "^5.11.6",
     "@types/lodash": "^4.14.166",
