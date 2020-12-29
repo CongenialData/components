@@ -1,13 +1,13 @@
-import { TThemeFromFn, tuple } from '../../theming'
+import { TThemeFromFn, tuple } from "../../theming";
 
 // eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
 export const listTitleTheme = () =>
   tuple([
-    'ListTitle',
+    "ListTitle",
     {
-      fontSize: '1rem',
-      fontWeight: '600',
+      fontSize: "1rem",
+      fontWeight: "600",
     },
-  ])
+  ]);
 
-export type ListTitleTheme = TThemeFromFn<typeof listTitleTheme>
+export type ListTitleTheme = TThemeFromFn<typeof listTitleTheme>;

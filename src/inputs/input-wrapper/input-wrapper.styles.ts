@@ -1,12 +1,20 @@
-import styled, { css } from 'styled-components/macro'
+import styled, { css } from "styled-components/macro";
 
-import { StyledInputWrapperOptionalProps, StyledInputWrapperRequiredProps } from './input-wrapper.interfaces'
+import {
+  StyledInputWrapperOptionalProps,
+  StyledInputWrapperRequiredProps,
+} from "./input-wrapper.interfaces";
 
-export const StyledInputWrapper = styled.div<StyledInputWrapperOptionalProps & StyledInputWrapperRequiredProps>`
+export const StyledInputWrapper = styled.div<
+  StyledInputWrapperOptionalProps & StyledInputWrapperRequiredProps
+>`
   ${({ direction, size, theme: { InputWrapper } }) => {
     /** Calculates the margin based on direction and size property defined in theme. */
-    const margin = direction === 'horizontal' ? `0 ${InputWrapper.size[size]} 0 0` : `0 0 ${InputWrapper.size[size]} 0`
-    const calculatedDirection = direction === 'vertical' ? 'column' : 'row'
+    const margin =
+      direction === "horizontal"
+        ? `0 ${InputWrapper.size[size]} 0 0`
+        : `0 0 ${InputWrapper.size[size]} 0`;
+    const calculatedDirection = direction === "vertical" ? "column" : "row";
 
     return css`
       display: ${InputWrapper.display};
@@ -20,6 +28,6 @@ export const StyledInputWrapper = styled.div<StyledInputWrapperOptionalProps & S
       & > :not(:last-child) {
         margin: ${margin};
       }
-    `
+    `;
   }};
-`
+`;

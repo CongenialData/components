@@ -1,2 +1,2 @@
-export { Button } from './button'
-export { buttonTheme } from './button.theme'
+export { Button } from "./button";
+export { buttonTheme } from "./button.theme";

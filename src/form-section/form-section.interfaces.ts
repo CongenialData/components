@@ -7,23 +7,23 @@ export interface FormSectionRequiredStyleProps {
    *
    * Defaults to `false`
    */
-  border: boolean
+  border: boolean;
 }
 
 export interface FormSectionComponentProps {
-  icon?: any
+  icon?: any;
 
   /**
    * The title of the section.
    *
    * If an icon is used, this title is aligned to the right of the icon.
    */
-  title?: string
+  title?: string;
 }
 
 export interface FormSectionProps
   extends FormSectionComponentProps,
     Partial<FormSectionRequiredStyleProps>,
     FormSectionOptionalStyleProps {
-  className?: string
+  className?: string;
 }

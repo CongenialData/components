@@ -1,7 +1,7 @@
-import { ListExtraRightTheme } from './listextraright.theme'
+import { ListExtraRightTheme } from "./listextraright.theme";
 
-declare module 'styled-components' {
+declare module "styled-components" {
   export interface DefaultTheme {
-    ListExtraRight: ListExtraRightTheme
+    ListExtraRight: ListExtraRightTheme;
   }
 }

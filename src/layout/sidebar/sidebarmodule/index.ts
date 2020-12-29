@@ -1,1 +1,1 @@
-export * from './sidebarmodule'
+export * from "./sidebarmodule";

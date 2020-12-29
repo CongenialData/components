@@ -2,12 +2,12 @@ export interface HideWhileLoadingProps {
   /**
    * isLoading
    */
-  isLoading?: boolean
+  isLoading?: boolean;
 
   /**
    * error message to show
    */
-  error?: string
+  error?: string;
 
-  children?: React.ReactNode | React.ReactNode[]
+  children?: React.ReactNode | React.ReactNode[];
 }

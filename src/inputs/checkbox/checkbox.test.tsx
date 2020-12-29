@@ -1,9 +1,9 @@
-describe('Hello Moon', () => {
-  const helloMoon = 'Hello, Moon!'
-  it('says hello moon', () => {
-    expect(helloMoon).toEqual('Hello, Moon!')
-  })
-})
+describe("Hello Moon", () => {
+  const helloMoon = "Hello, Moon!";
+  it("says hello moon", () => {
+    expect(helloMoon).toEqual("Hello, Moon!");
+  });
+});
 // import React from 'react'
 // import { cleanup } from '@testing-library/react'
 // // TODO: Remove eslint disable rule and fix imports

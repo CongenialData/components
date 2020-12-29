@@ -1,4 +1,8 @@
-import { TComponentShape, TComponentSize, TComponentStatus } from '../../theming/styled'
+import {
+  TComponentShape,
+  TComponentSize,
+  TComponentStatus,
+} from "../../theming/styled";
 
 export interface ButtonOptionalStyleProps {
   /**
@@ -6,32 +10,32 @@ export interface ButtonOptionalStyleProps {
    *
    * Should _not_ be used with `full`
    */
-  block?: boolean
+  block?: boolean;
 
   /**
    * Adjust the horizontal spacing
    */
-  horizontalSpacing?: 'narrow' | 'wide'
+  horizontalSpacing?: "narrow" | "wide";
 
-  nowrap?: boolean
+  nowrap?: boolean;
 
-  pulse?: boolean
+  pulse?: boolean;
 
   /** Make the button round. This is not a circle button. Use `circle` instead.
    *
    * Should _not_ be used with `full`.
    */
-  rounded?: boolean
+  rounded?: boolean;
 
   /**
    * Adjust transparency of button
    */
-  transparent?: boolean
+  transparent?: boolean;
 
   /**
    * Adjust the vertical spacing
    */
-  verticalSpacing?: 'narrow' | 'wide'
+  verticalSpacing?: "narrow" | "wide";
 }
 
 export interface ButtonRequiredStyleProps {
@@ -42,21 +46,21 @@ export interface ButtonRequiredStyleProps {
    *
    * Defaults to `filled`
    */
-  appearance: 'filled' | 'outline' | 'ghost' | 'hero'
+  appearance: "filled" | "outline" | "ghost" | "hero";
 
   /**
    * Button can be made full width.
    *
    * Defaults to `false`
    */
-  fullWidth: boolean
+  fullWidth: boolean;
 
   /**
    * Buttons available in different shapes, which could be combined with the other properties:
    *
    * Defaults to `rectangle`
    */
-  shape: TComponentShape
+  shape: TComponentShape;
 
   /**
    * The size of the button
@@ -65,7 +69,7 @@ export interface ButtonRequiredStyleProps {
    *
    * Defaults to `medium`
    */
-  size: TComponentSize
+  size: TComponentSize;
 
   /**
    * Buttons are available in multiple colors using status property.
@@ -74,34 +78,34 @@ export interface ButtonRequiredStyleProps {
    *
    * Defaults to `basic`
    */
-  status: TComponentStatus
+  status: TComponentStatus;
 }
 
 export interface ButtonComponentProps<T> {
-  className?: string
+  className?: string;
 
   /**
    * Make buttons look inactive by adding the disabled boolean attribute to any <button> element
    */
-  disabled?: boolean
+  disabled?: boolean;
 
   /**
    * Callback to run when clicking on the button
    */
-  onClick?: React.MouseEventHandler<T>
+  onClick?: React.MouseEventHandler<T>;
 
   /**
    * Custom CSS to override component styling
    */
-  style?: React.CSSProperties
+  style?: React.CSSProperties;
 
-  type?: 'submit' | 'reset' | 'button'
+  type?: "submit" | "reset" | "button";
 
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  as?: keyof JSX.IntrinsicElements | React.ComponentType<any>
-  asProps?: { [key: string]: string }
+  as?: keyof JSX.IntrinsicElements | React.ComponentType<any>;
+  asProps?: { [key: string]: string };
 
-  children?: React.ReactNode
+  children?: React.ReactNode;
 }
 
 export interface ButtonProps<T>

@@ -53,7 +53,8 @@ CDAB typography consist of 14 text styles, where text styles is a combination of
 All of the text styles could be applied by simply adding CSS classes to an element:
 
 ```html
-<input type="email" name="email" /> <span class="caption-2 text-hint">Work email address</span>
+<input type="email" name="email" />
+<span class="caption-2 text-hint">Work email address</span>
 ```
 
 Here we added both `caption-2` and `text-hint` making the span to be a caption with a hint text color.

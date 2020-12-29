@@ -1,5 +1,5 @@
-import styled, { css } from 'styled-components/macro'
-import { SkeletonStyleProps } from './skeleton.interfaces'
+import styled, { css } from "styled-components/macro";
+import { SkeletonStyleProps } from "./skeleton.interfaces";
 
 const SkeletonPulse = styled.div<SkeletonStyleProps>`
   display: inline-block;
@@ -22,7 +22,7 @@ const SkeletonPulse = styled.div<SkeletonStyleProps>`
       background-position: -135% 0%;
     }
   }
-`
+`;
 
 export const SkeletonLine = styled(SkeletonPulse)<SkeletonStyleProps>`
   width: ${({ theme, width }) =>
@@ -55,6 +55,6 @@ export const SkeletonLine = styled(SkeletonPulse)<SkeletonStyleProps>`
         theme.Skeleton.height[height]};
 
   &::before {
-    content: '\\00a0';
+    content: "\\00a0";
   }
-`
+`;

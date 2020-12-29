@@ -1,17 +1,17 @@
-import styled, { css } from 'styled-components/macro'
+import styled, { css } from "styled-components/macro";
 
-import { componentAnimation } from '../../theming/mixins'
+import { componentAnimation } from "../../theming/mixins";
 
-import { TextInputRequiredStyleProps } from './text-input.interfaces'
+import { TextInputRequiredStyleProps } from "./text-input.interfaces";
 
 export const InputWrapper = styled.div`
   display: flex;
   flex-direction: column;
-`
+`;
 
 export const StyledInput = styled.input<TextInputRequiredStyleProps>`
   ${({ fieldSize, fullWidth, status, shape, theme: { TextInput } }) => css`
-    ${componentAnimation('border, background-color, color, box-shadow')};
+    ${componentAnimation("border, background-color, color, box-shadow")};
 
     display: block;
 
@@ -37,7 +37,7 @@ export const StyledInput = styled.input<TextInputRequiredStyleProps>`
 
     font-family: ${TextInput.textFontFamily};
 
-    max-width: ${fullWidth ? '100%' : TextInput.size[fieldSize].maxWidth};
+    max-width: ${fullWidth ? "100%" : TextInput.size[fieldSize].maxWidth};
 
     &:placeholder {
       text-overflow: ellipsis;
@@ -69,4 +69,4 @@ export const StyledInput = styled.input<TextInputRequiredStyleProps>`
       }
     }
   `};
-`
+`;

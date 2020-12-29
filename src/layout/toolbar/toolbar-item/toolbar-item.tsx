@@ -1,18 +1,21 @@
-import React from 'react'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import React from "react";
 
-import { StyledToolbarItem } from './toolbar-item.styles'
-import { ToolbarItemProps } from './toolbar-item.interfaces'
-import { toolbarItemTheme } from './toolbar-item.theme'
+import { StyledToolbarItem } from "./toolbar-item.styles";
+import { ToolbarItemProps } from "./toolbar-item.interfaces";
+import { toolbarItemTheme } from "./toolbar-item.theme";
 
-export const ToolbarItem = ({ children, icon, flex }: ToolbarItemProps): JSX.Element => {
+export const ToolbarItem = ({
+  children,
+  icon,
+  flex,
+}: ToolbarItemProps): JSX.Element => {
   return (
     <StyledToolbarItem flex={flex || 1}>
-      {icon && <FontAwesomeIcon icon={icon} />}
+      {icon && icon}
       {children}
     </StyledToolbarItem>
-  )
-}
+  );
+};
 
-ToolbarItem.defaultTheme = toolbarItemTheme
-ToolbarItem.displayName = 'ToolbarItem'
+ToolbarItem.defaultTheme = toolbarItemTheme;
+ToolbarItem.displayName = "ToolbarItem";

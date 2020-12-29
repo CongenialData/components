@@ -1,4 +1,4 @@
-import { createGlobalStyle } from 'styled-components/macro'
+import { createGlobalStyle } from "styled-components/macro";
 
 export const Normalize = createGlobalStyle`
   html {
@@ -407,4 +407,4 @@ export const Normalize = createGlobalStyle`
  *   }
  * }
  */
-`
+`;

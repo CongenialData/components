@@ -1,4 +1,4 @@
-import { TComponentStatus } from '../theming'
+import { TComponentStatus } from "../theming";
 
 // eslint-disable-next-line @typescript-eslint/no-empty-interface
 export interface DatePickerOptionalStyleProps {}
@@ -9,25 +9,25 @@ export interface DatePickerRequiredStyleProps {
    *
    * Defaults to `basic`
    */
-  status: TComponentStatus
+  status: TComponentStatus;
 }
 
 export interface DatePickerComponentProps {
-  header?: string
+  header?: string;
 
   /**
    * Defaults to `false`
    */
-  disabled?: boolean
-  footer?: string
+  disabled?: boolean;
+  footer?: string;
 
-  inputRef?: React.Ref<HTMLInputElement>
+  inputRef?: React.Ref<HTMLInputElement>;
 
-  label: string
+  label: string;
 
-  name: string
+  name: string;
 
-  onChange: (value: string) => void
+  onChange: (value: string) => void;
 
   /**
    * Decides wether the date picker should be opened in a dialog box or now.
@@ -36,16 +36,16 @@ export interface DatePickerComponentProps {
    *
    * Defaults to `false`
    */
-  openInDialog?: boolean
+  openInDialog?: boolean;
 
-  initialValue?: Date | null
+  initialValue?: Date | null;
 }
 
 export interface DatePickerProps
   extends DatePickerComponentProps,
     Partial<DatePickerRequiredStyleProps>,
     DatePickerOptionalStyleProps {
-  className?: string
-  minTime?: string
-  maxTime?: string
+  className?: string;
+  minTime?: string;
+  maxTime?: string;
 }

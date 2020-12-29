@@ -1,29 +1,20 @@
 module.exports = {
-  parser: '@typescript-eslint/parser',
+  plugins: ['react', 'prettier', 'react-hooks', 'react-perf'],
   extends: [
-    'eslint:recommended',
+    'react-app',
     'plugin:react/recommended',
-    // '@cdab/eslint-config-cdab',
-    'plugin:@typescript-eslint/recommended', // Uses the recommended rules from the @typescript-eslint/eslint-plugin
-    'prettier/@typescript-eslint', // Uses eslint-config-prettier to disable ESLint rules from @typescript-eslint/eslint-plugin that would conflict with prettier
-    'plugin:prettier/recommended', // Make sure this is always the last configuration in the extends array. Enables eslint-plugin-prettier and
+    'plugin:react-perf/recommended',
+    'plugin:prettier/recommended',
   ],
-  plugins: ['jest', 'prettier', '@typescript-eslint', 'react', 'react-hooks', 'react-perf', 'markdown'],
-  parserOptions: {
-    sourceType: 'module', // Allows for the use of imports
-    ecmaFeatures: {
-      jsx: true, // Allows for the parsing of JSX,
-    },
-  },
   settings: {
     react: {
-      version: 'detect', // Tells eslint-plugin-react to automatically detect the version of React to use
+      version: 'detect',
     },
   },
-  env: {
-    'jest/globals': true,
-    browser: true,
-    node: true,
-    es6: true,
+  rules: {
+    'no-console': 'error',
+    'react/prop-types': 'off',
+    'react-hooks/rules-of-hooks': 'error',
+    'react-hooks/exhaustive-deps': 'warn',
   },
-}
+};

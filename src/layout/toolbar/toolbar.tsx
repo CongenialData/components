@@ -1,6 +1,4 @@
-import React from 'react'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faBars } from '@fortawesome/free-solid-svg-icons'
+import React from "react";
 
 import {
   ContextualInformation,
@@ -10,24 +8,33 @@ import {
   SecondaryControls,
   StyledToolbar,
   Title,
-} from './toolbar.styles'
-import { toolbarTheme } from './toolbar.theme'
-import { ToolbarProps } from './toolbar.interfaces'
+} from "./toolbar.styles";
+import { toolbarTheme } from "./toolbar.theme";
+import { ToolbarProps } from "./toolbar.types";
 
 export const Toolbar = (props: ToolbarProps): JSX.Element => {
-  const { primaryControlsComponent, secondaryControlsComponent, projectTitle, title, ...restProps } = props
+  const {
+    icon,
+    primaryControlsComponent,
+    secondaryControlsComponent,
+    projectTitle,
+    title,
+    ...restProps
+  } = props;
 
   return (
     <StyledToolbar {...restProps}>
       <MenuTitleWrapper>
-        <FontAwesomeIcon icon={faBars} size="2x" />
+        {icon && icon}
         <ProjectTitle>{projectTitle}</ProjectTitle>
       </MenuTitleWrapper>
       <PrimaryControls>{primaryControlsComponent}</PrimaryControls>
-      <ContextualInformation>{!!title && <Title>{title}</Title>}</ContextualInformation>
+      <ContextualInformation>
+        {!!title && <Title>{title}</Title>}
+      </ContextualInformation>
       <SecondaryControls>{secondaryControlsComponent}</SecondaryControls>
     </StyledToolbar>
-  )
-}
+  );
+};
 
-Toolbar.defaultTheme = toolbarTheme
+Toolbar.defaultTheme = toolbarTheme;

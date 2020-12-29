@@ -1,7 +1,7 @@
-import * as React from 'react'
+import * as React from "react";
 
-import { StyledFlex } from './flex.styles'
-import { FlexProps } from './flex.interfaces'
+import { StyledFlex } from "./flex.styles";
+import { FlexProps } from "./flex.interfaces";
 
 export const Flex = (props: FlexProps): JSX.Element => {
   return (
@@ -22,7 +22,7 @@ export const Flex = (props: FlexProps): JSX.Element => {
       padding={props.padding}
       width={props.width}
     >
-      {props.children || ''}
+      {props.children || ""}
     </StyledFlex>
-  )
-}
+  );
+};

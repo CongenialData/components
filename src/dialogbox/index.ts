@@ -1,1 +1,1 @@
-export * from './dialogbox'
+export * from "./dialogbox";

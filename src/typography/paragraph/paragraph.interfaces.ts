@@ -4,14 +4,14 @@ export interface StyledParagraphRequiredProps {
    *
    * Defaults to `start`
    */
-  alignSelf: 'start' | 'center' | 'end' | 'stretch'
+  alignSelf: "start" | "center" | "end" | "stretch";
 
   /**
    * How to align the text inside the paragraph.
    *
    * Defaults to `start`
    */
-  textAlign: 'start' | 'center' | 'end'
+  textAlign: "start" | "center" | "end";
 
   /**
    * Paragraph has two different variants, `default` and `alternate`.
@@ -20,18 +20,20 @@ export interface StyledParagraphRequiredProps {
    *
    * Defaults to 'default'
    */
-  variant: 'default' | 'alternate'
+  variant: "default" | "alternate";
 }
 
 export interface StyledParagraphOptionalProps {
   /** A color identifier to use for the text color. */
-  color?: string
+  color?: string;
 
   /** Restrict the text to a single line and truncate with ellipsis if it
   is too long to all fit. */
-  truncate?: boolean
+  truncate?: boolean;
 }
 
-export interface ParagraphProps extends Partial<StyledParagraphRequiredProps>, StyledParagraphOptionalProps {
-  children?: React.ReactChild
+export interface ParagraphProps
+  extends Partial<StyledParagraphRequiredProps>,
+    StyledParagraphOptionalProps {
+  children?: React.ReactChild;
 }

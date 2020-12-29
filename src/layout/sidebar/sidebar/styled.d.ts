@@ -1,7 +1,7 @@
-import { SidebarTheme } from './sidebar.theme'
+import { SidebarTheme } from "./sidebar.theme";
 
-declare module 'styled-components' {
+declare module "styled-components" {
   export interface DefaultTheme {
-    Sidebar: SidebarTheme
+    Sidebar: SidebarTheme;
   }
 }

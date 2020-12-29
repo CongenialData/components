@@ -1,19 +1,24 @@
-import React, { memo } from 'react'
-import { faTachometerAlt } from '@fortawesome/free-solid-svg-icons'
+import React, { memo } from "react";
 
-import { NavItem } from '../../navbar/navitem'
-import { NavBar } from '../../navbar/navbar'
-import { Toolbar } from '../toolbar'
-import { ThemedComponent } from '../../theming'
+import { NavItem } from "../../navbar/navitem";
+import { NavBar } from "../../navbar/navbar";
+import { Toolbar } from "../toolbar";
+import { ThemedComponent } from "../../theming";
 
-import { PageBody, PageContainer, PageContentWrapper, StyledPage } from './page.styles'
-import { pageTheme } from './page.theme'
-import { PageProps } from './page.interfaces'
+import {
+  PageBody,
+  PageContainer,
+  PageContentWrapper,
+  StyledPage,
+} from "./page.styles";
+import { pageTheme } from "./page.theme";
+import { PageProps } from "./page.interfaces";
 
 export const Page: React.FC<PageProps> & ThemedComponent = memo(
   ({
     disableToolbar = false,
     disableMenu = false,
+    navItems,
     title,
     primaryControlsComponent,
     secondaryControlsComponent,
@@ -34,7 +39,9 @@ export const Page: React.FC<PageProps> & ThemedComponent = memo(
           <PageBody>
             {disableMenu || (
               <NavBar>
-                <NavItem icon={faTachometerAlt} label="My item" to="/" />
+                <>
+                  {navItems && navItems.map(item => <NavItem key={item.label} icon={item.icon} label={item.label} to={item.to} />)}
+                </>
               </NavBar>
             )}
             <PageContentWrapper {...props}>{children}</PageContentWrapper>
@@ -42,9 +49,9 @@ export const Page: React.FC<PageProps> & ThemedComponent = memo(
           </PageBody>
         </PageContainer>
       </StyledPage>
-    )
-  },
-)
+    );
+  }
+);
 
-Page.defaultTheme = pageTheme
-Page.displayName = 'Page'
+Page.defaultTheme = pageTheme;
+Page.displayName = "Page";

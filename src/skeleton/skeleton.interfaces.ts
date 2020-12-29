@@ -6,14 +6,14 @@ export interface SkeletonStyleProps {
    *
    * A custom value like `100px`, `2rem` or `33%` is also valid.
    */
-  height?: 'small' | 'medium' | 'large' | string
+  height?: "small" | "medium" | "large" | string;
 
   /**
    * Make skeleton translucent
    *
    * Defaults to `false`
    */
-  translucent?: boolean
+  translucent?: boolean;
 
   /**
    * Adjusts the width of the skeleton.
@@ -22,10 +22,12 @@ export interface SkeletonStyleProps {
    *
    * A custom value like `100px`, `2rem` or `33%` is also valid.
    */
-  width?: 'small' | 'medium' | 'wide' | 'full' | string
+  width?: "small" | "medium" | "wide" | "full" | string;
 }
 
 // eslint-disable-next-line @typescript-eslint/no-empty-interface
 export interface SkeletonComponentProps {}
 
-export interface SkeletonProps extends SkeletonStyleProps, SkeletonComponentProps {}
+export interface SkeletonProps
+  extends SkeletonStyleProps,
+    SkeletonComponentProps {}

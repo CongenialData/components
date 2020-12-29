@@ -1,7 +1,7 @@
-import { ParagraphTheme } from './paragraph.theme'
+import { ParagraphTheme } from "./paragraph.theme";
 
-declare module 'styled-components' {
+declare module "styled-components" {
   export interface DefaultTheme {
-    Paragraph: ParagraphTheme
+    Paragraph: ParagraphTheme;
   }
 }

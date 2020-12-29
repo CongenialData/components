@@ -1,1 +1,1 @@
-export * from './hide-while-loading'
+export * from "./hide-while-loading";

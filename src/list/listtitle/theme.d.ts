@@ -1,7 +1,7 @@
-import { ListTitleTheme } from './listtitle.theme'
+import { ListTitleTheme } from "./listtitle.theme";
 
-declare module 'styled-components' {
+declare module "styled-components" {
   export interface DefaultTheme {
-    ListTitle: ListTitleTheme
+    ListTitle: ListTitleTheme;
   }
 }

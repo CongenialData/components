@@ -20,17 +20,17 @@ Exempel på hur en knapp definieras:
 ### Example
 
 ```typescript
-import { createTheme } from '../../theming' // Import theming function
+import { createTheme } from "../../theming"; // Import theming function
 
-import { Button } from '../inputs/button' // Import all components you want to use
+import { Button } from "../inputs/button"; // Import all components you want to use
 
 export const theme = createTheme(
   [Button], // Pass in components in theme
   {
     // Override stuff in theme
     Button: {
-      background: 'red',
+      background: "red",
     },
-  },
-)
+  }
+);
 ```

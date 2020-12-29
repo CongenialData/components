@@ -1,7 +1,7 @@
-import { DialogBoxTheme } from './dialogbox.theme'
+import { DialogBoxTheme } from "./dialogbox.theme";
 
-declare module 'styled-components' {
+declare module "styled-components" {
   export interface DefaultTheme {
-    DialogBox: DialogBoxTheme
+    DialogBox: DialogBoxTheme;
   }
 }

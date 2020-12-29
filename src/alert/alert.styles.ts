@@ -1,8 +1,13 @@
-import styled, { css } from 'styled-components/macro'
+import styled, { css } from "styled-components/macro";
 
-import { AlertOptionalStyleProps, AlertRequiredStyleProps } from './alert.interfaces'
+import {
+  AlertOptionalStyleProps,
+  AlertRequiredStyleProps,
+} from "./alert.interfaces";
 
-export const StyledAlert = styled.div<AlertOptionalStyleProps & AlertRequiredStyleProps>`
+export const StyledAlert = styled.div<
+  AlertOptionalStyleProps & AlertRequiredStyleProps
+>`
   ${({ accent, outline, size, status, theme: { Alert } }) => css`
     display: flex;
     flex-direction: column;
@@ -37,7 +42,7 @@ export const StyledAlert = styled.div<AlertOptionalStyleProps & AlertRequiredSty
      * Accent
      */
     ${accent &&
-      `
+    `
         border-top: ${Alert.borderRadius} solid ${Alert.accent[accent]};
     `};
 
@@ -45,10 +50,10 @@ export const StyledAlert = styled.div<AlertOptionalStyleProps & AlertRequiredSty
      * Outline
      */
     ${outline &&
-      `
+    `
 
         border: ${Alert.outlineWidth} solid ${Alert.outline[outline]};
 
     `};
   `};
-`
+`;

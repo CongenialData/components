@@ -1,101 +1,110 @@
-import React, { useCallback, useEffect, useRef, useState } from 'react'
+import React, { useCallback, useEffect, useRef, useState } from "react";
 
 /* Import components here */
-import { Line, StyledDateTimeInput } from './datetime.styles'
-import { TextInput } from '../../inputs/text-input'
-import { Label } from '../../typography/label'
+import { Line, StyledDateTimeInput } from "./datetime.styles";
+import { TextInput } from "../../inputs/text-input";
+import { Label } from "../../typography/label";
 
 /* Import interfaces here */
-import { DateTimeInputProps } from './datetime.interfaces'
+import { DateTimeInputProps } from "./datetime.interfaces";
 
 /* Import utilities here */
-import { dateTimeInputTheme } from './datetime.theme'
-import { Writeable, isRefObject } from '../../utils'
+import { dateTimeInputTheme } from "./datetime.theme";
+import { Writeable, isRefObject } from "../../utils";
 
 const fireEvent = (eventName: string, element: HTMLInputElement) => {
   setTimeout(() => {
-    const event = new Event(eventName, { bubbles: true, cancelable: true })
-    element.dispatchEvent(event)
-  }, 0)
-}
+    const event = new Event(eventName, { bubbles: true, cancelable: true });
+    element.dispatchEvent(event);
+  }, 0);
+};
 
 export const DateTimeInput = (props: DateTimeInputProps): JSX.Element => {
-  const { label, inputRef, name, status, onChange } = props
-  const [dateValue, setDateValue] = useState('')
-  const [timeValue, setTimeValue] = useState('')
-  const hiddenInputRef = useRef<HTMLInputElement>()
-  const onChangeRef = useRef(onChange)
+  const { label, inputRef, name, status, onChange } = props;
+  const [dateValue, setDateValue] = useState("");
+  const [timeValue, setTimeValue] = useState("");
+  const hiddenInputRef = useRef<HTMLInputElement>();
+  const onChangeRef = useRef(onChange);
 
   const updateHiddenValue = (date: string, time: string): void => {
-    if (hiddenInputRef.current === undefined) return
+    if (hiddenInputRef.current === undefined) return;
 
-    const value = date + 'T' + time
-    hiddenInputRef.current.value = value
-  }
+    const value = date + "T" + time;
+    hiddenInputRef.current.value = value;
+  };
 
   const onChangeDate = useCallback(
     (e: React.ChangeEvent<HTMLInputElement>) => {
-      updateHiddenValue(e.target.value, timeValue)
-      hiddenInputRef.current && fireEvent('input', hiddenInputRef.current)
+      updateHiddenValue(e.target.value, timeValue);
+      hiddenInputRef.current && fireEvent("input", hiddenInputRef.current);
     },
-    [timeValue],
-  )
+    [timeValue]
+  );
 
   const onChangeTime = useCallback(
     (e: React.ChangeEvent<HTMLInputElement>) => {
-      updateHiddenValue(dateValue, e.target.value)
-      hiddenInputRef.current && fireEvent('input', hiddenInputRef.current)
+      updateHiddenValue(dateValue, e.target.value);
+      hiddenInputRef.current && fireEvent("input", hiddenInputRef.current);
     },
-    [dateValue],
-  )
+    [dateValue]
+  );
 
   const handleBlur = useCallback(() => {
-    hiddenInputRef.current && fireEvent('blur', hiddenInputRef.current)
-  }, [])
+    hiddenInputRef.current && fireEvent("blur", hiddenInputRef.current);
+  }, []);
 
   // Store onChange in a ref, so it can be used without triggering other effects
   // if it's updated
   useEffect(() => {
-    onChangeRef.current = onChange
-  }, [onChange])
+    onChangeRef.current = onChange;
+  }, [onChange]);
 
   useEffect(() => {
-    if (hiddenInputRef.current === undefined) return
+    if (hiddenInputRef.current === undefined) return;
 
     // Redefined the value property on the hidden input to catch changes from
     // react-hook-forms
 
-    const originalValuePropertyDescriptor = Object.getOwnPropertyDescriptor(hiddenInputRef.current, 'value')
-    if (originalValuePropertyDescriptor === undefined) throw new Error('Unable to get descriptor')
+    const originalValuePropertyDescriptor = Object.getOwnPropertyDescriptor(
+      hiddenInputRef.current,
+      "value"
+    );
+    if (originalValuePropertyDescriptor === undefined)
+      throw new Error("Unable to get descriptor");
 
-    Object.defineProperty(hiddenInputRef.current, '_value', originalValuePropertyDescriptor)
-    Object.defineProperty(hiddenInputRef.current, 'value', {
+    Object.defineProperty(
+      hiddenInputRef.current,
+      "_value",
+      originalValuePropertyDescriptor
+    );
+    Object.defineProperty(hiddenInputRef.current, "value", {
       get() {
-        return this._value
+        return this._value;
       },
       set(value: string) {
-        const [date, time] = value.split('T')
-        setDateValue(date)
-        setTimeValue(time)
+        const [date, time] = value.split("T");
+        setDateValue(date);
+        setTimeValue(time);
 
         if (value !== this._value) {
-          this._value = value
-          onChangeRef.current(value)
+          this._value = value;
+          onChangeRef.current(value);
         }
       },
-    })
+    });
 
     // Set initial values
-    const { value } = hiddenInputRef.current
-    const [date, time] = value.split('T')
-    setDateValue(date)
-    setTimeValue(time)
-  }, [])
+    const { value } = hiddenInputRef.current;
+    const [date, time] = value.split("T");
+    setDateValue(date);
+    setTimeValue(time);
+  }, []);
 
+  // eslint-disable-next-line react-perf/jsx-no-new-function-as-prop
   const refCallback = (ref: HTMLInputElement): void => {
-    hiddenInputRef.current = ref
+    hiddenInputRef.current = ref;
 
-    if (!inputRef) return
+    if (!inputRef) return;
 
     // TODO: Fix correct types and remove disabled rules
     // eslint-disable-next-line @typescript-eslint/ban-ts-comment
@@ -104,13 +113,13 @@ export const DateTimeInput = (props: DateTimeInputProps): JSX.Element => {
       // eslint-disable-next-line @typescript-eslint/ban-ts-comment
       // @ts-ignore
       // eslint-disable-next-line no-extra-semi
-      ;(inputRef as Writeable<typeof inputRef>).current = ref
+      (inputRef as Writeable<typeof inputRef>).current = ref;
     } else {
       // eslint-disable-next-line @typescript-eslint/ban-ts-comment
       // @ts-ignore
-      inputRef(ref)
+      inputRef(ref);
     }
-  }
+  };
 
   return (
     <StyledDateTimeInput>
@@ -142,7 +151,7 @@ export const DateTimeInput = (props: DateTimeInputProps): JSX.Element => {
       </Line>
       <input ref={refCallback} name={name} type="hidden" />
     </StyledDateTimeInput>
-  )
-}
+  );
+};
 
-DateTimeInput.defaultTheme = dateTimeInputTheme
+DateTimeInput.defaultTheme = dateTimeInputTheme;

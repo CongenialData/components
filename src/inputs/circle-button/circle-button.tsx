@@ -1,29 +1,36 @@
-import React from 'react'
+import React from "react";
 
 /* Import components here */
-import { StyledCircleButton, Title, TitleAndIcon } from './circle-button.styles'
+import {
+  StyledCircleButton,
+  Title,
+  TitleAndIcon,
+} from "./circle-button.styles";
 
 /* Import interfaces here */
-import { CircleButtonProps } from './circle-button.interfaces'
-import { circleButtonTheme } from './circle-button.theme'
-import { ThemedComponent } from '../../theming'
+import { CircleButtonProps } from "./circle-button.interfaces";
+import { circleButtonTheme } from "./circle-button.theme";
+import { ThemedComponent } from "../../theming";
 
-export const _CircleButton = React.forwardRef<HTMLButtonElement, CircleButtonProps>(function CirceButton(
+export const _CircleButton = React.forwardRef<
+  HTMLButtonElement,
+  CircleButtonProps
+>(function CirceButton(
   {
     children,
     className,
     onClick,
     icon,
-    size = 'medium',
-    horizontalSpacing = 'normal',
-    verticalSpacing = 'normal',
+    size = "medium",
+    horizontalSpacing = "normal",
+    verticalSpacing = "normal",
     style,
     title,
     type,
-    variant = 'primary',
+    variant = "primary",
     disabled,
   }: CircleButtonProps,
-  ref,
+  ref
 ): JSX.Element {
   return (
     <StyledCircleButton
@@ -41,15 +48,22 @@ export const _CircleButton = React.forwardRef<HTMLButtonElement, CircleButtonPro
       {!!title || !!icon ? (
         <TitleAndIcon>
           {icon}
-          {title && <Title props={{ size }}>{title}</Title>}
+          {title && (
+            <Title
+              // eslint-disable-next-line react-perf/jsx-no-new-object-as-prop
+              props={{ size: size }}
+            >
+              {title}
+            </Title>
+          )}
         </TitleAndIcon>
       ) : null}
       {children}
     </StyledCircleButton>
-  )
-})
+  );
+});
 
-type TCircleButton = typeof _CircleButton & ThemedComponent
-export const CircleButton: TCircleButton = _CircleButton
+type TCircleButton = typeof _CircleButton & ThemedComponent;
+export const CircleButton: TCircleButton = _CircleButton;
 
-CircleButton.defaultTheme = circleButtonTheme
+CircleButton.defaultTheme = circleButtonTheme;

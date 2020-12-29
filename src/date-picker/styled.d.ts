@@ -1,7 +1,7 @@
-import { DatePickerTheme } from './date-picker.theme'
+import { DatePickerTheme } from "./date-picker.theme";
 
-declare module 'styled-components' {
+declare module "styled-components" {
   export interface DefaultTheme {
-    DatePicker: DatePickerTheme
+    DatePicker: DatePickerTheme;
   }
 }
