@@ -52,6 +52,7 @@ export const DatePicker = ({
   const hiddenInputRef = useRef<HTMLInputElement>()
   const onChangeRef = useRef(onChange)
 
+  // eslint-disable-next-line react-perf/jsx-no-new-function-as-prop
   const refCallback = (ref: HTMLInputElement): void => {
     hiddenInputRef.current = ref
     if (!inputRef) return
@@ -93,17 +94,20 @@ export const DatePicker = ({
     setCalendarIsOpen(false)
   }
 
+  // eslint-disable-next-line react-perf/jsx-no-new-function-as-prop
   const handleChangeHour = (e: React.ChangeEvent<HTMLSelectElement>) => {
     setHourValue(e.target.value)
     updateHiddenValue(dateValue, e.target.value, minuteValue)
     hiddenInputRef.current && fireEvent('input', hiddenInputRef.current)
   }
 
+  // eslint-disable-next-line react-perf/jsx-no-new-function-as-prop
   const handleChangeMinute = (e: React.ChangeEvent<HTMLSelectElement>) => {
     setMinuteValue(e.target.value)
     updateHiddenValue(dateValue, hourValue, e.target.value)
     hiddenInputRef.current && fireEvent('input', hiddenInputRef.current)
   }
+  // eslint-disable-next-line react-perf/jsx-no-new-function-as-prop
   const handleBlurTime = () => {
     hiddenInputRef.current && fireEvent('blur', hiddenInputRef.current)
   }
@@ -155,8 +159,10 @@ export const DatePicker = ({
     setMinuteValue(m)
   }, [])
 
+  // eslint-disable-next-line react-perf/jsx-no-new-function-as-prop
   const openCalendar = () => setCalendarIsOpen(true)
 
+  // eslint-disable-next-line react-perf/jsx-no-new-function-as-prop
   const closeCalendar = () => setCalendarIsOpen(false)
 
   /**

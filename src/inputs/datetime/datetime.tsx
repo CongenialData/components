@@ -92,6 +92,7 @@ export const DateTimeInput = (props: DateTimeInputProps): JSX.Element => {
     setTimeValue(time)
   }, [])
 
+  // eslint-disable-next-line react-perf/jsx-no-new-function-as-prop
   const refCallback = (ref: HTMLInputElement): void => {
     hiddenInputRef.current = ref
 

@@ -3,25 +3,24 @@ import * as React from 'react'
 import { navitemTheme } from './navitem.theme'
 import { IconWrapper, Label, StyledNavItem } from './navitem.styles'
 
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { IconDefinition } from '@fortawesome/free-solid-svg-icons'
-
-interface INavItemProps {
-  icon: IconDefinition
-  to: string
-  exact?: boolean
+interface NavItemComponentsProps {
+  icon: JSX.Element
   /** Text to be displayed next to the icon */
   label: string
 }
 
-export const NavItem = (props: INavItemProps): JSX.Element => {
-  const { icon, to, exact, label } = props
+export interface StyledNavItemProps {
+  to: string
+}
+
+interface NavItemProps extends NavItemComponentsProps, StyledNavItemProps {}
+
+export const NavItem = (props: NavItemProps): JSX.Element => {
+  const { icon, to, label } = props
 
   return (
-    <StyledNavItem exact={exact === undefined ? true : exact} to={to}>
-      <IconWrapper>
-        <FontAwesomeIcon fixedWidth={true} icon={icon} />
-      </IconWrapper>
+    <StyledNavItem to={to}>
+      <IconWrapper>{icon && icon}</IconWrapper>
       <Label>{label}</Label>
     </StyledNavItem>
   )

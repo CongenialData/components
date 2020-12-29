@@ -44,7 +44,7 @@ const getExtraInfoKey = (d: Date): string => format(d, 'yyyy-MM-dd')
  *
  * @returns an object that can be used as props to the Day component
  */
-const prepareItem = _.curry(function<T>(value: Date, month: Date, extraInfo: T, date: Date): DayProps<T> {
+const prepareItem = _.curry(function <T>(value: Date, month: Date, extraInfo: T, date: Date): DayProps<T> {
   const key = getExtraInfoKey(date)
   const info = extraInfo ? (extraInfo as Record<string, never>)[key] : undefined
 
@@ -154,6 +154,7 @@ export const Calendar = <T extends Record<string, never>>(props: CalendarProps<T
                   <DayComponent
                     key={getExtraInfoKey(dateProps.date)}
                     {...dateProps}
+                    // eslint-disable-next-line react-perf/jsx-no-new-function-as-prop
                     onClick={onSelectDate.bind(null, dateProps.date)}
                   />
                 ),

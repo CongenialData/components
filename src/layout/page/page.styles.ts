@@ -1,6 +1,6 @@
 import styled, { css } from 'styled-components/macro'
 
-import { Card } from '../../card'
+import { Card } from '../../card/card'
 import { Header, Title } from '../../card/card.styles'
 
 export const StyledPage = styled.div`

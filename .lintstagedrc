@@ -1,8 +1,8 @@
 {
   "*.+(js,ts,tsx,json,md)": [
-    "lint"
+    "eslint"
   ],
   "*.+(js|ts|tsx|json|md)": [
-    "prettier",
+    "prettier --write",
   ]
 }

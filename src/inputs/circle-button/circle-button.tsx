@@ -41,7 +41,14 @@ export const _CircleButton = React.forwardRef<HTMLButtonElement, CircleButtonPro
       {!!title || !!icon ? (
         <TitleAndIcon>
           {icon}
-          {title && <Title props={{ size }}>{title}</Title>}
+          {title && (
+            <Title
+              // eslint-disable-next-line react-perf/jsx-no-new-object-as-prop
+              props={{ size: size }}
+            >
+              {title}
+            </Title>
+          )}
         </TitleAndIcon>
       ) : null}
       {children}

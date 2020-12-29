@@ -155,6 +155,7 @@ export const MultiSelect = (props: MultiSelectProps<string>): JSX.Element => {
             disabled={disabled}
             showRemove={!disabled}
             text={labelMap[v]}
+            // eslint-disable-next-line react-perf/jsx-no-new-function-as-prop
             onClick={handleClickChip.bind(null, v)}
           />
         ))}

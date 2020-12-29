@@ -17,12 +17,17 @@ interface IConfirmModalProps<TValue> {
 }
 
 const ConfirmModal = <T extends Record<string, never>>(props: IConfirmModalProps<T>): JSX.Element => {
+  function onClick(answer: TAnswer<T>) {
+    props.onResult.bind(null, answer.value)
+    return undefined
+  }
+
   return (
     <StyledDialogBox show={props.show} showCloseButton={false}>
       {props.message}
       <DialogBox.Footer>
         {props.buttons.map((answer, index) => (
-          <Button key={index} onClick={props.onResult.bind(null, answer.value)}>
+          <Button key={index} onClick={onClick(answer)}>
             {answer.text}
           </Button>
         ))}

@@ -1,5 +1,14 @@
+interface NavItem {
+  label: string
+  icon: JSX.Element
+  to: string
+}
+
 export interface PageProps {
+  navItems?: NavItem[]
+
   primaryControlsComponent?: JSX.Element
+
   secondaryControlsComponent?: JSX.Element
 
   children?: React.ReactNode

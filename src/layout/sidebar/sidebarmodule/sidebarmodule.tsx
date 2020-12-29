@@ -19,12 +19,16 @@ export const SidebarModule = ({ children, footer, contentPadding, header }: Side
     opacity: isClosed ? 0 : 1,
   })
 
+  function onClick() {
+    toggleClosed(!isClosed)
+  }
+
   return (
     <StyledSidebarModule footer={footer} shadow={true} spacing="none">
       {/* FIXME: Justera så att Header inte renderas om title är undefined */}
-      <StyledHeader onClick={(): void => toggleClosed(!isClosed)}>{header && <Title>{header}</Title>}</StyledHeader>
+      <StyledHeader onClick={onClick}>{header && <Title>{header}</Title>}</StyledHeader>
 
-      <animated.div style={{ ...animProps }}>
+      <animated.div style={animProps}>
         <Content contentPadding={contentPadding}>
           {resizeListener}
           {children}

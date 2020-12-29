@@ -1,5 +1,5 @@
 import fp from 'lodash/fp'
-import i18n from '../config/i18n'
+import i18n from '../config/i18n' // TODO: Remove i18n dependency and allow user to define the text used as day names
 
 /**
  * get the first day of the week containing given day

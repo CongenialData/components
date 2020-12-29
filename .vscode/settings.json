@@ -1,16 +1,42 @@
 {
+  "javascript.referencesCodeLens.enabled": true,
+  "typescript.referencesCodeLens.enabled": true,
+
   // Formatting
   "editor.formatOnSave": false,
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": true
   },
 
-  "editor.defaultFormatter": "dbaeumer.vscode-eslint",
-  "[typescriptreact]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "eslint.validate": ["javascript", "typescript", "typescriptreact"],
+
+  // Enable per-language
+  "[markdown]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.trimAutoWhitespace": false,
+    "files.trimTrailingWhitespace": false,
+    "editor.formatOnSave": true
+  },
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true
+  },
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true
   },
   "[typescript]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true
+  },
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true
   },
   "[javascript]": {
     "editor.formatOnSave": true,
@@ -21,11 +47,5 @@
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
 
-  // Github
-  "github-actions.workflows.pinned.workflows": [".github/workflows/build.yml", ".github/workflows/npm-publish.yml"],
-  "github-actions.workflows.pinned.refresh.enabled": true,
-  "github-actions.workflows.pinned.refresh.interval": 65,
-
-  "typescript.tsdk": "node_modules/typescript/lib",
   "i18n-ally.localesPaths": "src/i18n"
 }
