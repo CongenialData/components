@@ -1,5 +1,5 @@
-import { TBaseColors } from './basecolors'
-import { TColors } from './colors'
+import { BaseColors } from './basecolors'
+import { Colors } from './colors'
 
 /**
  * **Support variables**
@@ -7,7 +7,7 @@ import { TColors } from './colors'
  * border radius, outline, shadow, divider
  */
 
-export const supportMapping = (baseColors: TBaseColors, colors: TColors) => {
+export const supportMapping = (baseColors: BaseColors, colors: Colors) => {
   const OUTLINE_COLOR = baseColors.COLOR_BASIC_TRANSPARENT_200
 
   const SCROLLBAR_COLOR = baseColors.COLOR_BASIC_TRANSPARENT_200
@@ -33,7 +33,7 @@ export const supportMapping = (baseColors: TBaseColors, colors: TColors) => {
   }
 }
 
-export type TSupport = ReturnType<typeof supportMapping>
+export type Support = ReturnType<typeof supportMapping>
 
 /**
  * Type used allowing user to create a typed override object for support variables in theme.
@@ -53,4 +53,4 @@ export type TSupport = ReturnType<typeof supportMapping>
  * })
  * ```
  */
-export type TCustomSupport = Partial<TSupport>
+export type CustomSupport = Partial<Support>

@@ -1,4 +1,4 @@
-import { TComponentStatus } from '../../theming/styled'
+import { ComponentStatus } from '../../theming/styled'
 
 export interface StyledCaptionRequiredProps {
   /**
@@ -8,7 +8,7 @@ export interface StyledCaptionRequiredProps {
    *
    * Defaults to `basic`
    */
-  status: TComponentStatus
+  status: ComponentStatus
 
   /**
    * Caption has two different variants, `default` and `alternate`.

@@ -1,4 +1,4 @@
-import { TComponentSize, TComponentStatus } from '../theming'
+import { ComponentSize, ComponentStatus } from '../theming'
 
 export type Spacing = 'none' | 'small' | 'normal'
 
@@ -22,13 +22,13 @@ export interface CardStyleProps {
    *
    * Defaults to `basic`
    */
-  status: TComponentStatus
+  status: ComponentStatus
 
   /**
    * It is also possible to assign an accent property for a slight card highlight as well as combine it with status.
    *
    */
-  accent?: TComponentStatus
+  accent?: ComponentStatus
 
   /**
    * The size of the alert
@@ -37,7 +37,7 @@ export interface CardStyleProps {
    *
    * Defaults to `medium`
    */
-  size?: TComponentSize
+  size?: ComponentSize
 }
 
 export interface CardComponentProps {

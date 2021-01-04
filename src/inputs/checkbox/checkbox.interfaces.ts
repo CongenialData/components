@@ -1,10 +1,10 @@
-import { TComponentStatus, TComponentType } from '../../theming'
+import { ComponentStatus, ComponentType } from '../../theming'
 
 // eslint-disable-next-line @typescript-eslint/no-empty-interface
 export interface CheckboxOptionalStyleProps {}
 
 export interface CheckboxRequiredStyleProps {
-  status: TComponentStatus
+  status: ComponentStatus
 }
 
 export interface CheckboxComponentProps extends React.InputHTMLAttributes<HTMLInputElement> {
@@ -44,7 +44,7 @@ export interface CheckboxComponentProps extends React.InputHTMLAttributes<HTMLIn
    *
    * Defaults to default value of <Caption />
    */
-  captionType?: TComponentType
+  captionType?: ComponentType
 }
 
 export interface CheckboxProps

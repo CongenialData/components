@@ -44,4 +44,4 @@ export const breakpoints = {
   zero: '0',
 }
 
-export type TBreakpoints = typeof breakpoints
+export type Breakpoints = typeof breakpoints

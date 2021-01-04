@@ -1,7 +1,7 @@
 import { css } from 'styled-components/macro'
-import { TComponentStatus } from '../../theming'
+import { ComponentStatus } from '../../theming'
 
-export const FilledButtonStyle = (status: TComponentStatus) => css`
+export const FilledButtonStyle = (status: ComponentStatus) => css`
   ${({
     theme: {
       Button: {

@@ -1,4 +1,4 @@
-import { TComponentShape, TComponentSize, TComponentStatus, TComponentType } from '../../theming/styled'
+import { ComponentShape, ComponentSize, ComponentStatus, ComponentType } from '../../theming/styled'
 import { NotVoid } from 'lodash'
 
 // eslint-disable-next-line @typescript-eslint/no-empty-interface
@@ -9,7 +9,7 @@ export interface TextInputRequiredStyleProps {
    *
    * Defaults to `medium`
    */
-  fieldSize: TComponentSize
+  fieldSize: ComponentSize
 
   /**
    *  You can add fullWidth attribute to make element fill container
@@ -23,13 +23,13 @@ export interface TextInputRequiredStyleProps {
    *
    * Defaults to 'semiround'
    */
-  shape: TComponentShape
+  shape: ComponentShape
 
   /** Inputs are available in multiple colors using status property
    *
    * Defaults to `basic`
    */
-  status: TComponentStatus
+  status: ComponentStatus
 
   value?: string
 }
@@ -58,7 +58,7 @@ export interface TextInputComponentProps {
    *
    * Defaults to default value of <Caption />
    */
-  captionType?: TComponentType
+  captionType?: ComponentType
 
   defaultValue?: string
 

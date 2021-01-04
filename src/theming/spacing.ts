@@ -4,4 +4,4 @@ export const spacing = {
   wide: '2rem',
 }
 
-export type TSpacing = typeof spacing
+export type Spacing = typeof spacing

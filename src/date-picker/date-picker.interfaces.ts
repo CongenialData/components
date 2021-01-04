@@ -1,4 +1,4 @@
-import { TComponentStatus } from '../theming'
+import { ComponentStatus } from '../theming'
 
 // eslint-disable-next-line @typescript-eslint/no-empty-interface
 export interface DatePickerOptionalStyleProps {}
@@ -9,7 +9,7 @@ export interface DatePickerRequiredStyleProps {
    *
    * Defaults to `basic`
    */
-  status: TComponentStatus
+  status: ComponentStatus
 }
 
 export interface DatePickerComponentProps {

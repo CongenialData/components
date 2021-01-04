@@ -3,9 +3,9 @@ import { DeepPartial, Tuple } from 'ts-essentials'
 import { DefaultTheme } from 'styled-components/macro'
 
 import { BASE_COLORS } from './basecolors'
-import { TColors, colorMapping } from './colors'
+import { Colors, colorMapping } from './colors'
 import { BASE_TYPOGRAPHY } from './typography'
-import { TSupport, supportMapping } from './support'
+import { Support, supportMapping } from './support'
 import { breakpoints } from './breakpoints'
 import { spacing } from './spacing'
 
@@ -17,8 +17,8 @@ const COMMON_THEME_DECLARATIONS = {
 }
 
 export type TCommonTheme = typeof COMMON_THEME_DECLARATIONS & {
-  colors: TColors
-  support: TSupport
+  colors: Colors
+  support: Support
 }
 
 export const tuple = <T extends Tuple>(t: T): T => {

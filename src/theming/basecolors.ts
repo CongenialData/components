@@ -229,7 +229,7 @@ export const BASE_COLORS = {
   COLOR_BASIC_CONTROL_TRANSPARENT_600,
 }
 
-export type TBaseColors = typeof BASE_COLORS
+export type BaseColors = typeof BASE_COLORS
 
 /**
  * Type used allowing user to create a typed override object for colors in theme.
@@ -248,4 +248,4 @@ export type TBaseColors = typeof BASE_COLORS
  * })
  * ```
  */
-export type TCustomBaseColors = Partial<TBaseColors>
+export type CustomBaseColors = Partial<BaseColors>

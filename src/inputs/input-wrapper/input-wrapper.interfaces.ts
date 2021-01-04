@@ -1,4 +1,4 @@
-import { TComponentSize } from '../../theming'
+import { ComponentSize } from '../../theming'
 
 export interface StyledInputWrapperRequiredProps {
   /**
@@ -15,7 +15,7 @@ export interface StyledInputWrapperRequiredProps {
    *
    * Defaults to `medium`
    */
-  size: TComponentSize
+  size: ComponentSize
 }
 
 // eslint-disable-next-line @typescript-eslint/no-empty-interface

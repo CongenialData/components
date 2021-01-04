@@ -1,4 +1,4 @@
-import { TComponentShape, TComponentSize, TComponentStatus } from '../../theming/styled'
+import { ComponentShape, ComponentSize, ComponentStatus } from '../../theming/styled'
 
 export interface ButtonOptionalStyleProps {
   /**
@@ -56,7 +56,7 @@ export interface ButtonRequiredStyleProps {
    *
    * Defaults to `rectangle`
    */
-  shape: TComponentShape
+  shape: ComponentShape
 
   /**
    * The size of the button
@@ -65,7 +65,7 @@ export interface ButtonRequiredStyleProps {
    *
    * Defaults to `medium`
    */
-  size: TComponentSize
+  size: ComponentSize
 
   /**
    * Buttons are available in multiple colors using status property.
@@ -74,7 +74,7 @@ export interface ButtonRequiredStyleProps {
    *
    * Defaults to `basic`
    */
-  status: TComponentStatus
+  status: ComponentStatus
 }
 
 export interface ButtonComponentProps<T> {

@@ -193,7 +193,7 @@ export const BASE_TYPOGRAPHY = {
   TEXT_BUTTON_GIANT_FONT_SIZE,
   TEXT_BUTTON_GIANT_LINE_HEIGHT,
 }
-export type TBaseTypography = typeof BASE_TYPOGRAPHY
+export type BaseTypography = typeof BASE_TYPOGRAPHY
 
 /**
  * Type used allowing user to create a typed override object for typography in theme.
@@ -215,4 +215,4 @@ export type TBaseTypography = typeof BASE_TYPOGRAPHY
  * })
  * ```
  */
-export type TCustomTypography = Partial<TBaseTypography>
+export type TCustomTypography = Partial<BaseTypography>

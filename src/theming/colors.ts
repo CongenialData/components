@@ -1,6 +1,6 @@
 // The contents of this file is based on https://github.com/akveo/nebular/blob/master/src/framework/theme/styles/themes/_default.scss
 
-import { TBaseColors } from './basecolors'
+import { BaseColors } from './basecolors'
 
 /**
  * A function that maps theme variables into Component variables
@@ -8,7 +8,7 @@ import { TBaseColors } from './basecolors'
  */
 
 // eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
-export const colorMapping = (baseColors: TBaseColors) => {
+export const colorMapping = (baseColors: BaseColors) => {
   /**
    * Status colors states - focus, hover, default, active, disabled
    */
@@ -484,7 +484,7 @@ export const colorMapping = (baseColors: TBaseColors) => {
   }
 }
 
-export type TColors = ReturnType<typeof colorMapping>
+export type Colors = ReturnType<typeof colorMapping>
 
 /**
  * Type used allowing user to create a typed override object for colors in theme.
@@ -503,4 +503,4 @@ export type TColors = ReturnType<typeof colorMapping>
  * })
  * ```
  */
-export type TCustomColors = Partial<TColors>
+export type CustomColors = Partial<Colors>

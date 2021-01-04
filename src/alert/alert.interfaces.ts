@@ -1,4 +1,4 @@
-import { TComponentSize, TDefaultStatuses } from '../theming'
+import { ComponentSize, DefaultStatuses } from '../theming'
 
 export interface AlertRequiredStyleProps {
   /**
@@ -6,7 +6,7 @@ export interface AlertRequiredStyleProps {
    *
    * Defaults to info
    */
-  status: TDefaultStatuses
+  status: DefaultStatuses
 }
 
 export interface AlertOptionalStyleProps {
@@ -14,13 +14,13 @@ export interface AlertOptionalStyleProps {
    * It is also possible to assign an accent property for a slight alert highlight as well as combine it with status.
    *
    */
-  accent?: TDefaultStatuses
+  accent?: DefaultStatuses
 
   /**
    * Adds and outline tot the alert
    *
    */
-  outline?: TDefaultStatuses
+  outline?: DefaultStatuses
 
   /**
    * The size of the alert
@@ -29,7 +29,7 @@ export interface AlertOptionalStyleProps {
    *
    * Defaults to `medium`
    */
-  size?: TComponentSize
+  size?: ComponentSize
 }
 
 export interface AlertComponentProps {

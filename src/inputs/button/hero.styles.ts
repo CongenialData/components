@@ -1,7 +1,7 @@
 import { css, keyframes } from 'styled-components/macro'
-import { TComponentStatus } from '../../theming'
+import { ComponentStatus } from '../../theming'
 
-export const HeroButtonStyle = (status: TComponentStatus, pulse: boolean) => css`
+export const HeroButtonStyle = (status: ComponentStatus, pulse: boolean) => css`
   ${({ theme }) => {
     const leftColor = theme.Button.appearance.hero[status].leftBackgroundColor
     const rightColor = theme.Button.appearance.hero[status].rightBackgroundColor
