@@ -14,5 +14,5 @@ const render = (ui: JSX.Element, { theme, ...options }: Render): RenderResult =>
   return rtlRender(ui, { wrapper: Wrapper, ...options })
 }
 
-export * from '@testing-library/react'
+// export * from '@testing-library/react'
 export { render }
