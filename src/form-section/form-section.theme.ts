@@ -1,6 +1,6 @@
-import { TCommonTheme, TThemeFromFn, tuple } from '../theming'
+import { CommonTheme, ThemeFromFn, tuple } from '../theming'
 
-export const formSectionTheme = (theme: TCommonTheme) =>
+export const formSectionTheme = (theme: CommonTheme) =>
   tuple([
     'FormSection',
     {
@@ -25,4 +25,4 @@ export const formSectionTheme = (theme: TCommonTheme) =>
     },
   ])
 
-export type FormSectionTheme = TThemeFromFn<typeof formSectionTheme>
+export type FormSectionTheme = ThemeFromFn<typeof formSectionTheme>

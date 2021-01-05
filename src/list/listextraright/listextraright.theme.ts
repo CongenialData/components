@@ -1,4 +1,4 @@
-import { TThemeFromFn, tuple } from '../../theming'
+import { ThemeFromFn, tuple } from '../../theming'
 
 // eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
 export const listExtraRightTheme = () => {
@@ -10,4 +10,4 @@ export const listExtraRightTheme = () => {
   ])
 }
 
-export type ListExtraRightTheme = TThemeFromFn<typeof listExtraRightTheme>
+export type ListExtraRightTheme = ThemeFromFn<typeof listExtraRightTheme>

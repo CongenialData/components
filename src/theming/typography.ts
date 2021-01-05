@@ -201,7 +201,7 @@ export type BaseTypography = typeof BASE_TYPOGRAPHY
  * Code sample:
  *
  * ```ts
- * const customTypography: TCustomTypography = {
+ * const customTypography: CustomTypography = {
  *   FONT_FAMILY_PRIMARY = 'Wingdings',
  *   TEXT_HEADING_1_FONT_FAMILY = 'Arial',
  *   TEXT_HEADING_1_FONT_SIZE = '8rem'
@@ -215,4 +215,4 @@ export type BaseTypography = typeof BASE_TYPOGRAPHY
  * })
  * ```
  */
-export type TCustomTypography = Partial<BaseTypography>
+export type CustomTypography = Partial<BaseTypography>

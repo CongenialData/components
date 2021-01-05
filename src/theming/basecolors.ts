@@ -237,7 +237,7 @@ export type BaseColors = typeof BASE_COLORS
  * Code sample:
  *
  * ```ts
- * const customBaseColors: TCustomBaseColors = {
+ * const customBaseColors: CustomBaseColors = {
  *   COLOR_BASIC_500 = 'red'
  * }
  *

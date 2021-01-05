@@ -1,4 +1,4 @@
-import { TThemeFromFn, tuple } from '../../theming'
+import { ThemeFromFn, tuple } from '../../theming'
 
 export const inputWrapperTheme = () =>
   tuple([
@@ -15,4 +15,4 @@ export const inputWrapperTheme = () =>
     },
   ])
 
-export type InputWrapperTheme = TThemeFromFn<typeof inputWrapperTheme>
+export type InputWrapperTheme = ThemeFromFn<typeof inputWrapperTheme>

@@ -1,6 +1,6 @@
-import { TCommonTheme, TThemeFromFn, tuple } from '../../theming'
+import { CommonTheme, ThemeFromFn, tuple } from '../../theming'
 
-export const navbarTheme = (theme: TCommonTheme) =>
+export const navbarTheme = (theme: CommonTheme) =>
   tuple([
     'NavBar',
     {
@@ -22,4 +22,4 @@ export const navbarTheme = (theme: TCommonTheme) =>
     },
   ])
 
-export type NavBarTheme = TThemeFromFn<typeof navbarTheme>
+export type NavBarTheme = ThemeFromFn<typeof navbarTheme>

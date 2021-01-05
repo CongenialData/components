@@ -1,4 +1,4 @@
-import { TThemeFromFn, tuple } from '../theming'
+import { ThemeFromFn, tuple } from '../theming'
 
 export const dialogBoxTheme = () =>
   tuple([
@@ -11,4 +11,4 @@ export const dialogBoxTheme = () =>
     },
   ])
 
-export type DialogBoxTheme = TThemeFromFn<typeof dialogBoxTheme>
+export type DialogBoxTheme = ThemeFromFn<typeof dialogBoxTheme>

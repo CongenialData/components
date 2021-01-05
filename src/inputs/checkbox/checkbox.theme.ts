@@ -1,6 +1,6 @@
-import { TCommonTheme, TThemeFromFn, tuple } from '../../theming'
+import { CommonTheme, ThemeFromFn, tuple } from '../../theming'
 
-export const checkboxTheme = ({ support, typography, colors, baseColors }: TCommonTheme) =>
+export const checkboxTheme = ({ support, typography, colors, baseColors }: CommonTheme) =>
   tuple([
     'Checkbox',
     {
@@ -227,4 +227,4 @@ export const checkboxTheme = ({ support, typography, colors, baseColors }: TComm
     },
   ])
 
-export type CheckboxTheme = TThemeFromFn<typeof checkboxTheme>
+export type CheckboxTheme = ThemeFromFn<typeof checkboxTheme>

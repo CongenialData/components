@@ -1,6 +1,6 @@
-import { TCommonTheme, TThemeFromFn, tuple } from '../theming'
+import { CommonTheme, ThemeFromFn, tuple } from '../theming'
 
-export const alertTheme = ({ colors, typography, support }: TCommonTheme) =>
+export const alertTheme = ({ colors, typography, support }: CommonTheme) =>
   tuple([
     'Alert',
     {
@@ -70,4 +70,4 @@ export const alertTheme = ({ colors, typography, support }: TCommonTheme) =>
     },
   ])
 
-export type AlertTheme = TThemeFromFn<typeof alertTheme>
+export type AlertTheme = ThemeFromFn<typeof alertTheme>

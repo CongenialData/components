@@ -41,7 +41,7 @@ export type Support = ReturnType<typeof supportMapping>
  * Code sample:
  *
  * ```ts
- * const customSupport: TCustomSupport = {
+ * const customSupport: CustomSupport = {
  *   BORDER_RADIUS = '8px'
  * }
  *
