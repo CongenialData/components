@@ -1,5 +1,5 @@
-import { TThemeFromFn, tuple } from '../../theming'
+import { ThemeFromFn, tuple } from '../../theming'
 
 export const moduleTheme = () => tuple(['Module', {}])
 
-export type ModuleTheme = TThemeFromFn<typeof moduleTheme>
+export type ModuleTheme = ThemeFromFn<typeof moduleTheme>

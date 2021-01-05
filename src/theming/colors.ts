@@ -492,7 +492,7 @@ export type Colors = ReturnType<typeof colorMapping>
  * Code sample:
  *
  * ```ts
- * const customColors: TCustomColors = {
+ * const customColors: CustomColors = {
  *   COLOR_PRIMARY_FOCUS = 'red'
  * }
  *

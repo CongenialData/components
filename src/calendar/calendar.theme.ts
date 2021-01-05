@@ -1,6 +1,6 @@
-import { TCommonTheme, TThemeFromFn, tuple } from '../theming'
+import { CommonTheme, ThemeFromFn, tuple } from '../theming'
 
-export const calendarTheme = ({ support, typography, colors }: TCommonTheme) => {
+export const calendarTheme = ({ support, typography, colors }: CommonTheme) => {
   // Pre-defined variable mapping. See note in src/components/theming/docs/cdab-notes.md
 
   const calendar: any = {
@@ -147,4 +147,4 @@ export const calendarTheme = ({ support, typography, colors }: TCommonTheme) => 
   ])
 }
 
-export type CalendarTheme = TThemeFromFn<typeof calendarTheme>
+export type CalendarTheme = ThemeFromFn<typeof calendarTheme>

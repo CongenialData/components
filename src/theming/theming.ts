@@ -16,7 +16,7 @@ const COMMON_THEME_DECLARATIONS = {
   typography: BASE_TYPOGRAPHY,
 }
 
-export type TCommonTheme = typeof COMMON_THEME_DECLARATIONS & {
+export type CommonTheme = typeof COMMON_THEME_DECLARATIONS & {
   colors: Colors
   support: Support
 }
@@ -24,18 +24,18 @@ export type TCommonTheme = typeof COMMON_THEME_DECLARATIONS & {
 export const tuple = <T extends Tuple>(t: T): T => {
   return t
 }
-type TTheme = {
-  [key: string]: TThemeValue
+type Theme = {
+  [key: string]: ThemeValue
 }
-type TThemeValue = string | number | TTheme
+type ThemeValue = string | number | Theme
 
-type TComponentTheme = [string, TTheme] // [<namespace>, <theme>]
-type TComponentThemeFn = (theme: TCommonTheme) => TComponentTheme
+type ComponentTheme = [string, Theme] // [<namespace>, <theme>]
+type ComponentThemeFn = (theme: CommonTheme) => ComponentTheme
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
-export type TThemeFromFn<T extends TComponentThemeFn> = T extends (...args: any) => [any, infer TT] ? TT : never
+export type ThemeFromFn<T extends ComponentThemeFn> = T extends (...args: any) => [any, infer TT] ? TT : never
 
 export interface ThemedComponent {
-  defaultTheme?: TComponentThemeFn
+  defaultTheme?: ComponentThemeFn
 }
 
 // TODO: Fix correct types
@@ -63,7 +63,7 @@ export const isThemedComponent = (obj: any): obj is ThemedComponent => obj && ob
  * @param baseTheme - Override the theme with this
  */
 export const createTheme = (
-  components: (ThemedComponent | TComponentThemeFn)[],
+  components: (ThemedComponent | ComponentThemeFn)[],
   baseTheme: DeepPartial<DefaultTheme> = {},
 ): DefaultTheme => {
   const partialBase = _.merge(
@@ -85,7 +85,7 @@ export const createTheme = (
     components,
     (acc, component) => {
       // Either expect a themed component or a theme function
-      let themeFn: TComponentThemeFn
+      let themeFn: ComponentThemeFn
       if (isThemedComponent(component)) {
         if (component.defaultTheme === undefined) throw new Error(`createTheme: Component must have a theme`)
         themeFn = component.defaultTheme
