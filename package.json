@@ -1,41 +1,4 @@
 {
-  "version": "0.1.9",
-  "license": "MIT",
-  "main": "dist/index.js",
-  "typings": "dist/index.d.ts",
-  "files": [
-    "dist",
-    "src"
-  ],
-  "engines": {
-    "node": ">=10"
-  },
-  "scripts": {
-    "start": "tsdx watch",
-    "build": "tsdx build",
-    "test": "tsdx test --passWithNoTests",
-    "analyze": "size-limit --why",
-    "build-storybook": "build-storybook",
-    "check-format": "yarn prettier --list-different",
-    "check-types": "tsc",
-    "format": "yarn prettier --write",
-    "lint:fix": "tsdx lint --fix",
-    "lint": "tsdx lint",
-    "prepare": "tsdx build",
-    "prettier": "prettier --ignore-path .gitignore --write \"**/*.+(js|ts|tsx|json|md)\"",
-    "size": "size-limit",
-    "storybook": "start-storybook -p 6006",
-    "validate": "npm-run-all --parallel check-types check-format lint build"
-  },
-  "peerDependencies": {
-    "react": ">=16"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "yarn check-types && lint-staged",
-      "pre-push": "yarn validate"
-    }
-  },
   "name": "@cdab/components",
   "author": "Congenial Data AB",
   "repository": {
@@ -52,6 +15,48 @@
       "url": "http://cdab.eu"
     }
   ],
+  "version": "0.1.9",
+  "license": "MIT",
+  "main": "dist/index.js",
+  "typings": "dist/index.d.ts",
+  "files": [
+    "dist",
+    "src"
+  ],
+  "engines": {
+    "node": ">=10"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  },
+  "scripts": {
+    "start": "tsdx watch",
+    "build": "tsdx build",
+    "test": "tsdx test --passWithNoTests",
+    "analyze": "size-limit --why",
+    "build-storybook": "build-storybook",
+    "check-format": "yarn prettier --list-different",
+    "check-types": "tsc",
+    "commit": "git-cz",
+    "format": "yarn prettier --write",
+    "lint:fix": "tsdx lint --fix",
+    "lint": "tsdx lint",
+    "prepare": "tsdx build",
+    "prettier": "prettier --ignore-path .gitignore --write \"**/*.+(js|ts|tsx|json|md)\"",
+    "push": "git add -A && git commit npm version patch -m \"Bump package version to %s\" && git push && git push --tags",
+    "release": "standard-version",
+    "size": "size-limit",
+    "storybook": "start-storybook -p 6006",
+    "validate": "npm-run-all --parallel check-types check-format lint build"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "yarn check-types && lint-staged",
+      "pre-push": "yarn validate"
+    }
+  },
   "module": "dist/components.esm.js",
   "size-limit": [
     {
@@ -66,6 +71,9 @@
   "resolutions": {
     "**/@typescript-eslint/eslint-plugin": "^4.1.1",
     "**/@typescript-eslint/parser": "^4.1.1"
+  },
+  "peerDependencies": {
+    "react": ">=16"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.32",
@@ -98,6 +106,7 @@
     "eslint-plugin-prettier": "^3.3.0",
     "eslint-plugin-react": "^7.22.0",
     "eslint-plugin-react-perf": "^3.3.0",
+    "git-cz": "^4.7.6",
     "husky": "^4.3.6",
     "lint-staged": "^10.5.3",
     "npm-run-all": "^4.1.5",
@@ -106,6 +115,7 @@
     "react-dom": "^17.0.1",
     "react-is": "^17.0.1",
     "size-limit": "^4.9.1",
+    "standard-version": "^9.1.0",
     "styled-components": "^5.2.1",
     "tsdx": "^0.14.1",
     "tslib": "^2.0.3",
