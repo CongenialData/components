@@ -28,7 +28,7 @@
   },
   "config": {
     "commitizen": {
-      "path": "./node_modules/cz-conventional-changelog"
+      "path": "./node_modules/git-cz"
     }
   },
   "scripts": {
@@ -39,7 +39,7 @@
     "build-storybook": "build-storybook",
     "check-format": "yarn prettier --list-different",
     "check-types": "tsc",
-    "commit": "git-cz",
+    "cm": "git-cz",
     "format": "yarn prettier --write",
     "lint:fix": "tsdx lint --fix",
     "lint": "tsdx lint",
