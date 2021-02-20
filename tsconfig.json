@@ -34,7 +34,7 @@
     // this must be enabled to use themes defined in JSON
     "resolveJsonModule": true,
     "target": "ES2017",
-    "removeComments": true,
+    "removeComments": false,
     "allowSyntheticDefaultImports": true
   }
 }
