@@ -79,7 +79,7 @@
     "@fortawesome/fontawesome-svg-core": "^1.2.32",
     "@fortawesome/free-solid-svg-icons": "^5.15.1",
     "@fortawesome/react-fontawesome": "^0.1.14",
-    "date-fns": "^2.16.1",
+    "date-fns": "^2.18.0",
     "focus-trap-react": "^8.3.2",
     "i18next": "^19.8.4",
     "i18next-browser-languagedetector": "^6.0.1",
